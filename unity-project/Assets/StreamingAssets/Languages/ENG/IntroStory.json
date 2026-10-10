@@ -1,0 +1,130 @@
+{
+	"listOfIntroStory":
+	[
+		{
+			"imageID":1,
+			"text":"Once upon a time, amongst rolling green hills, there existed a prosperous kingdom named Magnarta.",
+			"posTextUI":{"x":320.0,"y":270.0}
+		},
+		{
+			"imageID":1,
+			"text":"It was a nation of noble heroes and fair maidens, as well as the home of the fabled Mystic Knights.",
+			"posTextUI":{"x":-500.0,"y":-175.0}
+		},
+		{
+			"imageID":2,
+			"text":"Old tales recount their sudden appearance, wielding steel and flame with unparalleled excellency.",
+			"posTextUI":{"x":-625.0,"y":314.0}
+		},
+		{
+			"imageID":2,
+			"text":"After vanquishing all opposition, they formed a pact with the Magnartan rulers, ensuring a lasting peace to the lands.",
+			"posTextUI":{"x":30.0,"y":217.0}
+		},
+		{
+			"imageID":2,
+			"text":"Such legends inpired wonderment in folk's hearts, with many a youngster dreaming of becoming a Mystic Knight, fantasizing about great adventures.",
+			"posTextUI":{"x":30.0,"y":-200.0}
+		},
+		{
+			"imageID":3,
+			"text":"One of those youngins was Maya, a girl of singular crimson hair, a reflection of her fiery spirit.",
+			"posTextUI":{"x":-568.0,"y":41.0}
+		},
+		{
+			"imageID":3,
+			"text":"Her favorite pastime was to escape into the gardens, to play with wooden toys, determined to one day, transform her tenacious dream into reality.",
+			"posTextUI":{"x":378.0,"y":-175.0}
+		},
+		{
+			"imageID":4,
+			"text":"Years come to pass, and Maya has grown to become a fine lady, still chasing her unique aspirations with great intent.",
+			"posTextUI":{"x":50.0,"y":-150.0}
+		},
+		{
+			"imageID":4,
+			"text":"Duke Gamelon, her uncle, sought audience with the king, for the Duke held much steem in the court, and also loved his niece dearly.",
+			"posTextUI":{"x":-500.0,"y":100.0}
+		},
+		{
+			"imageID":4,
+			"text":"The Duke's proposal: to allow his niece, Maya, to become a Mystic Knight.",
+			"posTextUI":{"x":0.0,"y":0.0}
+		},
+		{
+			"imageID":4,
+			"text":"Much discussion was had, and an impasse was reached. The Archbishop, leader of the chivalric order, had stern objections to the proposition.",
+			"posTextUI":{"x":-500.0,"y":-50.0}
+		},
+		{
+			"imageID":4,
+			"text":"The lords of the council thus decided to postpone their decision, given that the subject matter was of unprecedented nature.",
+			"posTextUI":{"x":-500.0,"y":0.0}
+		},
+		{
+			"imageID":5,
+			"text":"'Blasphemy!', some councilmen barked, in the dimly lit room, in a dungeon somewhere, behind the King's back.",
+			"posTextUI":{"x":655.0,"y":-100.0}
+		},
+		{
+			"imageID":5,
+			"text":"'Arrogance!', 'Sedition!', others parroted. Truthfully, they were all drunk on their own snobbery; this group of noblemen were corrupt from the start.",
+			"posTextUI":{"x":0.0,"y":150.0}
+		},
+		{
+			"imageID":5,
+			"text":"But archbishop Ivan was nefarious, and so he cooked an evil plot, to take advantage of this whole situation. He had the entire council under his control.",
+			"posTextUI":{"x":-430.0,"y":-220.0}
+		},
+		{
+			"imageID":4,
+			"text":"Days pass, and the council reconvenes, with a response to the Duke and his niece. A condition needed to be fulfilled, in order to grant their request.",
+			"posTextUI":{"x":-250.0,"y":225.0}
+		},
+		{
+			"imageID":4,
+			"text":"A journey, to the remnants of an ancient empire, rumored to precede the Magnartan royal lineage.",
+			"posTextUI":{"x":590.0,"y":-100.0}
+		},
+		{
+			"imageID":4,
+			"text":"On those forgotten lands, Maya would prove her valor, scouting the ruins to unearth a holy artifact, long lost, that would prove the imperial legitimacy of Magnarta.",
+			"posTextUI":{"x":0.0,"y":0.0}
+		},
+		{
+			"imageID":4,
+			"text":"The Duke objected to such perilous demand, but it fell on deaf ears, because his energetic niece readily accepted the quest.",
+			"posTextUI":{"x":-500.0,"y":-50.0}
+		},
+		{
+			"imageID":6,
+			"text":"Arrangements were made by the council. A merchant ship, on its way to trade in exotic lands, would carry Maya along, to then drop her near the uncharted destination.",
+			"posTextUI":{"x":235.0,"y":-200.0}
+		},
+		{
+			"imageID":6,
+			"text":"Full of worry for his niece, the Duke decided to send someone to acompany Maya, someone he could trust.",
+			"posTextUI":{"x":0.0,"y":300.0}
+		},
+		{
+			"imageID":6,
+			"text":"Farina, the fairy-maid, who served his family for decades. She would be the ideal chaperone, a guide, and a voice of reason, to the stubborn red haired heroine.",
+			"posTextUI":{"x":-590.0,"y":25.0}
+		},
+		{
+			"imageID":7,
+			"text":"And so it was, that for the better part of a week, the ship sailed, carrying under its frame, a hidden pair of maidens.",
+			"posTextUI":{"x":-600.0,"y":275.0}
+		},
+		{
+			"imageID":7,
+			"text":"But when the voyage reached its 7th day, dusk brought about ill tidings on the horizon, as a swarm of colossal, dark clouds, stoically marched towards the ship.",
+			"posTextUI":{"x":0.0,"y":0.0}
+		},
+		{
+			"imageID":7,
+			"text":"Maya and Farina braced for the upcoming storm, praying for safety, but unsure, if the hurricane was merely a passing phenomenon, or a warning of much sinister things yet to come...",
+			"posTextUI":{"x":475.0,"y":-100.0}
+		}
+	]
+}

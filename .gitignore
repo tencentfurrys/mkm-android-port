@@ -1,0 +1,19 @@
+# Unity generated
+unity-project/Library/
+unity-project/Temp/
+unity-project/Obj/
+unity-project/Build/
+unity-project/Builds/
+unity-project/Logs/
+unity-project/UserSettings/
+unity-project/MemoryCaptures/
+# Build artifacts (shipped via Releases, never committed)
+*.apk
+*.aab
+*.symbols.zip
+*.keystore
+*.jks
+# OS / tools
+Thumbs.db
+Desktop.ini
+.DS_Store

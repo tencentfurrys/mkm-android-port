@@ -1,0 +1,698 @@
+{
+	"listOfItemDatabase":
+	[
+		{
+			"id":1,
+			"type":1,
+			"name":"Health Potion (Small)",
+			"equipable":true,
+			"description":"This potion restores 25% of health."
+		},
+		{
+			"id":2,
+			"type":1,
+			"name":"Health Potion (Medium)",
+			"equipable":true,
+			"description":"This potion restores 50% of health."
+		},
+		{
+			"id":3,
+			"type":1,
+			"name":"Health Potion (Big)",
+			"equipable":true,
+			"description":"This potion restores 100% of health."
+		},
+		{
+			"id":4,
+			"type":2,
+			"name":"Spirit Potion (Small)",
+			"equipable":true,
+			"description":"This potion restores 25% of spirit."
+		},
+		{
+			"id":5,
+			"type":2,
+			"name":"Spirit Potion (Medium)",
+			"equipable":true,
+			"description":"This potion restores 50% of spirit."
+		},
+		{
+			"id":6,
+			"type":2,
+			"name":"Spirit Potion (Big)",
+			"equipable":true,
+			"description":"This potion restores 100% of spirit."
+		},
+		{
+			"id":7,
+			"type":4,
+			"name":"Attack Upgrade (+10)",
+			"equipable":false,
+			"description":"Permanently increases attack by 10."
+		},
+		{
+			"id":8,
+			"type":9,
+			"name":"Throwing Daggers",
+			"equipable":true,
+			"description":"These daggers can be used as a ranged attack. While they do only 60% of the player's current attack power as damage, they completely bypass the target's armor or defense."
+		},
+		{
+			"id":9,
+			"type":10,
+			"name":"Small Rune Bomb",
+			"equipable":true,
+			"description":"Will react when it touches any surface or enemy, but it can only be thrown in an annoying arch of flight. The impact causes a small explosion that deals 150 flat damage."
+		},
+		{
+			"id":10,
+			"type":6,
+			"name":"Life Upgrade (+20)",
+			"equipable":false,
+			"description":"Permanently increases life by 20."
+		},
+		{
+			"id":11,
+			"type":7,
+			"name":"Spirit Upgrade (+20)",
+			"equipable":false,
+			"description":"Permanently increases spirit by 20."
+		},
+		{
+			"id":12,
+			"type":5,
+			"name":"Defense Upgrade (+10)",
+			"equipable":false,
+			"description":"Permanently increases defense by 10."
+		},
+		{
+			"id":14,
+			"type":11,
+			"name":"Creature Essence",
+			"equipable":false,
+			"description":"Essence of ..."
+		},
+		{
+			"id":15,
+			"type":14,
+			"name":"Dust of Protection",
+			"equipable":true,
+			"description":"Restores the durability of armor to 100%"
+		},
+		{
+			"id":16,
+			"type":15,
+			"name":"Mystic Armor",
+			"equipable":true,
+			"description":"Repairs all clothing to full, consequently allowing Maya to change between dress layers at will."
+		},
+		{
+			"id":17,
+			"type":25,
+			"name":"Hero's Lance",
+			"equipable":true,
+			"description":"Medium speed and damage, but can be throw directly upwards or downwards."
+		},
+		{
+			"id":18,
+			"type":25,
+			"name":"Boomerang Star",
+			"equipable":true,
+			"description":"A strong weapon that is tricky to handle, requiring finesse from the user while being closer to targets."
+		},
+		{
+			"id":19,
+			"type":25,
+			"name":"Homing Sphere",
+			"equipable":true,
+			"description":"Shoddy contraption invented by witches to distract their pursuers. Chases enemies, but with erratic movement and weak damage."
+		},
+		{
+			"id":20,
+			"type":26,
+			"name":"Brew of Health",
+			"equipable":true,
+			"description":"Life regeneration."
+		},
+		{
+			"id":21,
+			"type":26,
+			"name":"Brew of Stamina",
+			"equipable":true,
+			"description":"Spirit regeneration."
+		},
+		{
+			"id":22,
+			"type":26,
+			"name":"Brew of Power",
+			"equipable":true,
+			"description":"Increased attack. +50%"
+		},
+		{
+			"id":23,
+			"type":26,
+			"name":"Brew of Constitution",
+			"equipable":true,
+			"description":"Increased defense. +50%"
+		},
+		{
+			"id":24,
+			"type":26,
+			"name":"Brew of Agility",
+			"equipable":true,
+			"description":"Increased move speed. +25%"
+		},
+		{
+			"id":25,
+			"type":27,
+			"name":"Fruit of Slicing",
+			"equipable":true,
+			"description":"Able to cut most enemy projectiles with the sword."
+		},
+		{
+			"id":26,
+			"type":27,
+			"name":"Forbiden Fruit",
+			"equipable":true,
+			"description":"Surrender to the absolute lustful force. Adds 50 lust."
+		},
+		{
+			"id":27,
+			"type":27,
+			"name":"Garlic of Repulsion",
+			"equipable":true,
+			"description":"Will make enemies unable to grab. Can be used while grabbed to force an instant release."
+		},
+		{
+			"id":28,
+			"type":27,
+			"name":"Warrior's Vegetable",
+			"equipable":true,
+			"description":"Enemies will have a greater chance to release essence when defeated in combat."
+		},
+		{
+			"id":29,
+			"type":27,
+			"name":"Hero's Meal",
+			"equipable":true,
+			"description":"Grants complete invincibility for a short while."
+		},
+		{
+			"id":30,
+			"type":25,
+			"name":"Poison Powder",
+			"equipable":true,
+			"description":"Bypass enemies's defenses to apply an effect that slowly damages them over time."
+		},
+		{
+			"id":31,
+			"type":25,
+			"name":"Rage Pepper",
+			"equipable":true,
+			"description":"Enrages enemies, doubling their overall power. They are guaranteed to drop double essence when defeated."
+		},
+		{
+			"id":32,
+			"type":25,
+			"name":"Entropic Hand Bomb",
+			"equipable":true,
+			"description":"The end product of some devilish technology. Obliterates all enemies in the surrounding area."
+		},
+		{
+			"id":33,
+			"type":27,
+			"name":"Aspartame",
+			"equipable":true,
+			"description":"Reduces accumulated lust by 10."
+		},
+		{
+			"id":50,
+			"type":8,
+			"name":"Dash",
+			"equipable":false,
+			"description":"Input: <@:KEY_DEFSKILL> (ground)<@:LB2>Spirit Cost: 20<@:LB2>*High move speed<@:LINE_BREAK>*Jumping covers more distance<@:LINE_BREAK>*Phase through enemies<@:LINE_BREAK>*Phase through projectiles"
+		},
+		{
+			"id":51,
+			"type":8,
+			"name":"Sliding Tackle",
+			"equipable":false,
+			"description":"Input: <@:KEY_DOWN>+<@:KEY_DEFSKILL> (ground)<@:LB2>Spirit Cost: 30<@:LB2>*Staggers weak enemies<@:LINE_BREAK>*Slide into small tunnels"
+		},
+		{
+			"id":52,
+			"type":8,
+			"name":"Defense Shield",
+			"equipable":false,
+			"description":"Input: <@:KEY_UP>+<@:KEY_DEFSKILL> (ground or air)<@:LB2>Spirit Cost: 50<@:LB2>*Reduce all incoming damage by 30%"
+		},
+		{
+			"id":53,
+			"type":8,
+			"name":"Flame Sword",
+			"equipable":false,
+			"description":"Input: <@:KEY_UP>+<@:KEY_ATKSKILL> (ground or air)<@:LB2>Spirit Cost: 30<@:LB2>*Strong against flying enemies<@:LINE_BREAK>*Can reach higher platforms"
+		},
+		{
+			"id":54,
+			"type":8,
+			"name":"Power Slash",
+			"equipable":false,
+			"description":"Input: <@:KEY_ATKSKILL> (ground or air)<@:LB2>Spirit Cost: 40<@:LB2>*Powerful projectile."
+		},
+		{
+			"id":55,
+			"type":8,
+			"name":"Ground Pound",
+			"equipable":false,
+			"description":"Input: <@:KEY_DOWN>+<@:KEY_ATKSKILL> (air)<@:LB2>Spirit Cost: 50<@:LB2>*Strong impact<@:LINE_BREAK>*Small area of effect<@:LINE_BREAK>*Fast vertical descent"
+		},
+		{
+			"id":56,
+			"type":8,
+			"name":"Drill Dash",
+			"equipable":false,
+			"description":"Input: <@:KEY_DEFSKILL> (air)<@:LB2>Spirit Cost: 30<@:LB2>*Fastest move speed<@:LINE_BREAK>*Can enter small tunnels<@:LINE_BREAK>*Phase through enemies<@:LINE_BREAK>*Phase through projectiles"
+		},
+		{
+			"id":100,
+			"type":12,
+			"name":"Crimson Scepter",
+			"equipable":false,
+			"description":"An ominous, blood-colored scepter, adorned with golden details. This artifact allows Maya to teleport to any previously visited save points."
+		},
+		{
+			"id":101,
+			"type":3,
+			"name":"Silver Castle Key",
+			"equipable":false,
+			"description":"An ornate key made of silver. The craftmanship is notable with small and detailed engravings of some forgotten heraldry."
+		},
+		{
+			"id":102,
+			"type":3,
+			"name":"Dungeon Key",
+			"equipable":false,
+			"description":"This key is surprisingly sturdy, despite its uncanny light weight. Its texture feels weird to the touch and it exudes a rather harsh aura."
+		},
+		{
+			"id":103,
+			"type":3,
+			"name":"Hill Valley Key",
+			"equipable":false,
+			"description":"With such a rough build, one would never expect this turquoise key to possess a strong smell of delicate fairy dust."
+		},
+		{
+			"id":500,
+			"type":17,
+			"name":"Ring of Life+",
+			"equipable":true,
+			"description":"+50 HP"
+		},
+		{
+			"id":501,
+			"type":17,
+			"name":"Ring of Life++",
+			"equipable":true,
+			"description":"+100 HP"
+		},
+		{
+			"id":502,
+			"type":17,
+			"name":"Ring of Life+++",
+			"equipable":true,
+			"description":"+200 HP"
+		},
+		{
+			"id":503,
+			"type":17,
+			"name":"Ring of Meditation+",
+			"equipable":true,
+			"description":"+50 SP"
+		},
+		{
+			"id":504,
+			"type":17,
+			"name":"Ring of Meditation++",
+			"equipable":true,
+			"description":"+100 SP"
+		},
+		{
+			"id":505,
+			"type":17,
+			"name":"Ring of Meditation+++",
+			"equipable":true,
+			"description":"+200 SP"
+		},
+		{
+			"id":506,
+			"type":17,
+			"name":"Ring of the Fighter+",
+			"equipable":true,
+			"description":"+20 ATK"
+		},
+		{
+			"id":507,
+			"type":17,
+			"name":"Ring of the Fighter++",
+			"equipable":true,
+			"description":"+40 ATK"
+		},
+		{
+			"id":508,
+			"type":17,
+			"name":"Ring of the Fighter+++",
+			"equipable":true,
+			"description":"+80 ATK"
+		},
+		{
+			"id":509,
+			"type":17,
+			"name":"Ring of the Protector+",
+			"equipable":true,
+			"description":"+20 DEF"
+		},
+		{
+			"id":510,
+			"type":17,
+			"name":"Ring of the Protector++",
+			"equipable":true,
+			"description":"+40 DEF"
+		},
+		{
+			"id":511,
+			"type":17,
+			"name":"Ring of the Protector+++",
+			"equipable":true,
+			"description":"+80 DEF"
+		},
+		{
+			"id":550,
+			"type":18,
+			"name":"Bracer of the Vampire Hunter",
+			"equipable":true,
+			"description":"Main weapon becomes a whip with a much longer reach.<@:LB2>Annoying knockback when damaged by enemies.<@:LB2>HP -20%<@:LINE_BREAK>ATK -20%"
+		},
+		{
+			"id":551,
+			"type":18,
+			"name":"Bracer of Shielding",
+			"equipable":true,
+			"description":"When crouching, a shield will reflect projectiles towards a random enemy nearby.<@:LB2>Disables attack and throwing while crouching.<@:LB2>SP -20%"
+		},
+		{
+			"id":552,
+			"type":18,
+			"name":"Bracelets of the Cheapskate",
+			"equipable":true,
+			"description":"While equiped, defeating enemies will slowly acumulate a discount for purchases in the item shop, up to 30%. When unequipped, the discount resets back to zero."
+		},
+		{
+			"id":553,
+			"type":18,
+			"name":"Cursed Horned Bracer",
+			"equipable":true,
+			"description":"Nearby enemies will automatically become enraged.<@:LB2>All skills cost -20%"
+		},
+		{
+			"id":554,
+			"type":18,
+			"name":"Chastity of the Goddess",
+			"equipable":true,
+			"description":"Grants a 90% chance that any incoming lust will be completely ignored.<@:LB2>All stats -5%"
+		},
+		{
+			"id":555,
+			"type":18,
+			"name":"Secret Devices",
+			"equipable":true,
+			"description":"Lust increases by 1 every second.<@:LB2>All stats -5%"
+		},
+		{
+			"id":600,
+			"type":19,
+			"name":"Necklace of Phasing Attack",
+			"equipable":true,
+			"description":"Auto attack 2 times when phasing through enemies.<@:LB2>Dash cost +20<@:LINE_BREAK>Dash speed -10%"
+		},
+		{
+			"id":601,
+			"type":19,
+			"name":"Enhanced Power Slash",
+			"equipable":true,
+			"description":"Skill does double damage, moves faster and pierces 3 enemies in a row.<@:LB2>Spirit cost increased by 50%."
+		},
+		{
+			"id":602,
+			"type":19,
+			"name":"Enhanced Defense Shield",
+			"equipable":true,
+			"description":"Skill now reduces all damage by 50%.<@:LB2>Spirit cost increased by 20%."
+		},
+		{
+			"id":603,
+			"type":19,
+			"name":"Enhanced Sliding Tackle",
+			"equipable":true,
+			"description":"The skill lasts longer and has its damage and pushback doubled."
+		},
+		{
+			"id":604,
+			"type":19,
+			"name":"Enhanced Flaming Sword",
+			"equipable":true,
+			"description":"Greatly increases the skill's damage output, and it now applies a mini-stun on flying enemies."
+		},
+		{
+			"id":650,
+			"type":20,
+			"name":"Glass Earrings",
+			"equipable":true,
+			"description":"Glass breaks easily. The Shield skill is disabled.<@:LB2>ATK +1000<@:LINE_BREAK>HP -999%"
+		},
+		{
+			"id":651,
+			"type":20,
+			"name":"Earrings of Sword Projection",
+			"equipable":true,
+			"description":"Basic attacks send forth small projectiles.<@:LB2>Projectiles will use some amount of spirit.<@:LB2>HP -100"
+		},
+		{
+			"id":652,
+			"type":20,
+			"name":"Gems of the Runner",
+			"equipable":true,
+			"description":"Reduce the cost of the Dash skill by 75%, but it cannot phase through enemies anymore."
+		},
+		{
+			"id":653,
+			"type":20,
+			"name":"Blade of Stunning",
+			"equipable":true,
+			"description":"Basic attacks have a 10% chance of applying a mini-stun to enemies.<@:LB2>HP +25<@:LINE_BREAK>ATK +10<@:LINE_BREAK>DEF +10"
+		},
+		{
+			"id":700,
+			"type":21,
+			"name":"Eager Hairpin",
+			"equipable":true,
+			"description":"Careful to not overexert yourself.<@:LB2>SP +50%<@:LB2>When SP falls lower than 10%, become stunned for 5 seconds."
+		},
+		{
+			"id":701,
+			"type":21,
+			"name":"Hairpin of Bouncy Boots",
+			"equipable":true,
+			"description":"Grants double jump.<@:LB2>ATK -25<@:LINE_BREAK>DEF -25"
+		},
+		{
+			"id":702,
+			"type":21,
+			"name":"Erotic Dancer's Tiara",
+			"equipable":true,
+			"description":"While being grabbed by an enemy, the spirit loss rate is reduced by half.<@:LB2>DEF +10<@:LB2>SP -20"
+		},
+		{
+			"id":703,
+			"type":21,
+			"name":"Headress of the Succubus",
+			"equipable":true,
+			"description":"Enemies are guaranteed to drop double max essence when they are defeated after grabbing Maya for at least 10 seconds.<@:LB2>ATK +10<@:LB2>DEF -20"
+		},
+		{
+			"id":704,
+			"type":21,
+			"name":"Hairlock of Fertility",
+			"equipable":true,
+			"description":"Hearts appear more frequently during ero and they yeld 50% more essence.<@:LB2>All stats +20% naked.<@:LINE_BREAK>All stats -15% underwear.<@:LINE_BREAK>All stats -30% full armor."
+		},
+		{
+			"id":705,
+			"type":21,
+			"name":"Dagger Specialist",
+			"equipable":true,
+			"description":"Dagger damage is increased by 20%, and it now has a 20% chance to apply a mini-stun to enemies."
+		},
+		{
+			"id":900,
+			"type":12,
+			"name":"Belt of Holding",
+			"equipable":false,
+			"description":"A magic belt that can hold many items inside its nano-dimensional slots."
+		},
+		{
+			"id":901,
+			"type":12,
+			"name":"Mystic Sword",
+			"equipable":false,
+			"description":"Maya's custom order sword, it was a present from her uncle. It has been empowered with mystic energies by a certain bishop."
+		},
+		{
+			"id":902,
+			"type":12,
+			"name":"Adventurer's Boots",
+			"equipable":false,
+			"description":"Enchanted with pixie dust, these boots grant dexterious movement to its wearer."
+		},
+		{
+			"id":903,
+			"type":12,
+			"name":"Ruby Pendant",
+			"equipable":false,
+			"description":"An old birthday present from Farina, when Maya completed 7 years old. The fairy maid can make it vibrate to communicate with Maya, as well as being able to sense its aproximate location."
+		},
+		{
+			"id":904,
+			"type":13,
+			"name":"Mystic Belt Emblem",
+			"equipable":false,
+			"description":"Small relics fashioned by the Mystic Knights. Each emblem unlocks 1 additional belt slot."
+		},
+		{
+			"id":905,
+			"type":13,
+			"name":"Potion Token",
+			"equipable":false,
+			"description":"Each token increases the max carry amount of potions by 1."
+		},
+		{
+			"id":906,
+			"type":13,
+			"name":"Dagger Token",
+			"equipable":false,
+			"description":"Each token increases the max carry amount of daggers by 10."
+		},
+		{
+			"id":907,
+			"type":13,
+			"name":"Rune Bomb Token",
+			"equipable":false,
+			"description":"Each token increases the max carry amount of bombs by 2."
+		},
+		{
+			"id":908,
+			"type":12,
+			"name":"Maya's Core",
+			"equipable":false,
+			"description":"An unique aura emanates from her. Allows interaction with objects around the island that no other person can. <@:LB2>Chance of essence appearing after enemy defeat: <@:STAT_ESSENCECHANCE>%<@:LB2>Range of attraction: <@:STAT_RANGEATTRACT>"
+		},
+		{
+			"id":909,
+			"type":24,
+			"name":"Beach Globe",
+			"equipable":false,
+			"description":"Memorabilia that makes one reminisce about the past. Unlocks its respective door inside the gallery."
+		},
+		{
+			"id":910,
+			"type":24,
+			"name":"Forest Globe",
+			"equipable":false,
+			"description":"Memorabilia that makes one reminisce about the past. Unlocks its respective door inside the gallery."
+		},
+		{
+			"id":911,
+			"type":24,
+			"name":"Castle Globe",
+			"equipable":false,
+			"description":"Memorabilia that makes one reminisce about the past. Unlocks its respective door inside the gallery."
+		},
+		{
+			"id":912,
+			"type":24,
+			"name":"Hill Globe",
+			"equipable":false,
+			"description":"Memorabilia that makes one reminisce about the past. Unlocks its respective door inside the gallery."
+		},
+		{
+			"id":913,
+			"type":24,
+			"name":"City Globe",
+			"equipable":false,
+			"description":"Memorabilia that makes one reminisce about the past. Unlocks its respective door inside the gallery."
+		},
+		{
+			"id":914,
+			"type":24,
+			"name":"Underground Globe",
+			"equipable":false,
+			"description":"Memorabilia that makes one reminisce about the past. Unlocks its respective door inside the gallery."
+		},
+		{
+			"id":915,
+			"type":24,
+			"name":"Swamp Globe",
+			"equipable":false,
+			"description":"Memorabilia that makes one reminisce about the past. Unlocks its respective door inside the gallery."
+		},
+		{
+			"id":916,
+			"type":24,
+			"name":"High-Tech Globe",
+			"equipable":false,
+			"description":"Memorabilia that makes one reminisce about the past. Unlocks its respective door inside the gallery."
+		},
+		{
+			"id":920,
+			"type":12,
+			"name":"Trait: Spicy Pleasure",
+			"equipable":false,
+			"description":"Being damaged by enemies has a chance to increase lust."
+		},
+		{
+			"id":921,
+			"type":12,
+			"name":"Trait: Exposure",
+			"equipable":false,
+			"description":"As lust increases, there is a chance to remove a layer of clothing."
+		},
+		{
+			"id":922,
+			"type":12,
+			"name":"Trait: Deep Arousal",
+			"equipable":false,
+			"description":"Lust will automatically increase over time."
+		},
+		{
+			"id":923,
+			"type":12,
+			"name":"Trait: Nympho",
+			"equipable":false,
+			"description":"Occasionally loses control and submits to lust. Has a chance to ignore damage during sex."
+		},
+		{
+			"id":924,
+			"type":12,
+			"name":"Trait: Vore Whore",
+			"equipable":false,
+			"description":"Lust increases much more during vore events, and it's harder to escape from them."
+		},
+		{
+			"id":9999,
+			"type":16,
+			"name":"Empty Shop Slot",
+			"equipable":false,
+			"description":""
+		}
+	]
+}

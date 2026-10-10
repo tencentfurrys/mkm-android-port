@@ -1,0 +1,177 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fb6d1a888f1f5d3d93a7234158833bb, type: 3}
+  m_Name: 4_City_enemyList
+  m_EditorClassIdentifier:
+  listOfEnemyForGallery:
+  - logicType: 15
+    idNameJSON: 9915
+    displaySprite: {fileID: 21300000, guid: b727bc5c3cf93844ea7cc2b9e3952883, type: 2}
+    customScaleSprite: 0
+    OffsetTPPos: {x: 0, y: 0}
+    enemyPrefab: {fileID: 1709254077376921, guid: a052b2998329eb745a5200f08ac423b3, type: 2}
+    enemyCombo: {fileID: 0}
+    EroVariantID: 1
+    arenaSpawnType: 0
+  - logicType: 14
+    idNameJSON: 9915
+    displaySprite: {fileID: 21300000, guid: 7775813567d98df449e80372ea609b90, type: 2}
+    customScaleSprite: 0
+    OffsetTPPos: {x: 0, y: 0}
+    enemyPrefab: {fileID: 1709254077376921, guid: 8caf8e885ba032c4b8f67295ce905f40, type: 2}
+    enemyCombo: {fileID: 0}
+    EroVariantID: 2
+    arenaSpawnType: 0
+  - logicType: 14
+    idNameJSON: 9915
+    displaySprite: {fileID: 21300000, guid: 9508cee4667f8934b9f5b3cf9b4377a8, type: 2}
+    customScaleSprite: 0
+    OffsetTPPos: {x: 0, y: 0}
+    enemyPrefab: {fileID: 1709254077376921, guid: 8caf8e885ba032c4b8f67295ce905f40, type: 2}
+    enemyCombo: {fileID: 1709254077376921, guid: a052b2998329eb745a5200f08ac423b3, type: 2}
+    EroVariantID: 0
+    arenaSpawnType: 0
+  - logicType: 44
+    idNameJSON: 9916
+    displaySprite: {fileID: 21300000, guid: a33c203fd0179714aac501a7f98717e5, type: 2}
+    customScaleSprite: 0
+    OffsetTPPos: {x: 0, y: 0}
+    enemyPrefab: {fileID: 1709254077376921, guid: 19ce3604df5b1bd43bc1fd0bf4d90ff7, type: 2}
+    enemyCombo: {fileID: 0}
+    EroVariantID: 0
+    arenaSpawnType: 0
+  - logicType: 16
+    idNameJSON: 9917
+    displaySprite: {fileID: 21300000, guid: 3d40844f20c79dc41955546d042f0fce, type: 2}
+    customScaleSprite: 7
+    OffsetTPPos: {x: 0, y: 0.5}
+    enemyPrefab: {fileID: 1709254077376921, guid: 1fcab73a6631e554199f6999fef20cfb, type: 2}
+    enemyCombo: {fileID: 0}
+    EroVariantID: 0
+    arenaSpawnType: 1
+  - logicType: 17
+    idNameJSON: 9918
+    displaySprite: {fileID: 21300000, guid: ce07ee12e0b203c4b84ee450ebcb867e, type: 2}
+    customScaleSprite: 0
+    OffsetTPPos: {x: 0, y: 0}
+    enemyPrefab: {fileID: 1709254077376921, guid: d90d521bbaa50434aa31703c8d565022, type: 2}
+    enemyCombo: {fileID: 0}
+    EroVariantID: 0
+    arenaSpawnType: 0
+  - logicType: 30
+    idNameJSON: 10005
+    displaySprite: {fileID: 21300000, guid: a5bf0a02dbdb5df468c82624e3f3ce7a, type: 2}
+    customScaleSprite: 0
+    OffsetTPPos: {x: 0, y: 0}
+    enemyPrefab: {fileID: 1709254077376921, guid: 7aff76268b68b0b4292acf2cb8e3ae8e, type: 2}
+    enemyCombo: {fileID: 0}
+    EroVariantID: 1
+    arenaSpawnType: 0
+  - logicType: 69
+    idNameJSON: 9949
+    displaySprite: {fileID: 21300000, guid: d3e22f9aeff99564a9b38c02bd10d2b9, type: 2}
+    customScaleSprite: 0
+    OffsetTPPos: {x: 0, y: 0}
+    enemyPrefab: {fileID: 1709254077376921, guid: 21b1117e348f00e46bd6d996c229cdc8, type: 2}
+    enemyCombo: {fileID: 0}
+    EroVariantID: 1
+    arenaSpawnType: 0
+  - logicType: 69
+    idNameJSON: 9949
+    displaySprite: {fileID: 21300000, guid: cb50020e071c98949a5fd40f68a6df87, type: 2}
+    customScaleSprite: 0
+    OffsetTPPos: {x: 0, y: 0}
+    enemyPrefab: {fileID: 1709254077376921, guid: 21b1117e348f00e46bd6d996c229cdc8, type: 2}
+    enemyCombo: {fileID: 0}
+    EroVariantID: 2
+    arenaSpawnType: 0
+  - logicType: 69
+    idNameJSON: 9949
+    displaySprite: {fileID: 21300000, guid: bbf72b60dedaf1849adc269f6fc5ed79, type: 2}
+    customScaleSprite: 0
+    OffsetTPPos: {x: 0, y: 0}
+    enemyPrefab: {fileID: 1709254077376921, guid: 21b1117e348f00e46bd6d996c229cdc8, type: 2}
+    enemyCombo: {fileID: 0}
+    EroVariantID: 3
+    arenaSpawnType: 0
+  - logicType: 70
+    idNameJSON: 9951
+    displaySprite: {fileID: 21300000, guid: dc428d184278fb84c9c928feea5cacda, type: 2}
+    customScaleSprite: 0
+    OffsetTPPos: {x: 0.1, y: 0}
+    enemyPrefab: {fileID: 1709254077376921, guid: 3c9519e347e17fe449718df139482aef, type: 2}
+    enemyCombo: {fileID: 0}
+    EroVariantID: 1
+    arenaSpawnType: 0
+  - logicType: 70
+    idNameJSON: 9951
+    displaySprite: {fileID: 21300000, guid: 15d265ecb26c4374bb72e78f4cac0f00, type: 2}
+    customScaleSprite: 0
+    OffsetTPPos: {x: 0.2, y: 0}
+    enemyPrefab: {fileID: 1709254077376921, guid: 3c9519e347e17fe449718df139482aef, type: 2}
+    enemyCombo: {fileID: 1709254077376921, guid: 3c9519e347e17fe449718df139482aef, type: 2}
+    EroVariantID: 1
+    arenaSpawnType: 0
+  - logicType: 70
+    idNameJSON: 9951
+    displaySprite: {fileID: 21300000, guid: c915fdbee9175534094b3d0c6cfe8803, type: 2}
+    customScaleSprite: 0
+    OffsetTPPos: {x: 0.3, y: 0}
+    enemyPrefab: {fileID: 1709254077376921, guid: 3c9519e347e17fe449718df139482aef, type: 2}
+    enemyCombo: {fileID: 1709254077376921, guid: 3c9519e347e17fe449718df139482aef, type: 2}
+    EroVariantID: 1
+    arenaSpawnType: 0
+  - logicType: 70
+    idNameJSON: 9951
+    displaySprite: {fileID: 21300000, guid: ecb82a472b6e00144a155cb497b09948, type: 2}
+    customScaleSprite: 0
+    OffsetTPPos: {x: 0.4, y: 0}
+    enemyPrefab: {fileID: 1709254077376921, guid: 3c9519e347e17fe449718df139482aef, type: 2}
+    enemyCombo: {fileID: 1709254077376921, guid: 3c9519e347e17fe449718df139482aef, type: 2}
+    EroVariantID: 1
+    arenaSpawnType: 0
+  - logicType: 72
+    idNameJSON: 9953
+    displaySprite: {fileID: 21300000, guid: 6d93b7961d9bdd445a9934a440fb9d28, type: 2}
+    customScaleSprite: 8
+    OffsetTPPos: {x: 0, y: 0}
+    enemyPrefab: {fileID: 1709254077376921, guid: bac3874ec23d23242946ee951625b1c4, type: 2}
+    enemyCombo: {fileID: 0}
+    EroVariantID: 0
+    arenaSpawnType: 0
+  - logicType: 75
+    idNameJSON: 9956
+    displaySprite: {fileID: 21300000, guid: 92ec5e7f17a941f47b9a076e817ae004, type: 2}
+    customScaleSprite: 0
+    OffsetTPPos: {x: 0, y: 0}
+    enemyPrefab: {fileID: 1709254077376921, guid: 505b05c97a176894c8e2e5fc36d2d2e0, type: 2}
+    enemyCombo: {fileID: 0}
+    EroVariantID: 1
+    arenaSpawnType: 0
+  - logicType: 75
+    idNameJSON: 9956
+    displaySprite: {fileID: 21300000, guid: 00e86f9a4bfb45e4799f15393df337ac, type: 2}
+    customScaleSprite: 0
+    OffsetTPPos: {x: 0, y: 0}
+    enemyPrefab: {fileID: 1709254077376921, guid: 505b05c97a176894c8e2e5fc36d2d2e0, type: 2}
+    enemyCombo: {fileID: 0}
+    EroVariantID: 2
+    arenaSpawnType: 0
+  - logicType: 75
+    idNameJSON: 9956
+    displaySprite: {fileID: 21300000, guid: 9ce5d99ef5d2e404b8f809c89863a1fa, type: 2}
+    customScaleSprite: 0
+    OffsetTPPos: {x: 0, y: 0}
+    enemyPrefab: {fileID: 1709254077376921, guid: 505b05c97a176894c8e2e5fc36d2d2e0, type: 2}
+    enemyCombo: {fileID: 0}
+    EroVariantID: 3
+    arenaSpawnType: 0

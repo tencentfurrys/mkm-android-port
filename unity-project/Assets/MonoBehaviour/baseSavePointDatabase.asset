@@ -1,0 +1,207 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f0bfa6fd6034e9200af462b3d592085, type: 3}
+  m_Name: baseSavePointDatabase
+  m_EditorClassIdentifier:
+  databaseOfSavePoint:
+  - sceneGroup: 0
+    sceneName: Stage0-Dungeon
+    idSavePoint: 2
+    typeOfPiece: 4
+    positionOfPiece: {x: -50.5, y: 6.5}
+  - sceneGroup: 1
+    sceneName: Stage1-Forest
+    idSavePoint: 3
+    typeOfPiece: 0
+    positionOfPiece: {x: 199.5, y: 2.5}
+  - sceneGroup: 1
+    sceneName: Stage1-Forest-part2
+    idSavePoint: 4
+    typeOfPiece: 1
+    positionOfPiece: {x: 247.5, y: 3.5}
+  - sceneGroup: 2
+    sceneName: Stage2-Beach-Part2
+    idSavePoint: 5
+    typeOfPiece: 2
+    positionOfPiece: {x: -172.5, y: 7.5}
+  - sceneGroup: 2
+    sceneName: Stage2-Beach-Part2
+    idSavePoint: 6
+    typeOfPiece: 1
+    positionOfPiece: {x: -457.5, y: 2.5}
+  - sceneGroup: 3
+    sceneName: Stage3-Valley
+    idSavePoint: 7
+    typeOfPiece: 0
+    positionOfPiece: {x: 193.5, y: 11.5}
+  - sceneGroup: 3
+    sceneName: Stage3-Valley
+    idSavePoint: 8
+    typeOfPiece: 1
+    positionOfPiece: {x: 435.5, y: 11.5}
+  - sceneGroup: 3
+    sceneName: Stage3-Valley-part2
+    idSavePoint: 9
+    typeOfPiece: 0
+    positionOfPiece: {x: 107.5, y: 34.5}
+  - sceneGroup: 3
+    sceneName: Stage3-Valley-part2
+    idSavePoint: 10
+    typeOfPiece: 2
+    positionOfPiece: {x: 373.5, y: 8.5}
+  - sceneGroup: 4
+    sceneName: Stage4-City
+    idSavePoint: 11
+    typeOfPiece: 3
+    positionOfPiece: {x: 106.5, y: 1.5}
+  - sceneGroup: 4
+    sceneName: Stage4-City-part2
+    idSavePoint: 12
+    typeOfPiece: 2
+    positionOfPiece: {x: -107.5, y: 3.5}
+  - sceneGroup: 2
+    sceneName: Stage2-Beach
+    idSavePoint: 1
+    typeOfPiece: 0
+    positionOfPiece: {x: 272.5, y: 1.5}
+  - sceneGroup: 5
+    sceneName: Stage5-Cave1
+    idSavePoint: 13
+    typeOfPiece: 1
+    positionOfPiece: {x: -37, y: 23.5}
+  - sceneGroup: 5
+    sceneName: Stage5-Cave2
+    idSavePoint: 14
+    typeOfPiece: 2
+    positionOfPiece: {x: -303.5, y: 3.5}
+  - sceneGroup: 5
+    sceneName: Stage5-Cave3
+    idSavePoint: 15
+    typeOfPiece: 3
+    positionOfPiece: {x: 224.5, y: 142.5}
+  - sceneGroup: 6
+    sceneName: Stage6-1-Swamp
+    idSavePoint: 16
+    typeOfPiece: 0
+    positionOfPiece: {x: 306, y: 7.5}
+  - sceneGroup: 6
+    sceneName: Stage6-2-Gardens
+    idSavePoint: 17
+    typeOfPiece: 3
+    positionOfPiece: {x: 187.5, y: 8.5}
+  - sceneGroup: 4
+    sceneName: Stage4-City-part2
+    idSavePoint: 18
+    typeOfPiece: 1
+    positionOfPiece: {x: 174.5, y: 19.5}
+  - sceneGroup: 0
+    sceneName: Stage0-UpperFloors
+    idSavePoint: 19
+    typeOfPiece: 3
+    positionOfPiece: {x: -30.5, y: 48.5}
+  - sceneGroup: 0
+    sceneName: Stage0-xActualDungeon
+    idSavePoint: 20
+    typeOfPiece: 1
+    positionOfPiece: {x: -11.5, y: -61.5}
+  - sceneGroup: 7
+    sceneName: Stage7-HighTech_A
+    idSavePoint: 21
+    typeOfPiece: 5
+    positionOfPiece: {x: 208.5, y: 41.5}
+  - sceneGroup: 7
+    sceneName: Stage7-HighTech_A
+    idSavePoint: 22
+    typeOfPiece: 5
+    positionOfPiece: {x: 386.5, y: 9.5}
+  - sceneGroup: 7
+    sceneName: Stage7-HighTech_C
+    idSavePoint: 23
+    typeOfPiece: 5
+    positionOfPiece: {x: 196.5, y: -38.5}
+  - sceneGroup: 7
+    sceneName: Stage7-HighTech_C
+    idSavePoint: 24
+    typeOfPiece: 5
+    positionOfPiece: {x: 399, y: -75.5}
+  - sceneGroup: 7
+    sceneName: Stage7-HighTech_C
+    idSavePoint: 25
+    typeOfPiece: 5
+    positionOfPiece: {x: 102.5, y: 34.5}
+  - sceneGroup: 0
+    sceneName: AnimGallery
+    idSavePoint: 26
+    typeOfPiece: 4
+    positionOfPiece: {x: 0, y: -0.5}
+  - sceneGroup: 0
+    sceneName: Stage0-UpperFloors
+    idSavePoint: 27
+    typeOfPiece: 0
+    positionOfPiece: {x: -43.5, y: 0.5}
+  databaseOfScreenshots:
+  - idSavePoint: 0
+    imageScreenshot: {fileID: 21300000, guid: 0561bf22b04a2c34da5611a789b73419, type: 2}
+  - idSavePoint: 1
+    imageScreenshot: {fileID: 21300000, guid: f2f80b470340085448a864cd15c7437a, type: 2}
+  - idSavePoint: 2
+    imageScreenshot: {fileID: 21300000, guid: fff8d302a3f17c241aa7a69d70e48d82, type: 2}
+  - idSavePoint: 3
+    imageScreenshot: {fileID: 21300000, guid: cc8f7235dfa289342a4c48b4952e80dc, type: 2}
+  - idSavePoint: 4
+    imageScreenshot: {fileID: 21300000, guid: 2e28815db17a3cd4c9a4383bb1677e9c, type: 2}
+  - idSavePoint: 5
+    imageScreenshot: {fileID: 21300000, guid: 59402ff822ee0ff458fd8f875f8c66fa, type: 2}
+  - idSavePoint: 6
+    imageScreenshot: {fileID: 21300000, guid: 8d99c1efb0843a446893c11c959f8f0e, type: 2}
+  - idSavePoint: 7
+    imageScreenshot: {fileID: 21300000, guid: 6730bf0989b41204194ad221fd130c3e, type: 2}
+  - idSavePoint: 8
+    imageScreenshot: {fileID: 21300000, guid: fe63fab451cce2e4fbe7138493640e21, type: 2}
+  - idSavePoint: 9
+    imageScreenshot: {fileID: 21300000, guid: 99f7ba7bc75ced54fab219c3d4c2879c, type: 2}
+  - idSavePoint: 10
+    imageScreenshot: {fileID: 21300000, guid: 63254716d8f8ffc42816e7764838ea05, type: 2}
+  - idSavePoint: 11
+    imageScreenshot: {fileID: 21300000, guid: 9fa9443ab879cb746909eb2453bb6d63, type: 2}
+  - idSavePoint: 12
+    imageScreenshot: {fileID: 21300000, guid: 1291f255d95c8094e8f93d1de6948de4, type: 2}
+  - idSavePoint: 13
+    imageScreenshot: {fileID: 21300000, guid: 881c9b0832340c14c9971120a9d33f39, type: 2}
+  - idSavePoint: 14
+    imageScreenshot: {fileID: 21300000, guid: b44ddecf74f93d0459ed241c62f0f3c8, type: 2}
+  - idSavePoint: 15
+    imageScreenshot: {fileID: 21300000, guid: ef10df566aeffaf4195ad2a142eeab1e, type: 2}
+  - idSavePoint: 16
+    imageScreenshot: {fileID: 21300000, guid: c0f505214e0d0fd4f85cf3706a1caf17, type: 2}
+  - idSavePoint: 17
+    imageScreenshot: {fileID: 21300000, guid: bdd5333ec8cdc2940b8d2b77fc827333, type: 2}
+  - idSavePoint: 18
+    imageScreenshot: {fileID: 21300000, guid: 91f1f1cdf946d2d4499489aace9cfd5f, type: 2}
+  - idSavePoint: 19
+    imageScreenshot: {fileID: 21300000, guid: 6da5ca1965e1265409bfe0a62f531e64, type: 2}
+  - idSavePoint: 20
+    imageScreenshot: {fileID: 21300000, guid: 9a1e06cdd0c8cc34eb2632801aab9cd6, type: 2}
+  - idSavePoint: 21
+    imageScreenshot: {fileID: 21300000, guid: cfaa80c4cb5dcea45a4eca9c7cfe9bda, type: 2}
+  - idSavePoint: 22
+    imageScreenshot: {fileID: 21300000, guid: 0878d9c47e1e2f34184af7dab847c6b2, type: 2}
+  - idSavePoint: 23
+    imageScreenshot: {fileID: 21300000, guid: 2e07d86e5c3a2f14fb1d7305cf4d318e, type: 2}
+  - idSavePoint: 24
+    imageScreenshot: {fileID: 21300000, guid: d2dfbc150af5476428913a8d76bc31cd, type: 2}
+  - idSavePoint: 25
+    imageScreenshot: {fileID: 21300000, guid: 729e24aa412d11748877bfaa2de32ec7, type: 2}
+  - idSavePoint: 26
+    imageScreenshot: {fileID: 21300000, guid: 1f29439ed6a60f9409741c8dfdbd2cde, type: 2}
+  - idSavePoint: 27
+    imageScreenshot: {fileID: 21300000, guid: ea40482524e5bb74cba2ceb6d322c9eb, type: 2}

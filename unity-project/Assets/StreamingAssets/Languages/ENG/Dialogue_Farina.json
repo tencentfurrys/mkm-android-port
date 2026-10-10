@@ -1,0 +1,294 @@
+{
+	"listOfDialogue":
+	[
+		{
+			"id":1,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":13,"whichACT":2}],
+			"soundList":[],
+			"letterTone":13,
+			"cameraMovement":{"x":0.0,"y":-0.5},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.95,"g":0.75,"b":0.2,"a":1.0},
+			"speakerName":"Farina",
+			"speakerDialogue":"Miss Maya! Oh, I'm so glad that you're safe and sound!",
+			"miscText":""
+		},
+		{
+			"id":900,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":13,"whichACT":10}],
+			"soundList":[],
+			"letterTone":13,
+			"cameraMovement":{"x":0.0,"y":-0.5},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.95,"g":0.75,"b":0.2,"a":1.0},
+			"speakerName":"Farina",
+			"speakerDialogue":"Let me heal your wounds.",
+			"miscText":""
+		},
+		{
+			"id":900,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":13,"whichACT":10}],
+			"soundList":[],
+			"letterTone":13,
+			"cameraMovement":{"x":0.0,"y":-0.5},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.95,"g":0.75,"b":0.2,"a":1.0},
+			"speakerName":"Farina",
+			"speakerDialogue":"I'll make you feel better.",
+			"miscText":""
+		},
+		{
+			"id":900,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":13,"whichACT":10}],
+			"soundList":[],"letterTone":13,
+			"cameraMovement":{"x":0.0,"y":-0.5},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.95,"g":0.75,"b":0.2,"a":1.0},
+			"speakerName":"Farina",
+			"speakerDialogue":"Taking care of you is my duty, Miss Maya.",
+			"miscText":""
+		},
+		{
+			"id":901,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":13,"whichACT":2}],
+			"soundList":[],"letterTone":13,
+			"cameraMovement":{"x":0.0,"y":-0.5},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.95,"g":0.75,"b":0.2,"a":1.0},
+			"speakerName":"Farina",
+			"speakerDialogue":"Your clothes are in good shape.",
+			"miscText":""
+		},
+		{
+			"id":99999,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":13,"whichACT":2}],
+			"soundList":[],"letterTone":13,
+			"cameraMovement":{"x":0.0,"y":-0.5},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.95,"g":0.75,"b":0.2,"a":1.0},
+			"speakerName":"Farina",
+			"speakerDialogue":"Miss Maya, how can I serve you?",
+			"miscText":""
+		},
+		{
+			"id":99999,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":13,"whichACT":2}],
+			"soundList":[],"letterTone":13,
+			"cameraMovement":{"x":0.0,"y":-0.5},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.95,"g":0.75,"b":0.2,"a":1.0},
+			"speakerName":"Farina",
+			"speakerDialogue":"Welcome back!",
+			"miscText":""
+		},
+		{
+			"id":99999,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":13,"whichACT":2}],
+			"soundList":[],"letterTone":13,
+			"cameraMovement":{"x":0.0,"y":-0.5},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.95,"g":0.75,"b":0.2,"a":1.0},
+			"speakerName":"Farina",
+			"speakerDialogue":"I will help you in any way I can.",
+			"miscText":""
+		},
+		{
+			"id":100000,
+			"actionList":[{"whoID":1,"whichACT":2},{"whoID":13,"whichACT":0}],
+			"soundList":[],"letterTone":1,
+			"cameraMovement":{"x":0.0,"y":-0.5},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"So are we really stuck on an island?",
+			"miscText":"Arrival on the island"
+		},
+		{
+			"id":100000,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":13,"whichACT":2}],
+			"soundList":[],"letterTone":13,
+			"cameraMovement":{"x":0.0,"y":-0.5},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.95,"g":0.75,"b":0.2,"a":1.0},
+			"speakerName":"Farina",
+			"speakerDialogue":"Yes. I've found some maps here that confirm this.<@:LINE_BREAK>What's more, coincidence or not, this seems to be our intended original destination!",
+			"miscText":"Arrival on the island"
+		},
+		{
+			"id":100000,
+			"actionList":[{"whoID":1,"whichACT":2},{"whoID":13,"whichACT":0}],
+			"soundList":[],"letterTone":1,
+			"cameraMovement":{"x":0.0,"y":-0.5},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"Really?! So this is the... what's the name?",
+			"miscText":"Arrival on the island"
+		},
+		{
+			"id":100000,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":13,"whichACT":2}],
+			"soundList":[],"letterTone":13,
+			"cameraMovement":{"x":0.0,"y":-0.5},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.95,"g":0.75,"b":0.2,"a":1.0},
+			"speakerName":"Farina",
+			"speakerDialogue":"The sailors called it 'The Island of Dread', but the bishop called it 'The Summer Isle'. That name matches with the ancient maps that I've found around here.",
+			"miscText":"Arrival on the island"
+		},
+		{
+			"id":100000,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":13,"whichACT":2}],
+			"soundList":[],"letterTone":13,
+			"cameraMovement":{"x":0.0,"y":-0.5},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.95,"g":0.75,"b":0.2,"a":1.0},
+			"speakerName":"Farina",
+			"speakerDialogue":"This means that the artifact that you were tasked with finding has to be somewhere on this island!",
+			"miscText":"Arrival on the island"
+		},
+		{
+			"id":100001,
+			"actionList":[{"whoID":1,"whichACT":2},{"whoID":13,"whichACT":0}],
+			"soundList":[],"letterTone":1,
+			"cameraMovement":{"x":0.0,"y":-0.5},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"Okay, so we are on the right place. But what do we do now?",
+			"miscText":"Plan of Action"
+		},
+		{
+			"id":100001,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":13,"whichACT":2}],
+			"soundList":[],"letterTone":13,
+			"cameraMovement":{"x":0.0,"y":-0.5},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.95,"g":0.75,"b":0.2,"a":1.0},
+			"speakerName":"Farina",
+			"speakerDialogue":"I'm not as strong as you to survive out there Miss Maya, and this library seems safe enough, so I'll stay here and research these books for more information.",
+			"miscText":"Plan of Action"
+		},
+		{
+			"id":100001,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":13,"whichACT":2}],
+			"soundList":[],"letterTone":13,
+			"cameraMovement":{"x":0.0,"y":-0.5},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.95,"g":0.75,"b":0.2,"a":1.0},
+			"speakerName":"Farina",
+			"speakerDialogue":"We do need to learn more about this island as a whole, and I'll see if I can find clues as to where the artifact might be located.",
+			"miscText":"Plan of Action"
+		},
+		{
+			"id":100001,
+			"actionList":[{"whoID":1,"whichACT":2},{"whoID":13,"whichACT":0}],
+			"soundList":[],"letterTone":1,
+			"cameraMovement":{"x":0.0,"y":-0.5},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"Yeah, I'll leave the tome diving up to you; I'm not good with them anyways.",
+			"miscText":"Plan of Action"
+		},
+		{
+			"id":100001,
+			"actionList":[{"whoID":1,"whichACT":2},{"whoID":13,"whichACT":0}],
+			"soundList":[],"letterTone":1,
+			"cameraMovement":{"x":0.0,"y":-0.5},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"I'll explore around the castle to see what I can find.",
+			"miscText":"Plan of Action"
+		},
+		{
+			"id":100001,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":13,"whichACT":2}],
+			"soundList":[],"letterTone":13,
+			"cameraMovement":{"x":0.0,"y":-0.5},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.95,"g":0.75,"b":0.2,"a":1.0},
+			"speakerName":"Farina",
+			"speakerDialogue":"As much as I don't want to put you in any more danger... Yes, I agree that it's a good idea for us to scout our surroundings. I saw an exit leading into a forest on the ground floor, so that could be a good start.",
+			"miscText":"Plan of Action"
+		},
+		{
+			"id":100001,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":13,"whichACT":2}],
+			"soundList":[],"letterTone":13,
+			"cameraMovement":{"x":0.0,"y":-0.5},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.95,"g":0.75,"b":0.2,"a":1.0},
+			"speakerName":"Farina",
+			"speakerDialogue":"Oh and if you haven't already, speak with the witch downstairs; she was living here before us, so she might be able to help us.",
+			"miscText":"Plan of Action"
+		},
+		{
+			"id":100001,
+			"actionList":[{"whoID":1,"whichACT":5},{"whoID":13,"whichACT":0}],
+			"soundList":[],"letterTone":1,
+			"cameraMovement":{"x":0.0,"y":-0.5},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"Alright! Ah, this is so exciting!<@:LINE_BREAK>My first real adventure!",
+			"miscText":"Arrival on the island"
+		},
+		{
+			"id":100002,
+			"actionList":[{"whoID":1,"whichACT":2},{"whoID":13,"whichACT":0}],
+			"soundList":[],"letterTone":1,
+			"cameraMovement":{"x":0.0,"y":-0.5},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"I've defeated the plant mommy, but I can't continue because of a locked gate!",
+			"miscText":"Forest to Coast"
+		},
+		{
+			"id":100002,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":13,"whichACT":2}],
+			"soundList":[],"letterTone":13,
+			"cameraMovement":{"x":0.0,"y":-0.5},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.95,"g":0.75,"b":0.2,"a":1.0},
+			"speakerName":"Farina",
+			"speakerDialogue":"I don't think the key is in the forest, otherwise you would have found it by now. But there is a place we haven't searched yet: the far side of the beach.",
+			"miscText":""
+		},
+		{
+			"id":100002,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":13,"whichACT":2}],
+			"soundList":[],"letterTone":13,
+			"cameraMovement":{"x":0.0,"y":-0.5},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.95,"g":0.75,"b":0.2,"a":1.0},
+			"speakerName":"Farina",
+			"speakerDialogue":"You will be able to make the jump over the ocean, now that you have this new speed power. Exit to the left from this castle, then keep moving leftwards until you reach the gap, then jump across it.",
+			"miscText":""
+		},
+		{
+			"id":100002,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":13,"whichACT":2}],
+			"soundList":[],"letterTone":13,
+			"cameraMovement":{"x":0.0,"y":-0.5},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.95,"g":0.75,"b":0.2,"a":1.0},
+			"speakerName":"Farina",
+			"speakerDialogue":"You see, I've discovered a huge pile of shipwrecks there, including our own. I think that's a good place to look for gear and information, as well as where that key could be.",
+			"miscText":""
+		},
+		{
+			"id":100002,
+			"actionList":[{"whoID":1,"whichACT":5},{"whoID":13,"whichACT":0}],
+			"soundList":[],"letterTone":1,
+			"cameraMovement":{"x":0.0,"y":-0.5},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"Alright! Adventuring into the unexplored coast I go!",
+			"miscText":""
+		}
+	]
+}

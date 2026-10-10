@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/_InitialScreen.unity
+    guid: 7db3a16b2f771794fbb317cfe1a6b14c
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: cbc64c0df10a82449a4672c60a74f4a4
+  - enabled: 1
+    path: Assets/Scenes/Intro-Story.unity
+    guid: b528be0ad67086847b097ad17f8d3156
+  - enabled: 1
+    path: Assets/Scenes/DebugRoom.unity
+    guid: ffdad8955fb7969449a612303360d583
+  - enabled: 1
+    path: Assets/Scenes/AnimGallery.unity
+    guid: ca2b0edae4843ef449d4859acb4b7d41
+  - enabled: 1
+    path: Assets/Scenes/Stage0-Dungeon.unity
+    guid: 00728e8991889684ea906cee2f260168
+  - enabled: 1
+    path: Assets/Scenes/Stage0-xActualDungeon.unity
+    guid: 5142486fdc4d8b64fad21791422833a4
+  - enabled: 1
+    path: Assets/Scenes/Stage0-UpperFloors.unity
+    guid: 8a6a14c1057e78a458b0a91437328c5d
+  - enabled: 1
+    path: Assets/Scenes/Stage0-BossChamber.unity
+    guid: dff366dab350ad24ca8aeec6a633d0be
+  - enabled: 1
+    path: Assets/Scenes/Stage1-Forest.unity
+    guid: 865e74ece6ea8d34d957f462471e86e6
+  - enabled: 1
+    path: Assets/Scenes/Stage1-Forest-part2.unity
+    guid: 83056360bd980734ab9addb2a04c1315
+  - enabled: 1
+    path: Assets/Scenes/Stage1-Forest-Boss.unity
+    guid: 85625ce88ee10f84cb03016b0f9ea2d9
+  - enabled: 1
+    path: Assets/Scenes/Stage2-Beach.unity
+    guid: 103008ed697526a43bcfd3e92e49bb1c
+  - enabled: 1
+    path: Assets/Scenes/Stage2-Beach-Part2.unity
+    guid: a32febc5390cfee49b440b00d3bcfc54
+  - enabled: 1
+    path: Assets/Scenes/Stage2-Beach-PartBoss.unity
+    guid: de9ad281778d8414085212579676c183
+  - enabled: 1
+    path: Assets/Scenes/Stage3-Valley.unity
+    guid: 15450b98571e0ae479618cbb8f025e16
+  - enabled: 1
+    path: Assets/Scenes/Stage3-Valley-part2.unity
+    guid: 73dc48735f54d024c8cfc5bf74fa558a
+  - enabled: 1
+    path: Assets/Scenes/Stage3-Valley-partBoss.unity
+    guid: d08ae1def952bb94989d55f8698f72a8
+  - enabled: 1
+    path: Assets/Scenes/Stage4-City.unity
+    guid: 5ea00fefb9c1a084c8f7b2283b7e62ef
+  - enabled: 1
+    path: Assets/Scenes/Stage4-City-part2.unity
+    guid: 814fabb4e7746934ab97b237c9c8ffda
+  - enabled: 1
+    path: Assets/Scenes/Stage4-City-part3Boss.unity
+    guid: 63bf344e13a576040bf034922f30eaf9
+  - enabled: 1
+    path: Assets/Scenes/Stage5-Cave1.unity
+    guid: 1bea0f585031c4f40b233167166a7d40
+  - enabled: 1
+    path: Assets/Scenes/Stage5-Cave2.unity
+    guid: a9a44f2b4737317449b44a349b7a64ea
+  - enabled: 1
+    path: Assets/Scenes/Stage5-Cave3.unity
+    guid: 780f5ba00d7b155439c0f077a200a660
+  - enabled: 1
+    path: Assets/Scenes/Stage5-Cave4BW.unity
+    guid: a3f65ac14862a2a4d8d5451c95123c01
+  - enabled: 1
+    path: Assets/Scenes/Stage5-Cave5BossWitch.unity
+    guid: a3dcc0e52997815469586f968c7fdd9e
+  - enabled: 1
+    path: Assets/Scenes/Stage6-1-Swamp.unity
+    guid: 5fca28b36060d874f9146346358c1d4b
+  - enabled: 1
+    path: Assets/Scenes/Stage6-2-Gardens.unity
+    guid: 95dbd3f14062fbb499d0cab2efbd6550
+  - enabled: 1
+    path: Assets/Scenes/Stage6-3-SwampBoss.unity
+    guid: c8726ac91e507064c8053bd4c9bb8701
+  - enabled: 1
+    path: Assets/Scenes/Stage7-HighTech_A.unity
+    guid: d98c0621a86ec144f816d824a7b793cf
+  - enabled: 1
+    path: Assets/Scenes/Stage7-HighTech_B_Boss.unity
+    guid: f7ecec261970e334c84761feebf9c952
+  - enabled: 1
+    path: Assets/Scenes/Stage7-HighTech_C.unity
+    guid: 0c63c4786d2f68141a7578c245d9ee33
+  - enabled: 1
+    path: Assets/Scenes/Stage7-HighTech_D_FinalBoss.unity
+    guid: 722564c4982b029438ad4f8573531b02
+  m_configObjects: {}

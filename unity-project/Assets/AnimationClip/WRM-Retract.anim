@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WRM-Retract
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_EulerCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_PPtrCurves:
+  - curve:
+    - time: 0
+      value: {fileID: 21300000, guid: d964f0e472e98b94086b4a36f82082fc, type: 2}
+    - time: 0.083333336
+      value: {fileID: 21300000, guid: 7ab89156e6d9ce94baf2226786d52a41, type: 2}
+    - time: 0.16666667
+      value: {fileID: 21300000, guid: 7c4fdcee5e143f4458ade43b3999659f, type: 2}
+    - time: 0.25
+      value: {fileID: 21300000, guid: fd92f1e18d6e5d043b218bf13cf02760, type: 2}
+    - time: 0.3333333
+      value: {fileID: 21300000, guid: 1d4171eda44c69549916f38c50e9b271, type: 2}
+    - time: 0.41666666
+      value: {fileID: 21300000, guid: f851b57bc93dc4f479295087791c0025, type: 2}
+    - time: 0.49999997
+      value: {fileID: 21300000, guid: 1d1030378a2b9bf4e91ddca15650b1e6, type: 2}
+    - time: 0.6666667
+      value: {fileID: 21300000, guid: 1d1030378a2b9bf4e91ddca15650b1e6, type: 2}
+    attribute: m_Sprite
+    path:
+    classID: 212
+    script: {fileID: 0}
+  m_SampleRate: 12
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    pptrCurveMapping:
+    - {fileID: 21300000, guid: d964f0e472e98b94086b4a36f82082fc, type: 2}
+    - {fileID: 21300000, guid: 7ab89156e6d9ce94baf2226786d52a41, type: 2}
+    - {fileID: 21300000, guid: 7c4fdcee5e143f4458ade43b3999659f, type: 2}
+    - {fileID: 21300000, guid: fd92f1e18d6e5d043b218bf13cf02760, type: 2}
+    - {fileID: 21300000, guid: 1d4171eda44c69549916f38c50e9b271, type: 2}
+    - {fileID: 21300000, guid: f851b57bc93dc4f479295087791c0025, type: 2}
+    - {fileID: 21300000, guid: 1d1030378a2b9bf4e91ddca15650b1e6, type: 2}
+    - {fileID: 21300000, guid: 1d1030378a2b9bf4e91ddca15650b1e6, type: 2}
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 0.75
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 1
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_Events:
+  - time: 1E-45
+    functionName: WORMCOLL
+    data:
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 4
+    messageOptions: 0
+  - time: 0.083333336
+    functionName: WORMCOLL
+    data:
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 3
+    messageOptions: 0
+  - time: 0.16666667
+    functionName: WORMCOLL
+    data:
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 2
+    messageOptions: 0
+  - time: 0.25
+    functionName: WORMCOLL
+    data:
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 2
+    messageOptions: 0
+  - time: 0.33333334
+    functionName: WORMCOLL
+    data:
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 1
+    messageOptions: 0
+  - time: 0.41666666
+    functionName: WORMCOLL
+    data:
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 1
+    messageOptions: 0
+  - time: 0.5
+    functionName: WORMCOLL
+    data:
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 1
+    messageOptions: 0
+  - time: 0.5833333
+    functionName: PlayStopChildAnimation
+    data:
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

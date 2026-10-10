@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bafedc0a4c9f93cd307f831717921c6, type: 3}
+  m_Name: baseVisualEffectList
+  m_EditorClassIdentifier:
+  listOfVisualEffects:
+    GenericHit: {fileID: 1709254077376921, guid: 4d22625f437bb3d4386eb6965c18cbd8, type: 2}
+    BasicSwordHit: {fileID: 1709254077376921, guid: 15d162ecc1dc34549b8d7d19754ecdd8, type: 2}
+    SplashWaterEnter: {fileID: 1709254077376921, guid: bd755ab7d85367145b98f7a755b04a7f, type: 2}
+    SplashWaterLeave: {fileID: 1709254077376921, guid: bd755ab7d85367145b98f7a755b04a7f, type: 2}
+    SkillDashCast: {fileID: 1709254077376921, guid: 22dc9ebd31186e04ba9e6022faac9fd9, type: 2}
+    PunchGrabRelease: {fileID: 1709254077376921, guid: c69c62465667b0747abf62d6900211b3, type: 2}
+    ClawRed: {fileID: 1709254077376921, guid: 6df3d8149efe1064bbbea87153f9013a, type: 2}
+    GrabSmokes: {fileID: 1709254077376921, guid: af69697826a7a8e4a83e80df9f500827, type: 2}
+    SmokesGreen: {fileID: 1709254077376921, guid: 3b8c22065cd18c64aabfa75bfe8ea035, type: 2}
+    SporeTransform: {fileID: 1709254077376921, guid: 2179e10e0a81445438e35c76a840b5d5, type: 2}
+    SmallRuneExplosion: {fileID: 1709254077376921, guid: 79591570cec77e24daff69dbc892e3ac, type: 2}
+    HealLife: {fileID: 1709254077376921, guid: 70a7a7cea84424647b3aee753d779bb5, type: 2}
+    HealSpirit: {fileID: 1709254077376921, guid: a3d26df65f64f894b99ed85791a542aa, type: 2}
+    Spit: {fileID: 1709254077376921, guid: 24a30a15a597005478afbef652b8ea69, type: 2}
+    HatchLeft: {fileID: 1709254077376921, guid: dd4187e5e6d869a41b4cdb0f1e2f8040, type: 2}
+    SplashSewerEnter: {fileID: 1709254077376921, guid: 4935134687f232c42af60561906eb729, type: 2}
+    MimicChestTrail: {fileID: 1709254077376921, guid: 48f27ad8e1d3f9340bafbb56472e8ed7, type: 2}
+    SlidingTackleTrail: {fileID: 1709254077376921, guid: e6556d270686b8d4488b26ae5cab06dd, type: 2}
+    GenericPortal: {fileID: 1709254077376921, guid: 4549281aa7fb4224d8294f6d8bb06eb0, type: 2}
+    ChargePower_A: {fileID: 1709254077376921, guid: c962993414ab78349922b90f697240b7, type: 2}
+    ChargePower_B: {fileID: 1709254077376921, guid: ae2dadaa3ea334c48bf4f257f0b4032d, type: 2}
+    ChargePower_C: {fileID: 1709254077376921, guid: 98a7ed336954e9c40ac057e420939238, type: 2}
+    ChargePower_D: {fileID: 1709254077376921, guid: 0af2996fa92b52b448fa36ad7f9aa0dd, type: 2}
+    WerewolfCurse: {fileID: 1709254077376921, guid: df36d60c20c9f894ba036f06f8775c52, type: 2}
+    GhostCast: {fileID: 1709254077376921, guid: db63b1986abe1494db1d3d1484a336a9, type: 2}
+    SplashSwampEnter: {fileID: 1709254077376921, guid: 26e554ece6a730f4d860511d659a3825, type: 2}
+    TentacleTreeProjDead: {fileID: 1709254077376921, guid: eaf8d1a10066f474ca1dbf0129d7a810, type: 2}
+    MayaSkillShield: {fileID: 1709254077376921, guid: f4c5d644216b6464788b7db0b58328cc, type: 2}
+    NotEnoughSPToUseSkill: {fileID: 1709254077376921, guid: a7c41f7c406aeb746802ba5580d2bdfd, type: 2}
+    ShieldBreak: {fileID: 1709254077376921, guid: 6cd0c2c84af15da4cb14c78a324c222b, type: 2}
+    FlameSwordTrail: {fileID: 1709254077376921, guid: ff33a0890dc77524e9ad995072296f56, type: 2}
+    SlashSkillHit: {fileID: 1709254077376921, guid: 868cda57a7e2d7243b99341035c573e4, type: 2}
+    SlashSkillHitPurple: {fileID: 1709254077376921, guid: 049356556fcd32d409f9388d23d27172, type: 2}
+    PickaxEnd: {fileID: 1709254077376921, guid: 9309267d6b959c54f9becbfa1f15f80e, type: 2}
+    RedExplode: {fileID: 1709254077376921, guid: 2094153baa3890e42b0827b650590813, type: 2}
+    UnlockGate: {fileID: 1709254077376921, guid: 202b8994993e73048b30fac21ee1e095, type: 2}
+    Hourglass: {fileID: 1709254077376921, guid: c1288664c55900c4083f12f08477a974, type: 2}
+    SplashWaterEnterDungeon: {fileID: 1709254077376921, guid: d654bf8e04a12a941b3965f12ec80f82, type: 2}
+    IceBreak: {fileID: 1709254077376921, guid: 1848ad5696d7aac49b7c3a935f0ac940, type: 2}
+    IceTrail: {fileID: 1709254077376921, guid: 9b7c39b53d8d3fe439a7bbca30ffc386, type: 2}
+    IceSmoke1: {fileID: 1709254077376921, guid: 80b3ffd34ccce3148852e4c1bf88c7b8, type: 2}
+    PrincessDress: {fileID: 1709254077376921, guid: 70686aa35cc5c9b4f858f890cb5aa781, type: 2}
+    PurpleSlimeBurst: {fileID: 1709254077376921, guid: 869b44a450b3dfa4ea816f073c8611a2, type: 2}
+    PortraitEvil: {fileID: 1709254077376921, guid: b0023ca41c43186429718bcf3aa4d8a3, type: 2}
+    SmokeDigWorm: {fileID: 1709254077376921, guid: 24f26e15f2a9e61419e824721bc8350d, type: 2}
+    RocksDigging: {fileID: 1709254077376921, guid: abd9121eda6af68479b968dd5828dc7b, type: 2}
+    StarsINWARD: {fileID: 1709254077376921, guid: d4a493dd8ee85814c9c689321f74f31c, type: 2}
+    StarsOUTWARD: {fileID: 1709254077376921, guid: 232bc09bf9812a54a8195f64b75b9af5, type: 2}
+    CastingWitch0: {fileID: 1709254077376921, guid: f7009ba1900556e4aa979d2f1ff5f091, type: 2}
+    CastingWitch1: {fileID: 1709254077376921, guid: 9270bbef3c68ce648b9cd3b83716e6ea, type: 2}
+    CastingWitch2: {fileID: 1709254077376921, guid: dc870fbd1a146d644b34351df3613b11, type: 2}
+    CastingWitch3: {fileID: 1709254077376921, guid: d47a61155f2f986418ea3a3c5c7d21dc, type: 2}
+    CastingWitch4: {fileID: 1709254077376921, guid: 5549c155d8e552341b1599e62aabfb6b, type: 2}
+    CastingWitch5: {fileID: 1709254077376921, guid: d49d1884a055524459d60b93f75c8fe7, type: 2}
+    CastingWitch6: {fileID: 1709254077376921, guid: 0cec924376853dd46939f1a756eb417c, type: 2}
+    SmokesPink: {fileID: 1709254077376921, guid: 3f805769615780f479d8eb9b721b5f4c, type: 2}
+    BlueFoxCastShock: {fileID: 1709254077376921, guid: 29211d6c3f424204889065b13ee464b8, type: 2}
+    ChargePower_Blue: {fileID: 1709254077376921, guid: 1cc1c9263686a924c906e7c3331fc36e, type: 2}
+    BlueFoxTPAway: {fileID: 1709254077376921, guid: 7a5362633c9a68d4cae02dfe1581efa8, type: 2}
+    ArmorBreakB: {fileID: 1709254077376921, guid: d10e24655ded8ae4b8247f3511387ed0, type: 2}
+    ArmorBreakC: {fileID: 1709254077376921, guid: 7374abb2df58d9441b9f6f85ced2bf26, type: 2}
+    Petrified2: {fileID: 1709254077376921, guid: 73d5271ebcfe6a44ab76ef055c550b4e, type: 2}
+    JumpSmoke: {fileID: 1709254077376921, guid: 1ac8d15fe4ad28c49b0a5bf2cf15a184, type: 2}
+    playerGroundPound: {fileID: 1709254077376921, guid: e4f2d6f7f2bbb234eb10c937f62f2934, type: 2}
+    GlassShatter: {fileID: 1709254077376921, guid: 2611e5317792b5e4ebc2b4d4da2db496, type: 2}
+    ThrowItem: {fileID: 1709254077376921, guid: 698633737d635cc46b47ef2cb207c1b5, type: 2}
+    playerTeleportStars: {fileID: 1709254077376921, guid: 2bdf1cf5232491344a6e70ade1f4c27e, type: 2}
+    CreamExplosion: {fileID: 1709254077376921, guid: 7b94aefecd66ca14f9a454c5f4cdbf07, type: 2}
+    CreamExplosionPurple: {fileID: 1709254077376921, guid: 1971f3452a916d14f80a1c4527b39504, type: 2}
+    DressStateChange: {fileID: 1709254077376921, guid: d5f30483dd2e93745b776ddb5b43a160, type: 2}
+    PVFXRegenDefenseDurability: {fileID: 1709254077376921, guid: 10c1fc858aa420949aa4a71e77799b8c, type: 2}
+    ExplosionType2: {fileID: 1709254077376921, guid: c421db6cb3376054fa09aaa80889f2af, type: 2}
+    EssenceAbsorb: {fileID: 1709254077376921, guid: ec6574b539740544da23d5cafab529f9, type: 2}
+    EssenceAbsorbWhite: {fileID: 1709254077376921, guid: e942c8493cf71f54988f8603d8359a9e, type: 2}
+    DashATKSlash: {fileID: 1709254077376921, guid: f56f25ffb6795d042972996572008490, type: 2}
+    particleDrinkATK: {fileID: 1709254077376921, guid: e7b473cef10b3d043a3388196b005687, type: 2}
+    particleDrinkDEF: {fileID: 1709254077376921, guid: 3b489705238682947bbf75ff4cca0f4c, type: 2}
+    particleDrinkSPEED: {fileID: 1709254077376921, guid: 7131b6882bb1d3c479752403a8767860, type: 2}
+    particleDrinkREGENSP: {fileID: 1709254077376921, guid: 47f47c35f7e249e41a21e45955cc2c5d, type: 2}
+    particleDrinkREGENLIFE: {fileID: 1709254077376921, guid: c8972e3490b2cb148a6459298c87329c, type: 2}
+    particleFruitSlice: {fileID: 1709254077376921, guid: bf0f5c340eabccf49903f6a597f3951e, type: 2}
+    particleFruitForbidden: {fileID: 1709254077376921, guid: b6c4a4c61e0d08842ba5f9f573c3f4c3, type: 2}
+    particleFruitDistract: {fileID: 1709254077376921, guid: 0603e569dae546548b4c0c642ee37e82, type: 2}
+    particleFruitWarrior: {fileID: 1709254077376921, guid: 46c482e10ff72cb41b683b8c93086474, type: 2}
+    particleHeroMeal: {fileID: 1709254077376921, guid: e7fce75145afd424b810e033c24a20a0, type: 2}
+    ShieldMealInvincible: {fileID: 1709254077376921, guid: 748e45feed5da2947a815f0e3bc4bd42, type: 2}
+    PoisonConstant: {fileID: 1709254077376921, guid: c935e4ccb5dee2246ae96658a04b3c6d, type: 2}
+    PoisonTick: {fileID: 1709254077376921, guid: 0e0363f983c05a242b2d9b641bb40034, type: 2}
+    HackProjectileFlame: {fileID: 1709254077376921, guid: 103d49f8382fe4f42933918810f6d087, type: 2}
+    GainLust: {fileID: 1709254077376921, guid: 85ccce2f511eedf44bfb0a89dffc3422, type: 2}

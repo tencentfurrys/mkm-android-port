@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 823d710113ea794a235dd5427257a79d, type: 3}
+  m_Name: SewerWaterMain
+  m_EditorClassIdentifier:
+  m_AnimatedSprites:
+  - {fileID: 21300000, guid: 0190ff1a563004041b4268bb4f81b688, type: 2}
+  - {fileID: 21300000, guid: dc8b6398e3c3fa545b39551228c672d8, type: 2}
+  - {fileID: 21300000, guid: d7e959d3778942c4b8aa2460cfed2ffe, type: 2}
+  - {fileID: 21300000, guid: 4df575dd4b0052340b4ee19c1f2db98b, type: 2}
+  - {fileID: 21300000, guid: e1e86f1547c72f54ebc4d3d1e2f6e3ad, type: 2}
+  m_MinSpeed: 4
+  m_MaxSpeed: 4
+  m_AnimationStartTime: 0
+  m_TileColliderType: 0

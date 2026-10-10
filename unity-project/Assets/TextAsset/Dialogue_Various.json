@@ -1,0 +1,345 @@
+{
+	"listOfDialogue":
+	[
+		{
+			"id":1,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"It doesn't open... I think it's locked."
+		},
+		{
+			"id":2,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"This armor gives me the creeps!"
+		},
+		{
+			"id":3,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"Hmmm... are those magic symbols? Ugh I always forget what they are actually called. \r\nRubrics, or was it Runacs or something? \r\nAnyways, I wonder who carved those and what do they mean?"
+		},
+		{
+			"id":4,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"Wait a minute! This stone looks very suspicious!! \r\nIt kinda resembles a..."
+		},
+		{
+			"id":4,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"An upside-down hammer, that's it!! \r\nIt looks kinda bulky tough? \r\nI would have to grip it with my entire body due to its girth."
+		},
+		{
+			"id":1001,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"Huh?! What is that?"
+		},
+		{
+			"id":1002,
+			"actionList":[{"whoID":1,"whichACT":2}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"Oh! It's a cute plant!"
+		},
+		{
+			"id":1002,
+			"actionList":[{"whoID":1,"whichACT":4},{"whoID":4,"whichACT":6}],
+			"soundList":[{"whoID":4,"idSound":10}],
+			"cameraMovement":{"x":2.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.25,"g":0.75,"b":0.2,"a":1.0},
+			"speakerName":"Young Mother",
+			"speakerDialogue":"*ZZZ* ...Hmm?"
+		},
+		{
+			"id":1002,
+			"actionList":[{"whoID":4,"whichACT":2}],
+			"soundList":[{"whoID":4,"idSound":14}],
+			"cameraMovement":{"x":2.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.25,"g":0.75,"b":0.2,"a":1.0},
+			"speakerName":"Young Mother",
+			"speakerDialogue":"...Ah! You! \r\nSo it was you then? Very bold of you to come directly to me!"
+		},
+		{
+			"id":1002,
+			"actionList":[{"whoID":1,"whichACT":2}, {"whoID":4,"whichACT":1}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"Excuse me?"
+		},
+		{
+			"id":1002,
+			"actionList":[{"whoID":1,"whichACT":4},{"whoID":4,"whichACT":7}],
+			"soundList":[{"whoID":4,"idSound":2}],
+			"cameraMovement":{"x":2.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.25,"g":0.75,"b":0.2,"a":1.0},
+			"speakerName":"Young Mother",
+			"speakerDialogue":"You naughty girl! I've been sensing my precious trees being cut down by some villain, and then you show up here in my home!"
+		},
+		{
+			"id":1002,
+			"actionList":[{"whoID":1,"whichACT":2},{"whoID":4,"whichACT":1}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"Wait! But I just got here! \r\nI think you're confusing me for someone else!"
+		},
+		{
+			"id":1002,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":4,"whichACT":2}],
+			"soundList":[{"whoID":4,"idSound":6}],
+			"cameraMovement":{"x":2.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.25,"g":0.75,"b":0.2,"a":1.0},
+			"speakerName":"Young Mother",
+			"speakerDialogue":"Trying to trick me eh? You little rascal... \r\nI'm very hungry and I need lots of nutrients to birth new trees... so you'll help by becoming my succulent meal, ok? ♥"
+		},
+		{
+			"id":1003,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"Oh Look! \r\nA treasure chest!"
+		},
+		{
+			"id":1004,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"Hmm... \r\nHello?"
+		},
+		{
+			"id":1004,
+			"actionList":[],
+			"soundList":[],
+			"cameraMovement":{"x":2.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.92,"g":0.61,"b":0.43,"a":1.0},
+			"speakerName":"Nina",
+			"speakerDialogue":"...!"
+		},
+		{
+			"id":1004,
+			"actionList":[{"whoID":5,"whichACT":8}],
+			"soundList":[],
+			"cameraMovement":{"x":2.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.92,"g":0.61,"b":0.43,"a":1.0},
+			"speakerName":"Nina",
+			"speakerDialogue":"Who the hell are you? \r\nAnd how did you get past the hill's bridge?"
+		},
+		{
+			"id":1004,
+			"actionList":[],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"Oh it is a long story... \r\nAnyways, let's fight!"
+		},
+		{
+			"id":1005,
+			"actionList":[{"whoID":1,"whichACT":4}, {"whoID":6,"whichACT":1}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"Oh!"
+		},
+		{
+			"id":1005,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"Excuse me old man, I'm trying to find the exit from these caverns. \r\nCould you help me?"
+		},
+		{
+			"id":1005,
+			"actionList":[{"whoID":6,"whichACT":1}],
+			"soundList":[],
+			"cameraMovement":{"x":2.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.7,"g":0.8,"b":0.7,"a":1.0},
+			"speakerName":"Old man",
+			"speakerDialogue":"..."
+		},
+		{
+			"id":1005,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"Hmm?"
+		},
+		{
+			"id":1006,
+			"actionList":[{"whoID":6,"whichACT":1}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"Hey~ grampa? \r\nCan you hear me~? \r\nI said that I need directions, please!"
+		},
+		{
+			"id":1006,
+			"actionList":[{"whoID":6,"whichACT":1}],
+			"soundList":[],
+			"cameraMovement":{"x":1.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.7,"g":0.8,"b":0.7,"a":1.0},
+			"speakerName":"Old man",
+			"speakerDialogue":"..."
+		},
+		{
+			"id":1006,
+			"actionList":[{"whoID":6,"whichACT":2}],
+			"soundList":[{"whoID":7,"idSound":17}],
+			"cameraMovement":{"x":1.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.7,"g":0.8,"b":0.7,"a":1.0},
+			"speakerName":"Old man",
+			"speakerDialogue":"Goddess... why must you keep torturing me like so?"
+		},
+		{
+			"id":1006,
+			"actionList":[{"whoID":6,"whichACT":2}],
+			"soundList":[],
+			"cameraMovement":{"x":1.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.7,"g":0.8,"b":0.7,"a":1.0},
+			"speakerName":"Old man",
+			"speakerDialogue":"This malediction... is it not enough? \r\nMust you also... haunt me with visages of her?"
+		},
+		{
+			"id":1006,
+			"actionList":[{"whoID":1,"whichACT":4}, {"whoID":6,"whichACT":1}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"Malo-dick what now?! \r\nHeeey old man, you aren't making any sense! \r\nAre you okay?"
+		},
+		{
+			"id":1006,
+			"actionList":[{"whoID":6,"whichACT":6}],
+			"soundList":[],
+			"cameraMovement":{"x":1.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.7,"g":0.8,"b":0.7,"a":1.0},
+			"speakerName":"Old man",
+			"speakerDialogue":"Oh Goddess... this is too much to bear... \r\nAs your light bathes me, I can still vividly hear her voice..."
+		},
+		{
+			"id":1006,
+			"actionList":[{"whoID":6,"whichACT":6}],
+			"soundList":[],
+			"cameraMovement":{"x":1.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.7,"g":0.8,"b":0.7,"a":1.0},
+			"speakerName":"Old man",
+			"speakerDialogue":"I'm your ever loyal servant... \r\nAnd yet this torment perdures for countless moons... \r\nAnd the urge... as I heed your call... it burns... rrrRAAAAAGHH!!!"
+		},
+		{
+			"id":1007,
+			"actionList":[{"whoID":6,"whichACT":10}],
+			"soundList":[{"whoID":6,"idSound":2}],
+			"cameraMovement":{"x":1.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.7,"g":0.8,"b":0.7,"a":1.0},
+			"speakerName":"Werewolf",
+			"speakerDialogue":"Awoooooo!"
+		},
+		{
+			"id":1007,
+			"actionList":[{"whoID":1,"whichACT":4}, {"whoID":6,"whichACT":10}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"Wow! The old man became a big fluffy beast!"
+		},
+		{
+			"id":1007,
+			"actionList":[{"whoID":6,"whichACT":9}],
+			"soundList":[{"whoID":6,"idSound":3}],
+			"cameraMovement":{"x":1.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":0.7,"g":0.8,"b":0.7,"a":1.0},
+			"speakerName":"Werewolf",
+			"speakerDialogue":"Grrrrrrr!"
+		},
+		{
+			"id":1008,
+			"actionList":[{"whoID":1,"whichACT":11}],
+			"soundList":[{"whoID":1,"idSound":9}],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"Awawawawa!!"
+		},
+		{
+			"id":1008,
+			"actionList":[{"whoID":1,"whichACT":6}, {"whoID":6,"whichACT":9}],
+			"soundList":[{"whoID":1,"idSound":8}],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"Ouch... I feel tingly all over... \r\nUrgh, bad doggie, bad! \r\nWell now I'm gonna have to teach you a lesson!"
+		}
+	]
+}

@@ -1,0 +1,215 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 603ed4d1d927fcd726916c0d21444cf4, type: 3}
+  m_Name: baseInputGamepadIconList
+  m_EditorClassIdentifier:
+  iconKeyboard: {fileID: 21300000, guid: 23803d5d97bb47443b8016b58679f1e9, type: 2}
+  iconPSX: {fileID: 21300000, guid: cb6b40ad1b2b1ee45b7e6068e958d2d8, type: 2}
+  iconXBOX: {fileID: 21300000, guid: cfbbd8cecdf73794c83f916feecfc515, type: 2}
+  typePSX:
+  - TranslationID: 800
+    RawKeyCode: W
+    ButtonName: DPad-Up
+    ButtonIcon: {fileID: 21300000, guid: b27dbb5f65ffb084498fc0e4edc0af81, type: 2}
+  - TranslationID: 801
+    RawKeyCode: A
+    ButtonName: DPad-Left
+    ButtonIcon: {fileID: 21300000, guid: f0f0313dbc0388845a8e2e6530a971f8, type: 2}
+  - TranslationID: 802
+    RawKeyCode: S
+    ButtonName: DPad-Down
+    ButtonIcon: {fileID: 21300000, guid: 8b9493ec741c42a41a0becb84c92147b, type: 2}
+  - TranslationID: 803
+    RawKeyCode: D
+    ButtonName: DPad-Right
+    ButtonIcon: {fileID: 21300000, guid: c705ea920c1221f4daee7ab75aae9e5b, type: 2}
+  - TranslationID: 804
+    RawKeyCode: T
+    ButtonName: LeftStick-Up
+    ButtonIcon: {fileID: 21300000, guid: b183a15e374bd8246b74f1ef2329d950, type: 2}
+  - TranslationID: 805
+    RawKeyCode: F
+    ButtonName: LeftStick-Left
+    ButtonIcon: {fileID: 21300000, guid: 424f8b2c1c176b640b124807b15a0207, type: 2}
+  - TranslationID: 806
+    RawKeyCode: G
+    ButtonName: LeftStick-Down
+    ButtonIcon: {fileID: 21300000, guid: c636961402aa8ee498db194a87ce71ec, type: 2}
+  - TranslationID: 807
+    RawKeyCode: H
+    ButtonName: LeftStick-Right
+    ButtonIcon: {fileID: 21300000, guid: c51a4624c1dc646488afa722cd5f9bfe, type: 2}
+  - TranslationID: 808
+    RawKeyCode: I
+    ButtonName: RightStick-Up
+    ButtonIcon: {fileID: 21300000, guid: 46469fabd16538a47be1ed597069e4d2, type: 2}
+  - TranslationID: 809
+    RawKeyCode: J
+    ButtonName: RightStick-Left
+    ButtonIcon: {fileID: 21300000, guid: 18da75233fc8a324c96d447b92cfefd2, type: 2}
+  - TranslationID: 810
+    RawKeyCode: K
+    ButtonName: RightStick-Down
+    ButtonIcon: {fileID: 21300000, guid: a8dda02f1a645d5439e1e84aa7a9b848, type: 2}
+  - TranslationID: 811
+    RawKeyCode: L
+    ButtonName: RightStick-Right
+    ButtonIcon: {fileID: 21300000, guid: 7f0fdc81162ecff4d9e75095326c8843, type: 2}
+  - TranslationID: 812
+    RawKeyCode: JoystickButton0
+    ButtonName: Square
+    ButtonIcon: {fileID: 21300000, guid: dc1216ad2bd90d74987a739543c26830, type: 2}
+  - TranslationID: 813
+    RawKeyCode: JoystickButton1
+    ButtonName: X
+    ButtonIcon: {fileID: 21300000, guid: ac88e0d67674b344c938eb8771335be3, type: 2}
+  - TranslationID: 814
+    RawKeyCode: JoystickButton2
+    ButtonName: Circle
+    ButtonIcon: {fileID: 21300000, guid: 886daeecc2759084ebfbf152c4cb0316, type: 2}
+  - TranslationID: 815
+    RawKeyCode: JoystickButton3
+    ButtonName: Triangle
+    ButtonIcon: {fileID: 21300000, guid: 796bc40a06fb3594690c4b60d75289e6, type: 2}
+  - TranslationID: 816
+    RawKeyCode: JoystickButton4
+    ButtonName: L1
+    ButtonIcon: {fileID: 21300000, guid: cd042038dd1932a4db739105555c0e14, type: 2}
+  - TranslationID: 817
+    RawKeyCode: JoystickButton5
+    ButtonName: R1
+    ButtonIcon: {fileID: 21300000, guid: 82b4b9f243d06ca4f951bdbf0a66ad32, type: 2}
+  - TranslationID: 818
+    RawKeyCode: JoystickButton6
+    ButtonName: L2
+    ButtonIcon: {fileID: 21300000, guid: 2ff72a051b6f6684eb5b9397f41203c0, type: 2}
+  - TranslationID: 819
+    RawKeyCode: JoystickButton7
+    ButtonName: R2
+    ButtonIcon: {fileID: 21300000, guid: a9927d72bbf1ebb40a093134086675ee, type: 2}
+  - TranslationID: 820
+    RawKeyCode: JoystickButton8
+    ButtonName: Share
+    ButtonIcon: {fileID: 21300000, guid: 8cbfe0072ddef8541a6ad2694d37891d, type: 2}
+  - TranslationID: 821
+    RawKeyCode: JoystickButton9
+    ButtonName: Options
+    ButtonIcon: {fileID: 21300000, guid: 113a7eacfbf071a43b65ad2103548c1d, type: 2}
+  - TranslationID: 822
+    RawKeyCode: JoystickButton10
+    ButtonName: L3
+    ButtonIcon: {fileID: 21300000, guid: 2fff2c1f53a0f8e459997f52cb6308e8, type: 2}
+  - TranslationID: 823
+    RawKeyCode: JoystickButton11
+    ButtonName: R3
+    ButtonIcon: {fileID: 21300000, guid: a7e9d79066d8f724e825b229768bf928, type: 2}
+  - TranslationID: 824
+    RawKeyCode: JoystickButton13
+    ButtonName: Touchpad
+    ButtonIcon: {fileID: 21300000, guid: b774e8ed28ea4cf4a8710baf2019c041, type: 2}
+  typeXBOX:
+  - TranslationID: 800
+    RawKeyCode: W
+    ButtonName: Dpad-Up
+    ButtonIcon: {fileID: 21300000, guid: f35511ea4ae270947a523c518ed3de92, type: 2}
+  - TranslationID: 801
+    RawKeyCode: A
+    ButtonName: DPad-Left
+    ButtonIcon: {fileID: 21300000, guid: 2b3dfcae679c3b5409d13425c19e4ee1, type: 2}
+  - TranslationID: 802
+    RawKeyCode: S
+    ButtonName: DPad-Down
+    ButtonIcon: {fileID: 21300000, guid: 88c31ce51e66eb34c87e208022edf15b, type: 2}
+  - TranslationID: 803
+    RawKeyCode: D
+    ButtonName: DPad-Right
+    ButtonIcon: {fileID: 21300000, guid: 9e6f7406ea1147e4583862fca4aeb94f, type: 2}
+  - TranslationID: 804
+    RawKeyCode: T
+    ButtonName: LeftStick-Up
+    ButtonIcon: {fileID: 21300000, guid: c7f1c01ee44e2d645ac065775a2963a4, type: 2}
+  - TranslationID: 805
+    RawKeyCode: F
+    ButtonName: LeftStick-Left
+    ButtonIcon: {fileID: 21300000, guid: 1e074486d91ac074ea99bee48ba73f3c, type: 2}
+  - TranslationID: 806
+    RawKeyCode: G
+    ButtonName: LeftStick-Down
+    ButtonIcon: {fileID: 21300000, guid: 89a2d268c4948ef428dca18a165e89d2, type: 2}
+  - TranslationID: 807
+    RawKeyCode: H
+    ButtonName: LeftStick-Right
+    ButtonIcon: {fileID: 21300000, guid: 896a4d6d23ed0254fbb76c65ed531e28, type: 2}
+  - TranslationID: 808
+    RawKeyCode: I
+    ButtonName: RightStick-Up
+    ButtonIcon: {fileID: 21300000, guid: aca741c1f176db540a6ee20f6ded4902, type: 2}
+  - TranslationID: 809
+    RawKeyCode: J
+    ButtonName: RightStick-Left
+    ButtonIcon: {fileID: 21300000, guid: 502eff83fd44fb449ab1a063d9bd0ecb, type: 2}
+  - TranslationID: 810
+    RawKeyCode: K
+    ButtonName: RightStick-Down
+    ButtonIcon: {fileID: 21300000, guid: ddd470b2b7279f449abd955713875d12, type: 2}
+  - TranslationID: 811
+    RawKeyCode: L
+    ButtonName: RightStick-Right
+    ButtonIcon: {fileID: 21300000, guid: 5b487d05c4218af4985ce784d1ccbdff, type: 2}
+  - TranslationID: 825
+    RawKeyCode: JoystickButton0
+    ButtonName: A
+    ButtonIcon: {fileID: 21300000, guid: c0859932f55eee64b93ffd9f4f925b75, type: 2}
+  - TranslationID: 826
+    RawKeyCode: JoystickButton1
+    ButtonName: B
+    ButtonIcon: {fileID: 21300000, guid: 55d1d59a2b68eb948934f1c96c6824f3, type: 2}
+  - TranslationID: 813
+    RawKeyCode: JoystickButton2
+    ButtonName: X
+    ButtonIcon: {fileID: 21300000, guid: b18fce0ec7965b848a3d6a3358f80a82, type: 2}
+  - TranslationID: 827
+    RawKeyCode: JoystickButton3
+    ButtonName: Y
+    ButtonIcon: {fileID: 21300000, guid: 875836654c79d60479044eceda99215d, type: 2}
+  - TranslationID: 828
+    RawKeyCode: JoystickButton4
+    ButtonName: LeftBumper
+    ButtonIcon: {fileID: 21300000, guid: 199e3eeb6d4686744ae16e80f2ef3957, type: 2}
+  - TranslationID: 829
+    RawKeyCode: JoystickButton5
+    ButtonName: RightBumper
+    ButtonIcon: {fileID: 21300000, guid: 8320acfe8835b204db97dc3bfcd2c482, type: 2}
+  - TranslationID: 830
+    RawKeyCode: Y
+    ButtonName: LeftTrigger
+    ButtonIcon: {fileID: 21300000, guid: 3fee38411b7fd0a46a6042c685a64929, type: 2}
+  - TranslationID: 831
+    RawKeyCode: U
+    ButtonName: RightTrigger
+    ButtonIcon: {fileID: 21300000, guid: bedecdc19baf9494ca4211021d340594, type: 2}
+  - TranslationID: 832
+    RawKeyCode: JoystickButton6
+    ButtonName: Back
+    ButtonIcon: {fileID: 21300000, guid: cf98c9a26c5cf2144b7d94af8a2603a8, type: 2}
+  - TranslationID: 833
+    RawKeyCode: JoystickButton7
+    ButtonName: Start
+    ButtonIcon: {fileID: 21300000, guid: 08791162fd68b8542944e0c925df39b6, type: 2}
+  - TranslationID: 834
+    RawKeyCode: JoystickButton8
+    ButtonName: LeftStickButton
+    ButtonIcon: {fileID: 21300000, guid: ff2e8205a10552e48bb74eb1bd1a73d1, type: 2}
+  - TranslationID: 835
+    RawKeyCode: JoystickButton9
+    ButtonName: RightStickButton
+    ButtonIcon: {fileID: 21300000, guid: bc880745946d803498fb09566dd8e18b, type: 2}

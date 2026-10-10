@@ -1,0 +1,155 @@
+{
+	"listOfDialogue":
+	[
+		{
+			"id":1,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":3,"whichACT":2}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.65,"b":0.85,"a":1.0},
+			"speakerName":"Haruna",
+			"speakerDialogue":"Hello and welcome to my amazing shop!!"
+		},
+		{
+			"id":1,
+			"actionList":[{"whoID":1,"whichACT":2},{"whoID":3,"whichACT":0}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"Hi! \r\nPlease, could you help me? I'm lost and I need some inform-"
+		},
+		{
+			"id":1,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":3,"whichACT":2}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.65,"b":0.85,"a":1.0},
+			"speakerName":"Haruna",
+			"speakerDialogue":"You're so unlucky tough! \r\nYou see, at the moment my shop is closed. \r\nI know I know, you've travelled all the way here just to shop at the bestest shop in the world and yet..."
+		},
+		{
+			"id":1,
+			"actionList":[],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.65,"b":0.85,"a":1.0},
+			"speakerName":"Haruna",
+			"speakerDialogue":"It can't be helped. \r\nYou're gonna have to hold on to your panties and wait. \r\nI mean, this world version is only a demo after all."
+		},
+		{
+			"id":1,
+			"actionList":[{"whoID":1,"whichACT":2},{"whoID":3,"whichACT":0}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"Demo... what?! \r\nI just want some directions and-"
+		},
+		{
+			"id":1,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":3,"whichACT":2}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.65,"b":0.85,"a":1.0},
+			"speakerName":"Haruna",
+			"speakerDialogue":"Now shush! Away with you sweetie. \r\nGo explore some new places, make some friends or I dunno... whatever you kids do these days."
+		},
+		{
+			"id":1,
+			"actionList":[{"whoID":1,"whichACT":6},{"whoID":3,"whichACT":0}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.15,"b":0.15,"a":1.0},
+			"speakerName":"Maya",
+			"speakerDialogue":"(mumbling) Hmmmrg... I'm not your sweetie... (>_<╬)"
+		},
+		{
+			"id":90001,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":3,"whichACT":2}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.65,"b":0.85,"a":1.0},
+			"speakerName":"Haruna",
+			"speakerDialogue":"Be sure to behave around here, ok? ♥"
+		},
+		{
+			"id":90001,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":3,"whichACT":2}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.65,"b":0.85,"a":1.0},
+			"speakerName":"Haruna",
+			"speakerDialogue":"Welcome! \r\nWhat's gonna be for today?"
+		},
+		{
+			"id":90001,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":3,"whichACT":2}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.65,"b":0.85,"a":1.0},
+			"speakerName":"Haruna",
+			"speakerDialogue":"If you have the quartz, I have the wares!"
+		},
+		{
+			"id":90001,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":3,"whichACT":2}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.65,"b":0.85,"a":1.0},
+			"speakerName":"Haruna",
+			"speakerDialogue":"You won't find prices this low anywhere else, I guarantee!"
+		},
+		{
+			"id":90001,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":3,"whichACT":2}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.65,"b":0.85,"a":1.0},
+			"speakerName":"Haruna",
+			"speakerDialogue":"There's a nasty plant lady in the forest, and if I'm not mistaken she holds some type of power that will help you on your adventures, if you manage to defeat her that is."
+		},
+		{
+			"id":90001,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":3,"whichACT":2}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.65,"b":0.85,"a":1.0},
+			"speakerName":"Haruna",
+			"speakerDialogue":"Feel free to look around."
+		},
+		{
+			"id":90001,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":3,"whichACT":2}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.65,"b":0.85,"a":1.0},
+			"speakerName":"Haruna",
+			"speakerDialogue":"Nothing else to see here sweetie. Only you, me, a closed shop and a few repeating phrases!"
+		},
+		{
+			"id":90001,
+			"actionList":[{"whoID":1,"whichACT":0},{"whoID":3,"whichACT":2}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":false,
+			"speakerColorRGB":{"r":1.0,"g":0.65,"b":0.85,"a":1.0},
+			"speakerName":"Haruna",
+			"speakerDialogue":"Did you know that there's a hidden beach in the island? You'll need the DASH skill to be able to reach it tough. Once you acquire the skill, go all the way back on the beach to the left and you'll eventually reach it."
+		}
+	]
+}

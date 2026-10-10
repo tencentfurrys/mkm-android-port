@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 823d710113ea794a235dd5427257a79d, type: 3}
+  m_Name: Beach-WaterBG_top
+  m_EditorClassIdentifier:
+  m_AnimatedSprites:
+  - {fileID: 21300000, guid: e2c13ddbc12947647a78c9ef6397073c, type: 2}
+  - {fileID: 21300000, guid: 2b251f0a9bd61454cafb22c548549b08, type: 2}
+  - {fileID: 21300000, guid: 444f50e6d06b62747a4df96c752b6d26, type: 2}
+  - {fileID: 21300000, guid: 9d164893520f31e4faf9444c5efe4bfe, type: 2}
+  - {fileID: 21300000, guid: 99357cbfd56e36f479291784837a3a5e, type: 2}
+  m_MinSpeed: 5
+  m_MaxSpeed: 5
+  m_AnimationStartTime: 0
+  m_TileColliderType: 0

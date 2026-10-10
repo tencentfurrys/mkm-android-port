@@ -1,0 +1,385 @@
+{
+	"listOfDialogue":
+	[
+		{
+			"id":1,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"You can interact with people and objects by pressing the {@:KEY_INTERACT} key. If an icon appears above an object when you approach it, that means it can be interacted with."
+		},
+		{
+			"id":2,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Press the {@:KEY_JUMP} key to jump. The jump height is determined by how long the button is pressed, and the default max jump height is just above 3 blocks."
+		},
+		{
+			"id":3,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"To do a basic attack press the {@:KEY_ATTACK} key. Pressing it repeatedly will perform a combo."
+		},
+		{
+			"id":4,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"When your health is low, picking up life potions will automatically restore a certain amount of your life depending on the size of the potion."
+		},
+		{
+			"id":4,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"But if your health is already full, the potion will be stored in your inventory and it can then be equiped in one of the action slots, which can be triggered by pressing the 1-4 numeric keys."
+		},
+		{
+			"id":5,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Some enemies are small and can't be hit by the standing attacks. Press and hold the {@:KEY_DOWN} to crouch and then press {@:KEY_ATTACK} to perform a crouching attack."
+		},
+		{
+			"id":6,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":3.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Some places around the island are used by monsters for breeding purposes. These spots are called 'Monster Spawners' and they keep spawning monsters infinitelly."
+		},
+		{
+			"id":6,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Depending on the creatures spawned and the size of the breeding nest, these areas can become very dangerous and should be avoided."
+		},
+		{
+			"id":7,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"While exploring the island, some areas may be inacessible until you acquire a new item or skill that will help you reach it. But if you are creative, you might find alternative ways to solve some problems much sooner."
+		},
+		{
+			"id":7,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":2.0,"y":2.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"For instance, that potion... \r\nIf only there was something to stand on, you could get up there."
+		},
+		{
+			"id":8,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"If you don't know how to swim, stay away from the deep waters! The shallow water is safe to walk on. Just be careful not to step on the nasty barnacles!"
+		},
+		{
+			"id":9,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Danger! \r\nMonster Cove ahead! \r\nWatch your step!"
+		},
+		{
+			"id":10,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"To look up and down, hold the {@:KEY_CAMERA} key and then {@:KEY_UP} or {@:KEY_DOWN}. This is useful to check if there are any platforms or dangerous areas above or bellow your position."
+		},
+		{
+			"id":11,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"If you come too close to an enemy or other harmful things such as spikes, you will take damage but will still be able to continue moving freely."
+		},
+		{
+			"id":11,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"But if you get hurt for 20% of your health, either from a single hit or multiple smaller hits that accumulate into that percentile, you will be stunned for a short duration."
+		},
+		{
+			"id":12,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Be careful with the debris! \r\nThose wooden spikes can hurt your butt!"
+		},
+		{
+			"id":12,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Note to self: Don't forget to put another warning on the other side of the pit."
+		},
+		{
+			"id":12,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Yesterday I saw a pirate come tumbling down the sand steps and... he fell straight into the spikes. Ouch. That man isn't going to be able sit down for a while..."
+		},
+		{
+			"id":13,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Private beach!\r\nNo loitering!\r\nDo not use without permission!\r\nKeep moving!"
+		},
+		{
+			"id":14,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"The best and most amazing shop in the world, with the cutest owner ever, is that way! → → →"
+		},
+		{
+			"id":14,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"PS: This is an 100% unbiased message."
+		},
+		{
+			"id":15,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":3.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"If you stand near that monument and open the pause menu, you can save your progress by selecting the save option. If quick-saving is enabled you can simply press the {@:KEY_INTERACT} key to save, but do note that quick-saving will always use and overwrite the same dedicated slot."
+		},
+		{
+			"id":16,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"You can fall down through platforms such as these by pressing {@:KEY_DOWN} and {@:KEY_JUMP}. But when there's a stair pattern like bellow, simply moving left and right and letting gravity do the work is a much faster way to descend."
+		},
+		{
+			"id":17,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Debug Cheat Keys: \r\nF5:Restore HP / F6:Restore Spirit / F7:Restore Defense / F8:Reset Armor State."
+		},
+		{
+			"id":18,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"You have reached the end of the prototype! Thank you for playing! I'm activelly working on the game and adding more content and fixing things!"
+		},
+		{
+			"id":19,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"[Training Targets]\r\nThese training puppets have zero defense, which allows you to see the current full attack power. \r\nThey are also helpful for visualizing the reach and range of the different types of attacks."
+		},
+		{
+			"id":20,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"[Stagger]\r\nEnemies will be staggered if they are hit by an attack that damages 20% of their max health. Some enemies have skills that mitigate this effect, while others are completely immune."
+		},
+		{
+			"id":21,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"You can cross wide gaps like this by using the DASH skill. Build some momentum and then jump across."
+		},
+		{
+			"id":22,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Well done! Learning how to use the momentum of the DASH skill is important as it will help you overcome the more difficult platforming that lays ahead."
+		},
+		{
+			"id":23,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"There are two different camera modes that you can select in the options menu. The static camera is always centered on the player, while the smooth version has a nice delay to it. Play around with them and settle on the one that fits better your play style, specially when jumping around."
+		},
+		{
+			"id":24,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"If you need to hit something directly above, you can perform an upwards attack by pressing {@:KEY_UP} and {@:KEY_ATTACK}. \r\nThis can be done either standing on the ground or while jumping."
+		},
+		{
+			"id":25,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Abandoned Mines\r\nEntry is forbidden to anyone!\r\n\r\n- By decree of Count Tamaresh"
+		},
+		{
+			"id":26,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Danger Ahead: Deep Shaft! \r\nThe switches for the elevators have been removed to prevent trespassers from descending into the mines."
+		},
+		{
+			"id":27,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"↓ Deep Underground ↓"
+		},
+		{
+			"id":28,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"→ Crystal Veins →"
+		},
+		{
+			"id":29,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"← Minor Crystal Cluster #34 ←\r\nBeware of collapsing tunnels!"
+		},
+		{
+			"id":999,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"You've reached the end of the content.\r\nThank you for playing this early alpha build of Mystic Knight Maya!"
+		},
+		{
+			"id":999,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"The next areas are under construction and new enemy types and characters are also being created. Please look forward to the next version for some more lewd content.\r\nBest Regards!\r\nMega Blue Ball"
+		}
+	]
+}

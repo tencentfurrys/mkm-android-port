@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 823d710113ea794a235dd5427257a79d, type: 3}
+  m_Name: Swamp-Water
+  m_EditorClassIdentifier:
+  m_AnimatedSprites:
+  - {fileID: 21300000, guid: ed712dc404a9b6241addaec8ed4292c0, type: 2}
+  - {fileID: 21300000, guid: aaa4c87a3a43c0a44a76b95c94a7a4ec, type: 2}
+  - {fileID: 21300000, guid: b2cee763ef6509b428ca05a20c474c27, type: 2}
+  - {fileID: 21300000, guid: 0cf863e5509ae484e9013017b2fa1749, type: 2}
+  - {fileID: 21300000, guid: 5b5c4b7e2850a2b4bab2fc6db84e408e, type: 2}
+  m_MinSpeed: 5
+  m_MaxSpeed: 5
+  m_AnimationStartTime: 0
+  m_TileColliderType: 0

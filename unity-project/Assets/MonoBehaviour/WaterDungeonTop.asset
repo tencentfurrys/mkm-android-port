@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 823d710113ea794a235dd5427257a79d, type: 3}
+  m_Name: WaterDungeonTop
+  m_EditorClassIdentifier:
+  m_AnimatedSprites:
+  - {fileID: 21300000, guid: 947188b37b96790469ee0558b4c85d96, type: 2}
+  - {fileID: 21300000, guid: 7126ab068756bec4faa8003acd7261e9, type: 2}
+  - {fileID: 21300000, guid: 1d7c2ccaf5e4b304cb5a0347ff06591e, type: 2}
+  - {fileID: 21300000, guid: e1006e66acdf4f64ba2e0840cb4f5684, type: 2}
+  - {fileID: 21300000, guid: 8e094f9f14c994340980f9fff7d50dbb, type: 2}
+  m_MinSpeed: 4
+  m_MaxSpeed: 4
+  m_AnimationStartTime: 0
+  m_TileColliderType: 0

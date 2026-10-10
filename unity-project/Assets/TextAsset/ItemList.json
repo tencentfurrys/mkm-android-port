@@ -1,0 +1,131 @@
+{
+	"listOfItemDatabase":
+	[
+		{
+			"id":1,
+			"type":1,
+			"name":"Health Potion (Small)",
+			"equipable":true,
+			"description":"This potion restores 25% of your health."
+		},
+		{
+			"id":2,
+			"type":1,
+			"name":"Health Potion (Medium)",
+			"equipable":true,
+			"description":"This potion restores 50% of your health."
+		},
+		{
+			"id":3,
+			"type":1,
+			"name":"Health Potion (Big)",
+			"equipable":true,
+			"description":"This potion restores 100% of your health."
+		},
+		{
+			"id":4,
+			"type":2,
+			"name":"Spirit Potion (Small)",
+			"equipable":true,
+			"description":"This potion restores 25% of your spirit."
+		},
+		{
+			"id":5,
+			"type":2,
+			"name":"Spirit Potion (Medium)",
+			"equipable":true,
+			"description":"This potion restores 50% of your spirit."
+		},
+		{
+			"id":6,
+			"type":2,
+			"name":"Spirit Potion (Big)",
+			"equipable":true,
+			"description":"This potion restores 100% of your spirit."
+		},
+		{
+			"id":7,
+			"type":4,
+			"name":"Attack Upgrade (+10)",
+			"equipable":false,
+			"description":"Permanently increases your attack by 10."
+		},
+		{
+			"id":8,
+			"type":9,
+			"name":"Throwing Daggers",
+			"equipable":true,
+			"description":"These daggers can be used as a ranged attack. While they do only 60% of the player's current attack power as damage, they ignore the target's defense."
+		},
+		{
+			"id":9,
+			"type":10,
+			"name":"Small Rune Bomb",
+			"equipable":true,
+			"description":"When throw, these magic concotions will react and blow up on contact with any surface. This explosive force deals around 150 flat damage."
+		},
+		{
+			"id":10,
+			"type":6,
+			"name":"Life Upgrade (+20)",
+			"equipable":false,
+			"description":"Permanently increases your life by 20."
+		},
+		{
+			"id":11,
+			"type":7,
+			"name":"Spirit Upgrade (+20)",
+			"equipable":false,
+			"description":"Permanently increases your spirit by 20."
+		},
+		{
+			"id":12,
+			"type":5,
+			"name":"Defese Upgrade (+10)",
+			"equipable":false,
+			"description":"Permanently increases your defense by 10."
+		},
+		{
+			"id":50,
+			"type":8,
+			"name":"Dash",
+			"equipable":false,
+			"description":"This skill gives you a short boost of speed and allows you to phase through enemies and projectiles. This means that it can be used for both fast movement and dodging.\n\r\n\rSpirit Cost: 20"
+		},
+		{
+			"id":51,
+			"type":8,
+			"name":"Sliding Tackle",
+			"equipable":false,
+			"description":"A versatile skill that can be used to stagger vulnerable enemies, dodge under projectles or to reach certain areas that require sliding into tight passages.\n\r\n\rSpirit Cost: 30"
+		},
+		{
+			"id":52,
+			"type":8,
+			"name":"Invincibility Shield",
+			"equipable":false,
+			"description":"Maya becomes invulnerable while under the protection of the shield, allowing her to fight without worry or to be able to move safely through dangerous areas.\n\r\n\rSpirit Cost: 50"
+		},
+		{
+			"id":53,
+			"type":8,
+			"name":"Flame Sword",
+			"equipable":false,
+			"description":"Can be used as an offensive tool to deal with airborne enemies, or as a means of additional vertical movement in order to reach new heights.\n\r\n\rSpirit Cost: 30"
+		},
+		{
+			"id":54,
+			"type":8,
+			"name":"Power Slash",
+			"equipable":false,
+			"description":"A strong attack skill that can tear through enemies in a straight line, can be also used while in the air.\n\r\n\rSpirit Cost: 70"
+		},
+		{
+			"id":100,
+			"type":3,
+			"name":"Crimson Scepter",
+			"equipable":false,
+			"description":"An ominous, blood-colored scepter adorned with golden details. This artifact allows Maya to teleport at will to previously visited save points."
+		}
+	]
+}

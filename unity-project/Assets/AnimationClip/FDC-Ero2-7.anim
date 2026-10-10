@@ -1,0 +1,234 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FDC-Ero2-7
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_EulerCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_PPtrCurves:
+  - curve:
+    - time: 0
+      value: {fileID: 21300000, guid: 6b50259339f3fb141b020b7d832f738b, type: 2}
+    - time: 0.16666667
+      value: {fileID: 21300000, guid: cb91e64911e8427429e7635a1f426602, type: 2}
+    - time: 0.33333334
+      value: {fileID: 21300000, guid: a80a440faf7255547b78b7d144ccbe76, type: 2}
+    - time: 0.4166667
+      value: {fileID: 21300000, guid: 5ac64ad58c2b2ef4f86b7e7d896e94f6, type: 2}
+    - time: 0.5
+      value: {fileID: 21300000, guid: 8325d659aa9641648bd024982be12933, type: 2}
+    - time: 0.5833334
+      value: {fileID: 21300000, guid: 46b48171c220f7546b5a40e3b7ab3991, type: 2}
+    - time: 0.6666667
+      value: {fileID: 21300000, guid: 103f2998c024b1645a8f841d357b7539, type: 2}
+    - time: 0.75
+      value: {fileID: 21300000, guid: 9869860e03174df48bc00fc695b79f7a, type: 2}
+    - time: 0.8333333
+      value: {fileID: 21300000, guid: 126859a82cd492843bea111021f25c6a, type: 2}
+    - time: 0.9166666
+      value: {fileID: 21300000, guid: 119f7ef7eeb591d4d8748316aa49cb7c, type: 2}
+    - time: 0.99999994
+      value: {fileID: 21300000, guid: 68e4a736c2b271a4c9aecd23eebd69ec, type: 2}
+    - time: 1.0833333
+      value: {fileID: 21300000, guid: 448d1377bb75b284997d47cf65deda5e, type: 2}
+    - time: 1.1666665
+      value: {fileID: 21300000, guid: e00dc553ec50b334fa115b13314c1f84, type: 2}
+    - time: 1.2499999
+      value: {fileID: 21300000, guid: 2999e61c664d20e4d86225a8aab52e07, type: 2}
+    - time: 1.3333333
+      value: {fileID: 21300000, guid: 48f2dda61e52e2e4692375810887848e, type: 2}
+    - time: 1.4166666
+      value: {fileID: 21300000, guid: 7b8f34b88af20e8489fd5de53321373a, type: 2}
+    - time: 1.5
+      value: {fileID: 21300000, guid: f3e71078f88485d47a1953646fde5dcc, type: 2}
+    - time: 1.5833334
+      value: {fileID: 21300000, guid: bb3e89083ae4e71408d97a9b60067c6a, type: 2}
+    - time: 1.6666667
+      value: {fileID: 21300000, guid: 1a386059024f2ae4280ce05a444122fe, type: 2}
+    attribute: m_Sprite
+    path:
+    classID: 212
+    script: {fileID: 0}
+  m_SampleRate: 12
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    pptrCurveMapping:
+    - {fileID: 21300000, guid: 6b50259339f3fb141b020b7d832f738b, type: 2}
+    - {fileID: 21300000, guid: cb91e64911e8427429e7635a1f426602, type: 2}
+    - {fileID: 21300000, guid: a80a440faf7255547b78b7d144ccbe76, type: 2}
+    - {fileID: 21300000, guid: 5ac64ad58c2b2ef4f86b7e7d896e94f6, type: 2}
+    - {fileID: 21300000, guid: 8325d659aa9641648bd024982be12933, type: 2}
+    - {fileID: 21300000, guid: 46b48171c220f7546b5a40e3b7ab3991, type: 2}
+    - {fileID: 21300000, guid: 103f2998c024b1645a8f841d357b7539, type: 2}
+    - {fileID: 21300000, guid: 9869860e03174df48bc00fc695b79f7a, type: 2}
+    - {fileID: 21300000, guid: 126859a82cd492843bea111021f25c6a, type: 2}
+    - {fileID: 21300000, guid: 119f7ef7eeb591d4d8748316aa49cb7c, type: 2}
+    - {fileID: 21300000, guid: 68e4a736c2b271a4c9aecd23eebd69ec, type: 2}
+    - {fileID: 21300000, guid: 448d1377bb75b284997d47cf65deda5e, type: 2}
+    - {fileID: 21300000, guid: e00dc553ec50b334fa115b13314c1f84, type: 2}
+    - {fileID: 21300000, guid: 2999e61c664d20e4d86225a8aab52e07, type: 2}
+    - {fileID: 21300000, guid: 48f2dda61e52e2e4692375810887848e, type: 2}
+    - {fileID: 21300000, guid: 7b8f34b88af20e8489fd5de53321373a, type: 2}
+    - {fileID: 21300000, guid: f3e71078f88485d47a1953646fde5dcc, type: 2}
+    - {fileID: 21300000, guid: bb3e89083ae4e71408d97a9b60067c6a, type: 2}
+    - {fileID: 21300000, guid: 1a386059024f2ae4280ce05a444122fe, type: 2}
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 1.7500001
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 1
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_Events:
+  - time: 0.083333336
+    functionName: PlayEroSound
+    data: cum3
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.083333336
+    functionName: PlayMayaVoiceMuffled
+    data: scream2
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.16666667
+    functionName: PlayEroSound
+    data: cum5
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.33333334
+    functionName: PlayEroSound
+    data: piston3
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.41666666
+    functionName: PlayEroSound
+    data: cum2
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.5
+    functionName: PlayEroSound
+    data: cum5
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.6666667
+    functionName: PlayEroSound
+    data: cum3
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.75
+    functionName: PlayEroSound
+    data: piston3
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.8333333
+    functionName: PlayEroSound
+    data: cum5
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1
+    functionName: PlayEroSound
+    data: cum4
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.0833334
+    functionName: PlayEroSound
+    data: piston3
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.1666666
+    functionName: PlayEroSound
+    data: vore1
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.25
+    functionName: PlayEroSound
+    data: cum5
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.3333334
+    functionName: PlayEroSound
+    data: piston3
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.4166666
+    functionName: PlayEroSound
+    data: cum1
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.5
+    functionName: EroBasicMainLoop
+    data:
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

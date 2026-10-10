@@ -1,0 +1,815 @@
+{
+	"listOfDialogue":
+	[
+		{
+			"id":1,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Interactable objects display an icon when Maya is nearby.<@:LINE_BREAK>Pressing the <@:KEY_INTERACT> button will activate them."
+		},
+		{
+			"id":2,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Maya's jump height is determined by how long the <@:KEY_JUMP> button is pressed, allowing her to perform either short or long jumps, depending on what the current situation requires."
+		},
+		{
+			"id":2,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Her max jump height measures to around 3 blocks and a half, and these sand columns serve as a good reference point to measure her jumping capability."
+		},
+		{
+			"id":3,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Maya can swing her sword by pressing the <@:KEY_ATTACK> button.<@:LINE_BREAK>Pressing it repeatedly will perform a quick combo of 3 attacks."
+		},
+		{
+			"id":3,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Later on, the power and efficacy of her basic attacks can be improved, through various means."
+		},
+		{
+			"id":4,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Collected items are automatically added to Maya's inventory, which can be accessed via the pause menu, by pressing the <@:KEY_PAUSE> button, and selecting the appropriate option."
+		},
+		{
+			"id":4,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Consumable items such as potions must be first equiped in Maya's belt, but if there is an unoccupied slot, certain types of items will be automatically equiped on pickup."
+		},
+		{
+			"id":4,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Equiped items can be cycled backwards and fowards with the <@:KEY_PREVITEM> and <@:KEY_NEXTITEM> buttons, respectively.<@:LINE_BREAK>To use the currently selected item, press the <@:KEY_USEITEM> button."
+		},
+		{
+			"id":5,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Some enemies are too small to be hit by normal attacks. Press and hold the <@:KEY_DOWN> to crouch and then press <@:KEY_ATTACK> to perform a crouching attack."
+		},
+		{
+			"id":5,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Slimes have high defense against physical attacks, and are best avoided for now. Barnacles are quite weak, but possess an annoying ranged attack and therefore they should be dealt with as soon as possible."
+		},
+		{
+			"id":6,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":3.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Sometimes you will encounter areas where enemies continuously emerge from. These spots are called 'Monster Spawners', and they will keep spawning monsters infinitelly."
+		},
+		{
+			"id":6,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Depending on the creatures spawned, these areas can become very dangerous and should be avoided."
+		},
+		{
+			"id":7,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"While exploring the island, at first, certain areas will be inacessible to Maya, until she acquires either an item or skill that will enable her to reach more places."
+		},
+		{
+			"id":7,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"But, if you are creative enough and can think out of the box, you might find alternative ways to solve some of the puzzles much earlier!"
+		},
+		{
+			"id":7,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":2.0,"y":2.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"For instance, that potion up there seems unreachable for now..."
+		},
+		{
+			"id":7,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":2.0,"y":2.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"But if take a moment to annalyze the immediate area, and are not afraid to experiment a bit, there might a way for Maya to sequence-break and reach it right now!"
+		},
+		{
+			"id":8,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"The truth is, Maya nerver learned how to swim!"
+		},
+		{
+			"id":9,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Danger! <@:LINE_BREAK>Monster Cove ahead! <@:LINE_BREAK>Watch your step!"
+		},
+		{
+			"id":10,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"To look up and down, hold the <@:KEY_CAMERA> key and then press either <@:KEY_UP> or <@:KEY_DOWN>. This is useful to check if there are any platforms or dangerous areas above or bellow Maya's position."
+		},
+		{
+			"id":11,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"If Maya comes into contact with an enemy or other harmful things such as spikes, she will take damage but will still be able to continue moving freely."
+		},
+		{
+			"id":11,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"But if she receives damage that sums up to 20% or more of her health, either from a single hit or multiple smaller hits that accumulate into that percentile, she will be stunned for a short duration, so take care!"
+		},
+		{
+			"id":12,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Be careful with the debris! <@:LINE_BREAK>Those wooden spikes can hurt your butt!"
+		},
+		{
+			"id":12,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Note to self: Don't forget to put another warning on the other side of the pit."
+		},
+		{
+			"id":12,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Yesterday I saw a pirate come tumbling down the sand steps and... he fell straight into the spikes. Ouch. That man isn't going to be able sit down for a while..."
+		},
+		{
+			"id":13,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Private beach ahead!<@:LINE_BREAK>No loitering here!<@:LINE_BREAK>Do not use without permission!"
+		},
+		{
+			"id":14,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"The best and most amazing shop in the world, with the cutest owner ever, is that way! → → →"
+		},
+		{
+			"id":14,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"PS: This is an 100% unbiased message."
+		},
+		{
+			"id":15,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":3.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Stand near a red monument, open the pause menu and you can save your progress. If quick-saving is enabled, you can just press the <@:KEY_INTERACT> key to save when near them. There is also an auto-save option."
+		},
+		{
+			"id":16,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Press <@:KEY_DOWN> and <@:KEY_JUMP> to fall down through thin platforms. To go up and down stairs, press <@:KEY_UP> or <@:KEY_DOWN> in conjunction with a direction."
+		},
+		{
+			"id":17,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Debug Cheat Keys: <@:LINE_BREAK>F5:Restore HP / F6:Restore Spirit / F7:Restore Defense / F8:Reset Armor State."
+		},
+		{
+			"id":18,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"You have reached the end of the prototype! Thank you for playing! I'm activelly working on the game and adding more content and fixing things!"
+		},
+		{
+			"id":19,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"[Training Targets]<@:LINE_BREAK>These training puppets have zero defense, which allows you to see the current full attack power. <@:LINE_BREAK>They are also helpful for visualizing the reach and range of the different types of attacks."
+		},
+		{
+			"id":20,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"[Stagger]<@:LINE_BREAK>Enemies will be staggered if they are hit by an attack that damages 20% of their max health. Some enemies have skills that mitigate this effect, while others are completely immune."
+		},
+		{
+			"id":21,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"You can cross wide gaps like this by using the DASH skill. Build some momentum and then jump across."
+		},
+		{
+			"id":21,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"If you can't see the platform on the other side, toggle the minimap by holding the <@:KEY_TOGGLE> button. The minimap helps you to better understand the layout of an area."
+		},
+		{
+			"id":22,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Well done! Learning how to use and master the momentum of the DASH skill is imperative. It will help you to overcome the more difficult platforming that lays ahead."
+		},
+		{
+			"id":23,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"There are two different camera modes, and you can freely switch between them in the options menu."
+		},
+		{
+			"id":23,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"The static camera is always centered on Maya, while the smooth camera has a nice delay to it when Maya is moving."
+		},
+		{
+			"id":23,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Play around with both camera types until you settle on the one that better fits your prefered play style, especially when jumping around."
+		},
+		{
+			"id":24,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"If you need to hit something directly above, you can perform an upwards attack by pressing <@:KEY_UP> and <@:KEY_ATTACK>. <@:LINE_BREAK>This can be done either standing on the ground or while jumping."
+		},
+		{
+			"id":25,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Abandoned Mines<@:LINE_BREAK>Entry is forbidden to anyone!<@:LINE_BREAK><@:LINE_BREAK>- By decree of Count Tamaresh"
+		},
+		{
+			"id":26,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Danger Ahead: Deep Shaft! <@:LINE_BREAK>The switches for the elevators have been removed to prevent trespassers from descending into the mines."
+		},
+		{
+			"id":27,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"↓ Deep Underground ↓"
+		},
+		{
+			"id":28,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"→ Crystal Veins →"
+		},
+		{
+			"id":29,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"← Minor Crystal Cluster #34 ←<@:LINE_BREAK>Beware of collapsing tunnels!"
+		},
+		{
+			"id":30,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":3.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"As you advance further into the island, areas will become bigger and more open with side paths and such. Brave explorers will often be rewarded for their curiosity."
+		},
+		{
+			"id":31,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"You discovered a power-up! These types of items will permanently make Maya stronger, so collect them all!"
+		},
+		{
+			"id":31,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"There are many more different types of items and collectibles to find while exploring the island, many of which will be very well hidden."
+		},
+		{
+			"id":31,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"If you want to keep track of which items Maya has collected so far, open the inventory screen from the pause menu. There, you can read descriptions and further explanations about each item type."
+		},
+		{
+			"id":32,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":3.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Certain spots are trully uncreachable for the time being. Maya will be able to reach those locations later, after she acquires new special skills and enhancements!"
+		},
+		{
+			"id":33,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":2.0,"y":-2.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Like all interactable objects, levers and switches can be activated by pressing the <@:KEY_INTERACT> button."
+		},
+		{
+			"id":33,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":2.0,"y":-2.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Once the ladder has been activated, it can be climbed by pressing either <@:KEY_UP> or <@:KEY_DOWN>. Maya is able to jump off of them, and she can also attack while holding on to ladders as well."
+		},
+		{
+			"id":34,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"When this window is active, press the <@:KEY_CONFIRM> button to advance to the next page."
+		},
+		{
+			"id":34,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"If there are more pages yet to be displayed, the icon in the corner will be that of a book flipping through pages."
+		},
+		{
+			"id":34,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Alternatively, the <@:KEY_CANCEL> button can be held to quickly skip through all pages. The last page of a dialogue is always indicated by the icon changing to a book being closed."
+		},
+		{
+			"id":35,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"↑ Tutorial Beach ↑<@:LINE_BREAK>→ Castle →<@:LINE_BREAK>← Rocky Coast ←"
+		},
+		{
+			"id":900,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Tutorial",
+			"speakerDialogue":"I will try moving by pressing <@:KEY_LEFT> or <@:KEY_RIGHT>."
+		},
+		{
+			"id":901,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Tutorial",
+			"speakerDialogue":"There is something written on that board.<@:LINE_BREAK>I will read it by pressing <@:KEY_INTERACT>."
+		},
+		{
+			"id":902,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Tutorial",
+			"speakerDialogue":"I can jump over these sand columns by pressing <@:KEY_JUMP>."
+		},
+		{
+			"id":903,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Tutorial",
+			"speakerDialogue":"I can see monsters ahead.<@:LINE_BREAK>I will attack them by pressing <@:KEY_ATTACK>."
+		},
+		{
+			"id":904,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Tutorial",
+			"speakerDialogue":"I never learned how to swim...<@:LINE_BREAK>But these shallow waters should be safe enough to walk on."
+		},
+		{
+			"id":905,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Tutorial",
+			"speakerDialogue":"What a view!<@:LINE_BREAK>Looking down, I can see where I should jump to."
+		},
+		{
+			"id":906,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Tutorial",
+			"speakerDialogue":"I did it!<@:LINE_BREAK>Just a few more jumps to the right now..."
+		},
+		{
+			"id":907,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Tutorial",
+			"speakerDialogue":"The path forward is all broken up...<@:LINE_BREAK>Perfect time to show off my true jumping skills!"
+		},
+		{
+			"id":999,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"You've reached the end of the content.<@:LINE_BREAK>Thank you for playing this early alpha build of Mystic Knight Maya!"
+		},
+		{
+			"id":999,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"The next areas are under construction and new enemy types and characters are also being created. Please look forward to the next version for some more lewd content.<@:LINE_BREAK>Best Regards!<@:LINE_BREAK>Mega Blue Ball"
+		},
+		{
+			"id":1001,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Welcome to the gallery!<@:LINE_BREAK>For quick access to view the animations, open the [Pause] menu and select the option called [Gallery]."
+		},
+		{
+			"id":1002,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"To unlock the door of a biome, Maya must first obtain its respective glass orb. Only then will the residents of a biome become available in the menus of the gallery."
+		},
+		{
+			"id":1002,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Once a door is unlocked, you can select any of its scenes in the menu. Maya will be escorted to a secret room, where a new interface appears which allows you to manipulate the animation."
+		},
+		{
+			"id":1003,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":-14.0,"y":-7.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"The entrance to the shady arena is towards the bottom left.<@:LINE_BREAK>While in there, you may spawn any combination of enemies to your heart's desire."
+		},
+		{
+			"id":1003,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":-14.0,"y":-7.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"You can create unique battle scenarios or huge orgies with your favorite characters."
+		},
+		{
+			"id":1004,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Welcome to the arena!<@:LINE_BREAK>To spawn enemies, open the [Pause] menu and select the option called [Arena]. Enemies that you select will then be randomly placed around the center of the arena."
+		},
+		{
+			"id":99901,
+			"actionList":[{"whoID":1,"whichACT":4}],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Board",
+			"speakerDialogue":"Hey, good job! Don't tell anyone, but in the future you'll be able to reach a secret area through here!"
+		},
+		{
+			"id":100001,
+			"actionList":[],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Tutorial",
+			"speakerDialogue":"The sandy beaches, circling a rocky coast under the sun..."
+		},
+		{
+			"id":100002,
+			"actionList":[],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Tutorial",
+			"speakerDialogue":"The dense forest, filled with menacing flowers..."
+		},
+		{
+			"id":100003,
+			"actionList":[],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Tutorial",
+			"speakerDialogue":"The hilltops, full of insects and mystic faeries..."
+		},
+		{
+			"id":100004,
+			"actionList":[],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Tutorial",
+			"speakerDialogue":"The dark hallways and dungeons of the castle..."
+		},
+		{
+			"id":100005,
+			"actionList":[],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Tutorial",
+			"speakerDialogue":"The alleyways and rooftops of the anthro city..."
+		},
+		{
+			"id":100006,
+			"actionList":[],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Tutorial",
+			"speakerDialogue":"The scary swamp, covered in tragic moonlight..."
+		},
+		{
+			"id":100007,
+			"actionList":[],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Tutorial",
+			"speakerDialogue":"The mine shaft, leading deep into caverns of crystal..."
+		},
+		{
+			"id":100008,
+			"actionList":[],
+			"soundList":[],
+			"cameraMovement":{"x":0.0,"y":0.0},
+			"isInstantText":true,
+			"speakerColorRGB":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},
+			"speakerName":"Tutorial",
+			"speakerDialogue":"The insane metal machine, harboring fleshy monstrosities..."
+		}
+	]
+}

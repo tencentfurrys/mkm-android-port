@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Ero2L-05
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_EulerCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_PPtrCurves:
+  - curve:
+    - time: 0
+      value: {fileID: 21300000, guid: 40fbdcf8078544c44aaec077c8c1a2b9, type: 2}
+    - time: 0.16666667
+      value: {fileID: 21300000, guid: 5034d2733909c7d43b39d3bea5752c3a, type: 2}
+    - time: 0.25
+      value: {fileID: 21300000, guid: 5ed33690d279d204db3c9eb016d97fce, type: 2}
+    - time: 0.3333333
+      value: {fileID: 21300000, guid: e306dac2a78c2b24ba103f6bb629906d, type: 2}
+    - time: 0.41666666
+      value: {fileID: 21300000, guid: 84a2e204f7f7d3d47bbdd97d22e6b5f4, type: 2}
+    - time: 0.5
+      value: {fileID: 21300000, guid: 6b4aed14f9261884c8bb52eb3a69b530, type: 2}
+    - time: 0.5833333
+      value: {fileID: 21300000, guid: 44b0409ec340d4d409e9e05cd1a83dba, type: 2}
+    - time: 0.6666666
+      value: {fileID: 21300000, guid: c221f0a137921fe48bf21e0cabf527e2, type: 2}
+    - time: 0.74999994
+      value: {fileID: 21300000, guid: 835438e7a0e23ad40a5327f6042837cc, type: 2}
+    - time: 0.83333325
+      value: {fileID: 21300000, guid: b9896308deaa47e40887f0ce5b782c9a, type: 2}
+    - time: 0.91666657
+      value: {fileID: 21300000, guid: 94cceb84171c5564fa51bc078e1249f6, type: 2}
+    - time: 0.9999999
+      value: {fileID: 21300000, guid: 44cfca3378facb24bb4edd5f08da1404, type: 2}
+    - time: 1.0833331
+      value: {fileID: 21300000, guid: 44cfca3378facb24bb4edd5f08da1404, type: 2}
+    attribute: m_Sprite
+    path:
+    classID: 212
+    script: {fileID: 0}
+  m_SampleRate: 12
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    pptrCurveMapping:
+    - {fileID: 21300000, guid: 40fbdcf8078544c44aaec077c8c1a2b9, type: 2}
+    - {fileID: 21300000, guid: 5034d2733909c7d43b39d3bea5752c3a, type: 2}
+    - {fileID: 21300000, guid: 5ed33690d279d204db3c9eb016d97fce, type: 2}
+    - {fileID: 21300000, guid: e306dac2a78c2b24ba103f6bb629906d, type: 2}
+    - {fileID: 21300000, guid: 84a2e204f7f7d3d47bbdd97d22e6b5f4, type: 2}
+    - {fileID: 21300000, guid: 6b4aed14f9261884c8bb52eb3a69b530, type: 2}
+    - {fileID: 21300000, guid: 44b0409ec340d4d409e9e05cd1a83dba, type: 2}
+    - {fileID: 21300000, guid: c221f0a137921fe48bf21e0cabf527e2, type: 2}
+    - {fileID: 21300000, guid: 835438e7a0e23ad40a5327f6042837cc, type: 2}
+    - {fileID: 21300000, guid: b9896308deaa47e40887f0ce5b782c9a, type: 2}
+    - {fileID: 21300000, guid: 94cceb84171c5564fa51bc078e1249f6, type: 2}
+    - {fileID: 21300000, guid: 44cfca3378facb24bb4edd5f08da1404, type: 2}
+    - {fileID: 21300000, guid: 44cfca3378facb24bb4edd5f08da1404, type: 2}
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 1.1666665
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 1
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_Events:
+  - time: 0.083333336
+    functionName: PlayMayaVoice
+    data: BJClimax34
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.16666667
+    functionName: PlayEroSound
+    data: cum1
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.25
+    functionName: PlayEroSound
+    data: rubber1
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.33333334
+    functionName: PlayEroSound
+    data: piston3
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.5
+    functionName: PlayEroSound
+    data: cum4
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.5833333
+    functionName: PlayMayaVoice
+    data: BJClimax27
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.6666667
+    functionName: PlayEroSound
+    data: rubber3
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.75
+    functionName: PlayEroSound
+    data: vore4
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.9166667
+    functionName: PlayEroSound
+    data: cum5
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

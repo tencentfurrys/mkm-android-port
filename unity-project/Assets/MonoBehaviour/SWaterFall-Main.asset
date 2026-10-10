@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 823d710113ea794a235dd5427257a79d, type: 3}
+  m_Name: SWaterFall-Main
+  m_EditorClassIdentifier:
+  m_AnimatedSprites:
+  - {fileID: 21300000, guid: 9d6ce421564a16449b04256aa7238255, type: 2}
+  - {fileID: 21300000, guid: d33c5d6cba1772f47b359d7f8e770af1, type: 2}
+  - {fileID: 21300000, guid: 4afce01d9ddaeaf4ab15d6dad09f7901, type: 2}
+  - {fileID: 21300000, guid: 6c74c849d983fe0458f6cc341e885e9f, type: 2}
+  - {fileID: 21300000, guid: 569e9791ca4f99e42928490de3a96f26, type: 2}
+  m_MinSpeed: 4
+  m_MaxSpeed: 4
+  m_AnimationStartTime: 0
+  m_TileColliderType: 0

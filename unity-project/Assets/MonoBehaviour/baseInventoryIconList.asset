@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 019953c4bc2c91eebfaba2e4ef12e24e, type: 3}
+  m_Name: baseInventoryIconList
+  m_EditorClassIdentifier:
+  IconConsumables:
+    smallHealth: {fileID: 21300000, guid: f33cca1c90b544b46ae1f8a61d9c15e6, type: 2}
+    medHealth: {fileID: 21300000, guid: cc0f57ce54b49b34c894f7885e008d46, type: 2}
+    bigHealth: {fileID: 21300000, guid: 31a28f13ca7bdca439c06498e1ccbf24, type: 2}
+    smallSpirit: {fileID: 21300000, guid: 4358bb6cfee8ea74091ec65cb6da6c64, type: 2}
+    medSpirit: {fileID: 21300000, guid: ce2be227ff49f9140bf3a5bd903ca331, type: 2}
+    bigSpirit: {fileID: 21300000, guid: e7ba0cb0821fd1c448417688ae7da817, type: 2}
+    brewLife: {fileID: 21300000, guid: 127aafde9478a81449a9cfdf1f4d47dd, type: 2}
+    brewMana: {fileID: 21300000, guid: 9c59fbd04dcaf954caa28e2c3724ffac, type: 2}
+    brewATK: {fileID: 21300000, guid: 93b446ef3c604d449abfe393cabfe51f, type: 2}
+    brewDEF: {fileID: 21300000, guid: f8c0364de890aec4395e8df5357c85a7, type: 2}
+    brewSPEED: {fileID: 21300000, guid: 8f20e4f7a97cafc4898ad3bdb4238c4d, type: 2}
+    eatFruitSlice: {fileID: 21300000, guid: 5b4bcbd33fc09df4b8f10c48f0962369, type: 2}
+    eatFruitForbid: {fileID: 21300000, guid: 9ff317019cb2a2348a78d9307227cc59, type: 2}
+    eatTuberDistract: {fileID: 21300000, guid: d2ae6d79a87f86449ae43877b26d9aa8, type: 2}
+    eatWarriorMeat: {fileID: 21300000, guid: f866c9a4180c1434287c4481955dc079, type: 2}
+    eatHeroMeal: {fileID: 21300000, guid: 21eca9666f1b127439b7c48063c42e1e, type: 2}
+    aspartame: {fileID: 21300000, guid: db17fafe6a15ca54ab6805b8a5367489, type: 2}
+  IconGear:
+    throwDagger: {fileID: 21300000, guid: acba330fa8498d441811a75b8972136a, type: 2}
+    throwSmallRuneBomb: {fileID: 21300000, guid: 1e35a995505c75848b957717a70978f6, type: 2}
+    metalDust: {fileID: 21300000, guid: f98c58e171b11bd4681b87b520597c7d, type: 2}
+    freshClothing: {fileID: 21300000, guid: 83ee7f90a16b0884196e89de06e0426a, type: 2}
+    throwLance: {fileID: 21300000, guid: 044a213c0537fb848800f4f5a2aa713e, type: 2}
+    throwBoomerangStar: {fileID: 21300000, guid: 15a710a087637014387c3b1bb03d1186, type: 2}
+    throwHomingSphere: {fileID: 21300000, guid: d0378e6faca70f3458cd3d7ed08a5561, type: 2}
+    poisonPownder: {fileID: 21300000, guid: 6765f54a41ced0d4bb62c2dce1c64e2b, type: 2}
+    ragePepper: {fileID: 21300000, guid: 924621f585d17fb4fbb89c6ab603162b, type: 2}
+    entropicBomb: {fileID: 21300000, guid: 9a29731207d0ca84c8dfb6bde92fd000, type: 2}
+  IconSkills:
+    skillDash: {fileID: 21300000, guid: 3c24e47b94c297346b440e38b1b1ac33, type: 2}
+    skillSlidingTackle: {fileID: 21300000, guid: bbdc2027a25b0a74bbb62813f4025184, type: 2}
+    skillShield: {fileID: 21300000, guid: b980577c0bb63ca4abbad75f416b46d6, type: 2}
+    skillFlameSword: {fileID: 21300000, guid: f5ff7f850608296458c137ef2dcc6b3a, type: 2}
+    skillSlash: {fileID: 21300000, guid: b0ab56d1b07f9cb4e8106355ec20d3c0, type: 2}
+    skillGroundPound: {fileID: 21300000, guid: d888403b1a889d5469d471eb053fc476, type: 2}
+    skillDrillDash: {fileID: 21300000, guid: 4aeb20455538a54478cf57e84c3d2695, type: 2}
+  IconKey:
+    keyCrimsonScepter: {fileID: 21300000, guid: 5540020bdbd448f4da578b0c808c1767, type: 2}
+    keySilverCastleKey: {fileID: 21300000, guid: f234d024523ef884fa8e20aabc3530ff, type: 2}
+    key01HillValley: {fileID: 21300000, guid: 1b539ee4112761845854aec1606aaa7e, type: 2}
+    keyDungeonKey: {fileID: 21300000, guid: 18c4627fca250ca47aa36c07b10aafe1, type: 2}
+  IconEquip:
+    coreEquipBelt: {fileID: 21300000, guid: 3b38938182ce00043abca6c8eb01547e, type: 2}
+    coreEquipSword: {fileID: 21300000, guid: a63ecc81ea7fa5549abd8e0b39a05a8c, type: 2}
+    coreEquipBoots: {fileID: 21300000, guid: 61866a8e96e4add47843dc0bd9c10846, type: 2}
+    coreEquipPendant: {fileID: 21300000, guid: e19fe3f56b8eccf468c2e047566c9feb, type: 2}
+    coreEquipBeltSlot: {fileID: 21300000, guid: 5ad1683f36e17f5428c3c301c71ba47d, type: 2}
+    coreEquipMayaCoreDNA: {fileID: 21300000, guid: 3f699c26c02f4754c934b35528538530, type: 2}
+    coreTraitMasoc: {fileID: 21300000, guid: 77ae0f82d214d934d999ceb65fc0778c, type: 2}
+    coreTraitExib: {fileID: 21300000, guid: efce7d5cfcb988a4da7a04a999d1921e, type: 2}
+    coreTraitLust: {fileID: 21300000, guid: ebc7956d53c2c8341b6acb5e12989488, type: 2}
+    coreTraitNympho: {fileID: 21300000, guid: 3e9d036efa85e52468edb8778e640a52, type: 2}
+    coreTraitVoreWhore: {fileID: 21300000, guid: 8a78e0f97e92f7d48a8dceb88790bd7b, type: 2}
+  IconMiscUpgrades:
+    upHealth: {fileID: 21300000, guid: 2716a178906ae9a4184b8a490b14578f, type: 2}
+    upSpirit: {fileID: 21300000, guid: 429cadf84421da845bd62f6239d35326, type: 2}
+    upAttack: {fileID: 21300000, guid: b5a0c1b210f04c842a1dd1c6d2068c55, type: 2}
+    upDefense: {fileID: 21300000, guid: bfec1c0b34f9f6643bc676808daa63c1, type: 2}
+    tokenPotion: {fileID: 21300000, guid: 966b6eb412437e64eb51fbcaef71f308, type: 2}
+    tokenDagger: {fileID: 21300000, guid: fcc28386a9714a8479f32af5fed79f93, type: 2}
+    tokenRuneBomb: {fileID: 21300000, guid: c8432c94fe17e7f4086685f047083d14, type: 2}
+    shopSlotEmpty: {fileID: 21300000, guid: 1120213e2cbc3ef4b9e4d793e0d85e31, type: 2}
+    galleryBeach: {fileID: 21300000, guid: 5ad8694ea3993d74ea68a588ecf0f5ec, type: 2}
+    galleryForest: {fileID: 21300000, guid: 1aad4eafa1e74ab4296991ac8457dea7, type: 2}
+    galleryCastle: {fileID: 21300000, guid: a11502479f2153442b4e7467311c7fab, type: 2}
+    galleryHill: {fileID: 21300000, guid: ae9944929c5b2d744a2854ea6777f641, type: 2}
+    galleryCity: {fileID: 21300000, guid: e0bd4d91fad8f8c429e33fffa38bd5d5, type: 2}
+    galleryCaves: {fileID: 21300000, guid: 78938458bccb79e478bc97dca332b09f, type: 2}
+    gallerySwamp: {fileID: 21300000, guid: ce4cb6654bc01654a9e38c987f641f72, type: 2}
+    galleryHighTech: {fileID: 21300000, guid: b27d3e04ea1734e458a4d9cec86a3fb1, type: 2}
+  IconAccessories:
+    ring_HP1: {fileID: 21300000, guid: 8d90982a44d63d34689cb665defb85ee, type: 2}
+    ring_HP2: {fileID: 21300000, guid: e333cbd9cf28b0548ab9f4cd9be54069, type: 2}
+    ring_HP3: {fileID: 21300000, guid: a85272a24a83acc4bb34b0d0108c6d82, type: 2}
+    ring_SP1: {fileID: 21300000, guid: 5523d4a428924164a903f3a707aef6cb, type: 2}
+    ring_SP2: {fileID: 21300000, guid: b994951a9b4c861439df417e900e4daa, type: 2}
+    ring_SP3: {fileID: 21300000, guid: 8d7ab7abd5f66a6478b2afd10f754916, type: 2}
+    ring_ATK1: {fileID: 21300000, guid: ad342b6b575480049aaa0a2a281b9b6d, type: 2}
+    ring_ATK2: {fileID: 21300000, guid: 24b52ef37c9607a4f886c5242253ab3a, type: 2}
+    ring_ATK3: {fileID: 21300000, guid: c7312af59b155604f94e08242189e6a5, type: 2}
+    ring_DEF1: {fileID: 21300000, guid: 8482814c5af3e8941bb06c71aa17e85d, type: 2}
+    ring_DEF2: {fileID: 21300000, guid: 1e87adf70539ef242b2569b806353af3, type: 2}
+    ring_DEF3: {fileID: 21300000, guid: 36416f8ee0c526e43a15dd89680a8b96, type: 2}
+    bracelet_HunterWhip: {fileID: 21300000, guid: 17bf4a2f5dc40864789bb5dbd5a2a32c, type: 2}
+    bracelet_ShieldCrouch: {fileID: 21300000, guid: c310759a8474ab34eafd929fa494124a, type: 2}
+    bracelet_cheapstakeDiscount: {fileID: 21300000, guid: f935946208910cb498badf090a43da93, type: 2}
+    bracelet_cursedHorned: {fileID: 21300000, guid: e53ec0fad287ebc4ab6548d392ed1bbb, type: 2}
+    bracelet_Chastity: {fileID: 21300000, guid: 502c3439cb9b60a4586257f95038a491, type: 2}
+    bracelet_JoyDevice: {fileID: 21300000, guid: 996f2cf9b89d34b46bbfcaef3322db8a, type: 2}
+    necklace_PhaseAttack: {fileID: 21300000, guid: 34cf845d0230bf543b35341107e45f38, type: 2}
+    necklace_SKILLEnhancedPowerSlash: {fileID: 21300000, guid: 6f931781d13a61741af79f51ac9ebb8a, type: 2}
+    necklace_SKILLEnhancedDefenseShield: {fileID: 21300000, guid: c3e28306d4b89004fb4adbbeafa1e131, type: 2}
+    necklace_SKILLEnhancedSlidingTackle: {fileID: 21300000, guid: 7495be7f3522d2547abd620c6d3102d3, type: 2}
+    necklace_SKILLEnhancedFlameSword: {fileID: 21300000, guid: a2402122b5e35954ba8019e02f59f1d3, type: 2}
+    earring_Glass: {fileID: 21300000, guid: 923101edc262d6844b3d7ddaf3d00b3f, type: 2}
+    earring_SmallSlash: {fileID: 21300000, guid: 9e5588b21781f9b4c866fd3ffcb7b594, type: 2}
+    earring_masterDash: {fileID: 21300000, guid: 37b75af1066c30d4f97ffa76a7ef2f73, type: 2}
+    earring_bladeStun: {fileID: 21300000, guid: cf3cd7bb10158e648b7e61f6562482e0, type: 2}
+    hairpin_EagerSpiritStun: {fileID: 21300000, guid: 5ef07f8bd49841f4a93ba2949a01d0a6, type: 2}
+    hairpin_DoubleJump: {fileID: 21300000, guid: f79906a03ef4955499c89ff78017b3f3, type: 2}
+    hairpin_EroticDancer: {fileID: 21300000, guid: 79ec4610edf1ca446937fbee7e16b407, type: 2}
+    hairpin_HeadSuccubus: {fileID: 21300000, guid: 1c7dc3fe00bd81e408cc9caec1dce286, type: 2}
+    hairpin_HairlockFertility: {fileID: 21300000, guid: 82c1e60261dd9f54884fc5c4317487d1, type: 2}
+    hairpin_DaggerSpecialist: {fileID: 21300000, guid: 6b86ca72343292444a37256214f7f971, type: 2}

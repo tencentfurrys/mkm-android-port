@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01141b1b44565e816cebda9978b148c0, type: 3}
+  m_Name: City-A-Main
+  m_EditorClassIdentifier:
+  m_DefaultSprite: {fileID: 0}
+  m_DefaultGameObject: {fileID: 0}
+  m_DefaultColliderType: 1
+  m_TilingRules:
+  - m_Neighbors: 0000000000000000000000000000000000000000000000000000000000000000
+    m_Sprites:
+    - {fileID: 21300000, guid: e41f0bf95423994459f3385c678b7a64, type: 2}
+    - {fileID: 21300000, guid: cbb395a0d451e1a49abfeca4dca481ca, type: 2}
+    - {fileID: 21300000, guid: e41f0bf95423994459f3385c678b7a64, type: 2}
+    - {fileID: 21300000, guid: 8eb59e245a5a54842af6ce708964466f, type: 2}
+    - {fileID: 21300000, guid: e41f0bf95423994459f3385c678b7a64, type: 2}
+    - {fileID: 21300000, guid: b1a78e53949413745845df99e06b1b0a, type: 2}
+    - {fileID: 21300000, guid: e41f0bf95423994459f3385c678b7a64, type: 2}
+    - {fileID: 21300000, guid: 2bfd8db8169e47545ab9e7662ec2f899, type: 2}
+    - {fileID: 21300000, guid: e41f0bf95423994459f3385c678b7a64, type: 2}
+    - {fileID: 21300000, guid: 16f875e230257bd4d8340c63bc5224d7, type: 2}
+    - {fileID: 21300000, guid: e41f0bf95423994459f3385c678b7a64, type: 2}
+    - {fileID: 21300000, guid: 7624713579e3bb349b8d41914be098a4, type: 2}
+    - {fileID: 21300000, guid: db36be942423e1e498b132118513454c, type: 2}
+    m_GameObject: {fileID: 0}
+    m_AnimationSpeed: 1
+    m_PerlinScale: 0.5
+    m_RuleTransform: 0
+    m_Output: 1
+    m_ColliderType: 1
+    m_RandomTransform: 0
