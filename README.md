@@ -23,6 +23,18 @@ Private reverse-engineering backup + build tree for porting the Windows demo
 - **P1** JSON loading on Android uses the embedded TextAssets (WebGL code path):
   `GameCore.WEBGL_CheckIfIsWebBuild()` + `SplashScreen` feed condition check
   `Application.platform == RuntimePlatform.Android`.
+- **P1c** splash text fix: Farina TextAsset wired + null-guards in
+  `WEBGL_FeedLocalVariablesToString` (all 7 slots).
+- **P1d** loading-screen crash fix: the ripped `Assets/TextAsset/*.json` were
+  trimmed WebGL copies (UserInterface.json had only 123 of 348 UI ids, ItemList
+  18 of 99) → `Find(...).text` NRE on id 136 during MainMenu load killed the app
+  on the loading screen. All TextAssets now hold the complete
+  `StreamingAssets/Languages/ENG/` data.
+- **P1e** Nene dialogue TextAsset wired into the Nene feed slot (was Haruna),
+  and all 43 `Find(...).member` JSON lookups are null-safe (`?.`), plus guards in
+  `LoadUIFile`/`LoadItemDatabaseFile`/`LoadIntroStoryFile`/`LoadGameConfiguration`
+  and a build-settings check in `LoadYourAsyncScene` — a missing entry now
+  degrades to empty text instead of crashing the app.
 - **P2 (TODO)** touch controls injected at `GameCore.UnifiedInputHandler`.
 
 ## Toolchain (all installed on the build machine, D: drive)

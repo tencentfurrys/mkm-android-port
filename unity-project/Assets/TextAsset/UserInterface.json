@@ -4,61 +4,61 @@
     {
       "id": 0,
 	  "sub_id": 0,
-	  "type": "MENU.GAMETITLE",
+	  "type": "MENU:GAMETITLE",
 	  "text": "Mystic Knight Maya"
     },
 	{
       "id": 1,
 	  "sub_id": 0,
-	  "type": "MENU.CONTINUE",
+	  "type": "MENU:CONTINUE",
 	  "text": "Continue"
     },
 	{
       "id": 2,
 	  "sub_id": 0,
-	  "type": "MENU.NEWGAME",
+	  "type": "MENU:NEWGAME",
 	  "text": "New Game"
     },
 	{
       "id": 3,
 	  "sub_id": 0,
-	  "type": "MENU.LOADGAME",
+	  "type": "MENU:LOADGAME",
 	  "text": "Load Game"
     },
 	{
       "id": 4,
 	  "sub_id": 0,
-	  "type": "MENU.GALLERY",
+	  "type": "MENU:GALLERY",
 	  "text": "Gallery"
     },
 	{
       "id": 5,
 	  "sub_id": 0,
-	  "type": "MENU.OPTIONS",
+	  "type": "MENU:OPTIONS",
 	  "text": "Options"
     },
 	{
       "id": 6,
 	  "sub_id": 0,
-	  "type": "MENU.QUIT",
-	  "text": "Quit"
+	  "type": "MENU:QUIT",
+	  "text": "Exit Game"
     },
 	{
       "id": 7,
 	  "sub_id": 0,
-	  "type": "MENU.DIFFICULTY",
+	  "type": "MENU:DIFFICULTY",
 	  "text": "Difficulty"
     },
 	{
       "id": 8,
 	  "sub_id": 0,
-	  "type": "DIFFICULTY.EASY",
+	  "type": "DIFFICULTY:EASY",
 	  "text": "Easy"
     },
 	{
       "id": 8,
 	  "sub_id": 1,
-	  "type": "DIFFICULTY.NORMAL",
+	  "type": "DIFFICULTY:NORMAL",
 	  "text": "Normal"
     },
 	{
@@ -101,7 +101,7 @@
       "id": 16,
 	  "sub_id": 0,
 	  "type": "MENU:VOICE",
-	  "text": "Voice"
+	  "text": "Moan"
     },
 	{
       "id": 17,
@@ -124,91 +124,97 @@
 	{
       "id": 20,
 	  "sub_id": 0,
-	  "type": "MENU:CONTROLS:ATACK",
-	  "text": "Attack/Confirm"
+	  "type": "MENU:CONTROLS_ATACK",
+	  "text": "Attack"
     },
 	{
       "id": 21,
 	  "sub_id": 0,
-	  "type": "MENU:CONTROLS:JUMP",
-	  "text": "Jump/Cancel"
+	  "type": "MENU:CONTROLS_JUMP",
+	  "text": "Jump"
     },
 	{
       "id": 22,
 	  "sub_id": 0,
-	  "type": "MENU:CONTROLS:DEFENSESKILLS",
+	  "type": "MENU:CONTROLS_DEFENSESKILLS",
 	  "text": "Defense Skills"
     },
 	{
       "id": 23,
 	  "sub_id": 0,
-	  "type": "MENU:CONTROLS:CAMERA",
-	  "text": "Camera Look/Zoom"
+	  "type": "MENU:CONTROLS_CAMERA",
+	  "text": "Ero-Zoom & Camera Look (hold)"
     },
 	{
       "id": 24,
 	  "sub_id": 0,
-	  "type": "MENU:CONTROLS:INTERACT",
-	  "text": "Interact/Examine"
+	  "type": "MENU:CONTROLS_INTERACT",
+	  "text": "Interact & Examine"
     },
 	{
       "id": 25,
 	  "sub_id": 0,
-	  "type": "MENU:CONTROLS:PAUSE",
-	  "text": "Pause/Menu"
+	  "type": "MENU:CONTROLS_PAUSE",
+	  "text": "Pause & Menu"
     },
 	{
       "id": 26,
 	  "sub_id": 0,
-	  "type": "MENU:CONTROLS:UP",
-	  "text": "Up"
+	  "type": "MENU:CONTROLS_UP",
+	  "text": "Move Up"
     },
 	{
       "id": 27,
 	  "sub_id": 0,
-	  "type": "MENU:CONTROLS:RIGHT",
-	  "text": "Right"
+	  "type": "MENU:CONTROLS_RIGHT",
+	  "text": "Move Right"
     },
 	{
       "id": 28,
 	  "sub_id": 0,
-	  "type": "MENU:CONTROLS:DOWN",
-	  "text": "Down"
+	  "type": "MENU:CONTROLS_DOWN",
+	  "text": "Move Down"
     },
 	{
       "id": 29,
 	  "sub_id": 0,
-	  "type": "MENU:CONTROLS:LEFT",
-	  "text": "Left"
+	  "type": "MENU:CONTROLS_LEFT",
+	  "text": "Move Left"
     },
 	{
       "id": 30,
 	  "sub_id": 0,
-	  "type": "MENU:CONTROLS:RESET",
-	  "text": "Reset to Default"
+	  "type": "MENU:CONTROLS_RESET",
+	  "text": "Reset to Defaults"
     },
 	{
       "id": 31,
 	  "sub_id": 0,
-	  "type": "MENU:CONTROLS:TYPE",
+	  "type": "MENU:CONTROLS_TYPE",
 	  "text": "Input Type"
     },
 	{
       "id": 32,
 	  "sub_id": 0,
-	  "type": "MENU:CONTROLS:TYPE:KEYBOARD",
+	  "type": "MENU:CONTROLS_TYPE_KEYBOARD",
 	  "text": "Keyboard"
     },
 	{
       "id": 32,
 	  "sub_id": 1,
-	  "type": "MENU:CONTROLS:TYPE:GAMEPAD",
-	  "text": "Gamepad"
+	  "type": "MENU:CONTROLS_TYPE_GAMEPAD",
+	  "text": "Gamepad Type 1"
+    },
+	{
+      "id": 32,
+	  "sub_id": 2,
+	  "type": "MENU:CONTROLS_TYPE_GAMEPAD",
+	  "text": "Gamepad Type2"
     },
 	{
       "id": 33,
 	  "sub_id": 0,
-	  "type": "MENU:CONTROLS:TITLE",
+	  "type": "MENU:CONTROLS_TITLE",
 	  "text": "Control Configuration"
     },
 	{
@@ -226,7 +232,7 @@
 	{
       "id": 36,
 	  "sub_id": 0,
-	  "type": "ADVANCED:OPTION_1",
+	  "type": "ADVANCED:OPTION",
 	  "text": "Apply slow motion and zoom effects when the armor is broken."
     },
 	{
@@ -239,7 +245,7 @@
       "id": 38,
 	  "sub_id": 0,
 	  "type": "MENU:STATS",
-	  "text": "Stats"
+	  "text": "Statistics"
     },	
 	{
       "id": 39,
@@ -250,37 +256,37 @@
 	{
       "id": 40,
 	  "sub_id": 0,
-	  "type": "ADVANCED:OPTION_2",
+	  "type": "ADVANCED:OPTION",
 	  "text": "Automatically zoom in when grabbed by an enemy."
     },
 	{
       "id": 41,
 	  "sub_id": 0,
-	  "type": "ADVANCED:OPTION_3",
+	  "type": "ADVANCED:OPTION",
 	  "text": "Show the amount of damage that was blocked by the defense value."
     },
 	{
       "id": 42,
 	  "sub_id": 0,
-	  "type": "MENU.SAVEGAME",
+	  "type": "MENU:SAVEGAME",
 	  "text": "Save Game"
     },
 	{
       "id": 43,
 	  "sub_id": 0,
-	  "type": "SAVELOAD.SLOT",
+	  "type": "SAVELOAD:SLOT",
 	  "text": "Empty Slot"
     },
 	{
       "id": 44,
 	  "sub_id": 0,
-	  "type": "ADVANCED:OPTION_4",
+	  "type": "ADVANCED:OPTION",
 	  "text": "Enable Quick-Save: Interact when near a save point to quickly save."
     },
 	{
       "id": 45,
 	  "sub_id": 0,
-	  "type": "ADVANCED:OPTION_5",
+	  "type": "ADVANCED:OPTION",
 	  "text": "Enable Auto-Save: The game is automatically saved when near a save point."
     },
 	{
@@ -292,164 +298,164 @@
 	{
       "id": 47,
 	  "sub_id": 0,
-	  "type": "MENU:CONTROLS:USEITEM",
-	  "text": "Use Item 1"
+	  "type": "MENU:CONTROLS_USEITEM",
+	  "text": "Use Active Item"
     },
 	{
       "id": 48,
 	  "sub_id": 0,
-	  "type": "MENU:CONTROLS:USEITEM",
-	  "text": "Use Item 2"
+	  "type": "MENU:CONTROLS_USEITEM",
+	  "text": "Cycle to Next Item"
     },
 	{
       "id": 49,
 	  "sub_id": 0,
-	  "type": "MENU:CONTROLS:USEITEM",
-	  "text": "Use Item 3"
+	  "type": "MENU:CONTROLS_USEITEM",
+	  "text": "Cycle to Previous Item"
     },
 	{
       "id": 50,
 	  "sub_id": 0,
-	  "type": "MENU:CONTROLS:USEITEM",
-	  "text": "Use Item 4"
+	  "type": "MENU:CONTROLS_USEITEM",
+	  "text": "PLACEHOLDER"
     },
 	{
       "id": 51,
 	  "sub_id": 0,
-	  "type": "ADVANCED:OPTION_6",
+	  "type": "ADVANCED:OPTION",
 	  "text": "Automatically equip items on pickup if there is an empty action slot."
     },
 	{
       "id": 52,
 	  "sub_id": 0,
-	  "type": "UI:ACTIVATE:ON",
+	  "type": "UI:ACTIVATE_ON",
 	  "text": "On"
     },
 	{
       "id": 53,
 	  "sub_id": 0,
-	  "type": "UI:DEACTIVATE:OFF",
+	  "type": "UI:DEACTIVATE_OFF",
 	  "text": "Off"
     },
 	{
       "id": 54,
 	  "sub_id": 0,
-	  "type": "UI:DISPLAY:INTERNAL:VISION",
+	  "type": "UI:DISPLAY_INTERNAL_VISION",
 	  "text": "Internal View"
     },
 	{
       "id": 55,
 	  "sub_id": 0,
-	  "type": "UI:DISPLAY:ZOOM",
+	  "type": "UI:DISPLAY_ZOOM",
 	  "text": "Zoom"
     },
 	{
       "id": 56,
 	  "sub_id": 0,
-	  "type": "UI:DISPLAY:ZOOM:AMOUNT",
+	  "type": "UI:DISPLAY_ZOOM_AMOUNT",
 	  "text": "x1"
     },
 	{
       "id": 57,
 	  "sub_id": 0,
-	  "type": "UI:DISPLAY:ZOOM:AMOUNT",
+	  "type": "UI:DISPLAY_ZOOM_AMOUNT",
 	  "text": "x2"
     },
 	{
       "id": 58,
 	  "sub_id": 0,
-	  "type": "UI:DISPLAY:ZOOM:AMOUNT",
+	  "type": "UI:DISPLAY_ZOOM_AMOUNT",
 	  "text": "x3"
     },
 	{
       "id": 59,
 	  "sub_id": 0,
-	  "type": "UI:DISPLAY:AUTOSAVE",
+	  "type": "UI:DISPLAY_AUTOSAVE",
 	  "text": "Auto-Saved!"
     },
 	{
       "id": 60,
 	  "sub_id": 0,
-	  "type": "UI:DISPLAY:QUICKSAVE",
+	  "type": "UI:DISPLAY_QUICKSAVE",
 	  "text": "Quick-Saved!"
     },
 	{
       "id": 61,
 	  "sub_id": 0,
-	  "type": "UI:DISPLAY:SAVE",
+	  "type": "UI:DISPLAY_SAVE",
 	  "text": "Saved succesfully!"
     },
 	{
       "id": 62,
 	  "sub_id": 0,
-	  "type": "UI:DISPLAY:BOSSDEFEATED",
+	  "type": "UI:DISPLAY_BOSSDEFEATED",
 	  "text": "was defeated!"
     },
 	{
       "id": 63,
 	  "sub_id": 0,
-	  "type": "UI:DISPLAY:GETSKILL",
+	  "type": "UI:DISPLAY_GETSKILL",
 	  "text": "Acquired a new skill:"
     },
 	{
       "id": 64,
 	  "sub_id": 0,
-	  "type": "UI:DISPLAY:FASTRETRY",
-	  "text": "Press the {@:KEY_INTERACT} key to retry"
+	  "type": "UI:DISPLAY_FASTRETRY",
+	  "text": "Press the <@:KEY_INTERACT> key to retry"
     },
 	{
       "id": 65,
 	  "sub_id": 0,
-	  "type": "MENU:STATS:HEALTHPOINTS",
+	  "type": "MENU:STATS_HEALTHPOINTS",
 	  "text": "HP"
     },
 	{
       "id": 66,
 	  "sub_id": 0,
-	  "type": "MENU:STATS:SPIRITPOINTS",
+	  "type": "MENU:STATS_SPIRITPOINTS",
 	  "text": "SP"
     },
 	{
       "id": 67,
 	  "sub_id": 0,
-	  "type": "MENU:STATS:ATTACKPOWER",
+	  "type": "MENU:STATS_ATTACKPOWER",
 	  "text": "ATK"
     },
 	{
       "id": 68,
 	  "sub_id": 0,
-	  "type": "MENU:STATS:DEFENSEPOWER",
+	  "type": "MENU:STATS_DEFENSEPOWER",
 	  "text": "DEF"
     },
 	{
       "id": 69,
 	  "sub_id": 0,
-	  "type": "MENU:STATS:LUST",
+	  "type": "MENU:STATS_LUST",
 	  "text": "Lust"
     },
 	{
       "id": 70,
 	  "sub_id": 0,
-	  "type": "MENU:STATS:QUARTZ",
-	  "text": "Quartz"
+	  "type": "MENU:STATS_ESSENCE",
+	  "text": "Essence"
     },
 	{
       "id": 71,
 	  "sub_id": 0,
-	  "type": "MENU:STATS:PLAYTIME",
+	  "type": "MENU:STATS_PLAYTIME",
 	  "text": "Play Time"
     },
 	{
       "id": 72,
 	  "sub_id": 0,
-	  "type": "UI:DISPLAY:BOSSENRAGED",
+	  "type": "UI:DISPLAY_BOSSENRAGED",
 	  "text": "The boss became enraged!"
     },
 	{
       "id": 73,
 	  "sub_id": 0,
 	  "type": "UI:FETISH",
-	  "text": "Vanilla Sex, Anal"
+	  "text": "Vanilla Sex"
     },
 	{
       "id": 74,
@@ -508,104 +514,944 @@
 	{
       "id": 83,
 	  "sub_id": 0,
-	  "type": "ADVANCED:OPTION_7",
+	  "type": "ADVANCED:OPTION",
 	  "text": "Remember the last zoom amount when Maya is grabbed."
     },
 	{
       "id": 84,
 	  "sub_id": 0,
-	  "type": "MENU.TELEPORT",
+	  "type": "MENU:TELEPORT",
 	  "text": "Teleport"
     },
 	{
       "id": 85,
 	  "sub_id": 0,
-	  "type": "UI:DISPLAY:GETKEYITEM",
+	  "type": "UI:DISPLAY_GETKEYITEM",
 	  "text": "Maya acquired the"
     },
 	{
       "id": 86,
 	  "sub_id": 0,
-	  "type": "UI:INVENTORY:TABNAME",
-	  "text": "[CONSUMABLES]"
+	  "type": "UI:INVENTORY_TABNAME",
+	  "text": "CONSUMABLES"
     },
 	{
       "id": 87,
 	  "sub_id": 0,
-	  "type": "UI:INVENTORY:TABNAME",
-	  "text": "[GEAR]"
+	  "type": "UI:INVENTORY_TABNAME",
+	  "text": "GEAR"
     },
 	{
       "id": 88,
 	  "sub_id": 0,
-	  "type": "UI:INVENTORY:TABNAME",
-	  "text": "[SKILLS]"
+	  "type": "UI:INVENTORY_TABNAME",
+	  "text": "SKILLS"
     },
 	{
       "id": 89,
 	  "sub_id": 0,
-	  "type": "UI:INVENTORY:TABNAME",
-	  "text": "[KEY ITEMS]"
+	  "type": "UI:INVENTORY_TABNAME",
+	  "text": "KEY ITEMS"
     },
 	{
       "id": 90,
 	  "sub_id": 0,
-	  "type": "UI:INVENTORY:TABNAME",
-	  "text": "[MISCELLANEOUS]"
+	  "type": "UI:INVENTORY_TABNAME",
+	  "text": "UPGRADES"
     },
 	{
       "id": 91,
 	  "sub_id": 0,
-	  "type": "UI:TELEPORT:CHESS",
+	  "type": "UI:TELEPORT_CHESS",
 	  "text": "Pawn"
     },
 	{
       "id": 92,
 	  "sub_id": 0,
-	  "type": "UI:TELEPORT:CHESS",
+	  "type": "UI:TELEPORT_CHESS",
 	  "text": "Rook"
     },
 	{
       "id": 93,
 	  "sub_id": 0,
-	  "type": "UI:TELEPORT:CHESS",
+	  "type": "UI:TELEPORT_CHESS",
 	  "text": "Knight"
     },
 	{
       "id": 94,
 	  "sub_id": 0,
-	  "type": "UI:TELEPORT:CHESS",
+	  "type": "UI:TELEPORT_CHESS",
 	  "text": "Bishop"
     },
 	{
       "id": 95,
 	  "sub_id": 0,
-	  "type": "UI:TELEPORT:CHESS",
+	  "type": "UI:TELEPORT_CHESS",
 	  "text": "Queen"
     },
 	{
       "id": 96,
 	  "sub_id": 0,
-	  "type": "MENU:CONTROLS:INTERNALVIEW",
-	  "text": "Internal View"
+	  "type": "MENU:CONTROLS_INTERNALVIEW",
+	  "text": "Internal View & Minimap (hold)"
     },
 	{
       "id": 97,
 	  "sub_id": 0,
-	  "type": "ADVANCED:OPTION_8",
+	  "type": "ADVANCED:OPTION",
 	  "text": "Display lines showing the connections between switches and linked objects."
     },
 	{
       "id": 98,
 	  "sub_id": 0,
-	  "type": "ADVANCED:OPTION_9",
+	  "type": "ADVANCED:OPTION",
 	  "text": "All vore scenes become final and lead to an instant game over."
     },
 	{
       "id": 99,
 	  "sub_id": 0,
-	  "type": "MENU:CONTROLS:ATTACKSKILLS",
+	  "type": "MENU:CONTROLS_ATTACKSKILLS",
 	  "text": "Attack Skills"
+    },
+	{
+      "id": 100,
+	  "sub_id": 0,
+	  "type": "DEBUFF:WARNING",
+	  "text": "Warning: Maya is being trained!"
+    },
+	{
+      "id": 101,
+	  "sub_id": 0,
+	  "type": "DEBUFF:WARNING",
+	  "text": "Training Complete! Maya has become an obedient bitch!"
+    },
+	{
+      "id": 102,
+	  "sub_id": 0,
+	  "type": "UI:TELEPORT_CHESS",
+	  "text": "Crystal"
+    },
+	{
+      "id": 103,
+	  "sub_id": 0,
+	  "type": "MENU:ARENA",
+	  "text": "Arena"
+    },
+	{
+      "id": 104,
+	  "sub_id": 0,
+	  "type": "ANIM:PLAYBACK",
+	  "text": "Restarting..."
+    },
+	{
+      "id": 105,
+	  "sub_id": 0,
+	  "type": "ANIM:PLAYBACK",
+	  "text": "Normal playback..."
+    },
+	{
+      "id": 106,
+	  "sub_id": 0,
+	  "type": "ANIM:PLAYBACK",
+	  "text": "Lock current loop..."
+    },
+	{
+      "id": 107,
+	  "sub_id": 0,
+	  "type": "ANIM:PLAYBACK",
+	  "text": "Advance phase..."
+    },
+	{
+      "id": 108,
+	  "sub_id": 0,
+	  "type": "ANIM:PLAYBACK",
+	  "text": "Decrease speed..."
+    },
+	{
+      "id": 109,
+	  "sub_id": 0,
+	  "type": "ANIM:PLAYBACK",
+	  "text": "Increase speed..."
+    },
+	{
+      "id": 110,
+	  "sub_id": 0,
+	  "type": "ANIM:PLAYBACK",
+	  "text": "Closing..."
+    },
+	{
+      "id": 111,
+	  "sub_id": 0,
+	  "type": "ANIM:PLAYBACK",
+	  "text": "Minimum Speed"
+    },
+	{
+      "id": 112,
+	  "sub_id": 0,
+	  "type": "ANIM:PLAYBACK",
+	  "text": "Maximum Speed"
+    },
+	{
+      "id": 113,
+	  "sub_id": 0,
+	  "type": "DEBUFF:WARNING",
+	  "text": "Warning: Maya has become stiff!"
+    },
+	{
+      "id": 114,
+	  "sub_id": 0,
+	  "type": "DEBUFF:WARNING",
+	  "text": "Warning: Maya is being petrified!"
+    },
+	{
+      "id": 115,
+	  "sub_id": 0,
+	  "type": "DEBUFF:WARNING",
+	  "text": "Maya has become a depraved statue forevermore!"
+    },
+	{
+      "id": 116,
+	  "sub_id": 0,
+	  "type": "ADVANCED:OPTION",
+	  "text": "The gallery list will now hide scenes that contain blocked fetishes."
+    },
+	{
+      "id": 117,
+	  "sub_id": 0,
+	  "type": "DEBUFF:WARNING",
+	  "text": "Maya's essence has been corrupted!"
+    },
+	{
+      "id": 118,
+	  "sub_id": 0,
+	  "type": "DEBUFF:WARNING",
+	  "text": "Maya gained a lot of fat and is now confused!"
+    },
+	{
+      "id": 119,
+	  "sub_id": 0,
+	  "type": "DEBUFF:WARNING",
+	  "text": "Maya will be joining the unity!"
+    },
+	{
+      "id": 120,
+	  "sub_id": 0,
+	  "type": "DEBUFF:WARNING",
+	  "text": "Maya's belly is being filled to the brim!"
+    },
+	{
+      "id": 121,
+	  "sub_id": 0,
+	  "type": "DEBUFF:WARNING",
+	  "text": "Maya resisted against the slimification!"
+    },
+	{
+      "id": 122,
+	  "sub_id": 0,
+	  "type": "DEBUFF:WARNING",
+	  "text": "Maya feels a weird sensation in her stomach!"
+    },
+	{
+      "id": 123,
+	  "sub_id": 0,
+	  "type": "ADVANCED:OPTION",
+	  "text": "Enable dialogue during bad endings."
+    },
+	{
+      "id": 124,
+	  "sub_id": 0,
+	  "type": "DEBUFF:WARNING",
+	  "text": "Warning: Maya will be taken to the nest!"
+    },
+	{
+      "id": 125,
+	  "sub_id": 0,
+	  "type": "DEBUFF:WARNING",
+	  "text": "Warning: Maya is now married!"
+    },
+	{
+      "id": 126,
+	  "sub_id": 0,
+	  "type": "ADVANCED:OPTION",
+	  "text": "Enable bad endings."
+    },
+	{
+      "id": 127,
+	  "sub_id": 0,
+	  "type": "SYSTEM:MESSAGE",
+	  "text": "Press <@:KEY_DEFSKILL> to skip to the special ending"
+    },
+	{
+      "id": 128,
+	  "sub_id": 0,
+	  "type": "CONTROLS:DEBUG_A",
+	  "text": "(Debug) Heal Life"
+    },
+	{
+      "id": 129,
+	  "sub_id": 0,
+	  "type": "CONTROLS:DEBUG_B",
+	  "text": "(Debug) Heal Spirit"
+    },
+	{
+      "id": 130,
+	  "sub_id": 0,
+	  "type": "CONTROLS:DEBUG_C",
+	  "text": "(Debug) Increase Stats"
+    },
+	{
+      "id": 131,
+	  "sub_id": 0,
+	  "type": "CONTROLS:DEBUG_D",
+	  "text": "(Debug) Reset Clothing to Full"
+    },
+	{
+      "id": 132,
+	  "sub_id": 0,
+	  "type": "CONTROLS:DEBUG_E",
+	  "text": "(Debug) Grant All Skills and Teleport Points"
+    },
+	{
+      "id": 133,
+	  "sub_id": 0,
+	  "type": "CONTROLS:DEBUG_F",
+	  "text": "(Debug) Defeat Beach Boss to Unlock Teleports"
+    },
+	{
+      "id": 134,
+	  "sub_id": 0,
+	  "type": "CONTROLS:DEBUG_G",
+	  "text": "(Debug) Remove a Single Layer of Clothing"
+    },
+	{
+      "id": 135,
+	  "sub_id": 0,
+	  "type": "CONTROLS:DEBUG_H",
+	  "text": "(Debug) Instant Defeat"
+    },
+	{
+      "id": 136,
+	  "sub_id": 0,
+	  "type": "MENU:RESUME",
+	  "text": "Resume"
+    },
+	{
+      "id": 137,
+	  "sub_id": 0,
+	  "type": "MENU:CONTROLS_UICONFIRM",
+	  "text": "UI Confirm & Advance"
+    },
+	{
+      "id": 138,
+	  "sub_id": 0,
+	  "type": "MENU:CONTROLS_UICANCEL",
+	  "text": "UI Cancel & Return"
+    },
+	{
+      "id": 139,
+	  "sub_id": 0,
+	  "type": "MENU:INPUT_LISTENING",
+	  "text": "Awaiting a valid input..."
+    },
+	{
+      "id": 140,
+	  "sub_id": 0,
+	  "type": "DEBUFF:WARNING",
+	  "text": "Warning: Maya will become a breeding queen!"
+    },
+	{
+      "id": 141,
+	  "sub_id": 0,
+	  "type": "SYSTEM:DISCLAIMER",
+	  "text": "If you have more than 1 gamepad, joystick or controller connected to your computer at the same time, that may cause incorrect input readings or other bugs."
+    },
+	{
+      "id": 142,
+	  "sub_id": 0,
+	  "type": "DEBUFF:WARNING",
+	  "text": "Warning: Maya will be turned into love fluids!"
+    },
+	{
+      "id": 143,
+	  "sub_id": 0,
+	  "type": "UI:INVENTORY_TABNAME",
+	  "text": "ESSENTIAL"
+    },
+	{
+      "id": 144,
+	  "sub_id": 0,
+	  "type": "MENU:ADVANCED",
+	  "text": "Lock the game's refresh rate at 60 frames per second."
+    },
+	{
+      "id": 145,
+	  "sub_id": 0,
+	  "type": "DEBUFF:WARNING",
+	  "text": "Warning: Maya is being pumped full of eggs!"
+    },
+	{
+      "id": 146,
+	  "sub_id": 0,
+	  "type": "UI:DIALOGUE",
+	  "text": "Next Page"
+    },
+	{
+      "id": 147,
+	  "sub_id": 0,
+	  "type": "UI:DIALOGUE",
+	  "text": "Skip All"
+    },
+	{
+      "id": 148,
+	  "sub_id": 0,
+	  "type": "UI:DRESS_STATE",
+	  "text": "Body Armor"
+    },
+	{
+      "id": 149,
+	  "sub_id": 0,
+	  "type": "UI:DRESS_STATE",
+	  "text": "Underwear"
+    },
+	{
+      "id": 150,
+	  "sub_id": 0,
+	  "type": "UI:DRESS_STATE",
+	  "text": "Naked"
+    },
+	{
+      "id": 151,
+	  "sub_id": 0,
+	  "type": "UI:DRESS_STATE",
+	  "text": "Broken"
+    },
+	{
+      "id": 152,
+	  "sub_id": 0,
+	  "type": "UI:DRESS_STATE",
+	  "text": "Unfavorable Situation..."
+    },
+	{
+      "id": 153,
+	  "sub_id": 0,
+	  "type": "UI:DRESS_STATE",
+	  "text": "Broken Dress Layer..."
+    },
+	{
+      "id": 154,
+	  "sub_id": 0,
+	  "type": "UI:DRESS_STATE",
+	  "text": "Current Layer!"
+    },
+	{
+      "id": 155,
+	  "sub_id": 0,
+	  "type": "UI:EQUIP_ITEM",
+	  "text": "Select a slot to equip or swap item positions. To unequip the item, select its current slot."
+    },
+	{
+      "id": 156,
+	  "sub_id": 0,
+	  "type": "UI:DISPLAY_ZOOM_AMOUNT",
+	  "text": "x4"
+    },
+	{
+      "id": 157,
+	  "sub_id": 0,
+	  "type": "MENU:ADVANCED",
+	  "text": "Revert to classic button-mashing whenever Maya is grabbed by an enemy."
+    },
+	{
+      "id": 158,
+	  "sub_id": 0,
+	  "type": "UI:OVERRIDEFETISH",
+	  "text": "Default"
+    },
+	{
+      "id": 159,
+	  "sub_id": 0,
+	  "type": "UI:OVERRIDEFETISH",
+	  "text": "Always Allowed"
+    },
+	{
+      "id": 160,
+	  "sub_id": 0,
+	  "type": "UI:OVERRIDEFETISH",
+	  "text": "Always Blocked"
+    },
+	{
+      "id": 161,
+	  "sub_id": 0,
+	  "type": "UI:OVERRIDEFETISH",
+	  "text": "Combo"
+    },
+	{
+      "id": 162,
+	  "sub_id": 0,
+	  "type": "MENU:ADVANCED",
+	  "text": "Enable debug buttons."
+    },
+	{
+      "id": 163,
+	  "sub_id": 0,
+	  "type": "MENU:NPC",
+	  "text": "Talk"
+    },
+	{
+      "id": 164,
+	  "sub_id": 0,
+	  "type": "MENU:NPC",
+	  "text": "Heal"
+    },
+	{
+      "id": 165,
+	  "sub_id": 0,
+	  "type": "MENU:NPC",
+	  "text": "Repair"
+    },
+	{
+      "id": 166,
+	  "sub_id": 0,
+	  "type": "MENU:NPC",
+	  "text": "Exit"
+    },
+	{
+      "id": 167,
+	  "sub_id": 0,
+	  "type": "DEBUFF:WARNING",
+	  "text": "Maya has fainted!"
+    },
+	{
+      "id": 168,
+	  "sub_id": 0,
+	  "type": "UI:SHOP_ITEM_PRICE",
+	  "text": "Cost"
+    },
+	{
+      "id": 169,
+	  "sub_id": 0,
+	  "type": "UI:SHOP",
+	  "text": "Shop"
+    },
+	{
+      "id": 170,
+	  "sub_id": 0,
+	  "type": "UI:SHOP",
+	  "text": "Not enough essence"
+    },
+	{
+      "id": 171,
+	  "sub_id": 0,
+	  "type": "UI:SHOP",
+	  "text": "Out of stock"
+    },
+	{
+      "id": 172,
+	  "sub_id": 0,
+	  "type": "UI:SHOP_ITEMS_OWNED",
+	  "text": "Own"
+    },
+	{
+      "id": 173,
+	  "sub_id": 0,
+	  "type": "UI:INVENTORY_TABNAME",
+	  "text": "ACCESSORIES"
+    },
+	{
+      "id": 174,
+	  "sub_id": 0,
+	  "type": "MENU:TEXTSOUND",
+	  "text": "Text Sound"
+    },
+	{
+      "id": 175,
+	  "sub_id": 0,
+	  "type": "UI:DISPLAY_CONTINUE",
+	  "text": "No save files were detected!"
+    },
+	{
+      "id": 176,
+	  "sub_id": 0,
+	  "type": "MENU:ADVANCED",
+	  "text": "Disable the bouncy animation of cursors in the user interface."
+    },
+	{
+      "id": 177,
+	  "sub_id": 0,
+	  "type": "UI:DISCOUNT",
+	  "text": "Discount"
+    },
+	{
+      "id": 178,
+	  "sub_id": 0,
+	  "type": "DEBUFF:WARNING",
+	  "text": "Acquired"
+    },
+	{
+      "id": 179,
+	  "sub_id": 0,
+	  "type": "UI:MESSAGE_ARENA",
+	  "text": "Defeat all the enemies!"
+    },
+	{
+      "id": 180,
+	  "sub_id": 0,
+	  "type": "UI:MESSAGE_ARENA",
+	  "text": "You've survived the challenge!"
+    },
+	{
+      "id": 181,
+	  "sub_id": 0,
+	  "type": "UI:DRESS_STATE",
+	  "text": "Maya is excited to exhibit herself!"
+    },
+	{
+      "id": 182,
+	  "sub_id": 0,
+	  "type": "MENU_OPTIONS:VOICE_RATE",
+	  "text": "Moan Frequency"
+    },
+	{
+      "id": 183,
+	  "sub_id": 0,
+	  "type": "UI:SHOP",
+	  "text": "Maya's Current Essence"
+    },
+	{
+      "id": 184,
+	  "sub_id": 0,
+	  "type": "UI:SHOP",
+	  "text": "To view the gallery menu, Maya must have at least 1 of the glass globes!"
+    },
+	{
+      "id": 185,
+	  "sub_id": 0,
+	  "type": "SYSTEM:MESSAGE",
+	  "text": "Checkpoint!"
+    },
+	{
+      "id": 186,
+	  "sub_id": 0,
+	  "type": "MENU:ADVANCED",
+	  "text": "Disable the voice that plays during the splash screen with the logo."
+    },
+	{
+      "id": 700,
+	  "sub_id": 0,
+	  "type": "BADEND:MESSAGE",
+	  "text": "Maya will be constantly used for breeding... forevermore..."
+    },
+	{
+      "id": 701,
+	  "sub_id": 0,
+	  "type": "BADEND:MESSAGE",
+	  "text": "Maya became a seeding hole for the insects... forevermore..."
+    },
+	{
+      "id": 702,
+	  "sub_id": 0,
+	  "type": "BADEND:MESSAGE",
+	  "text": "Maya became a slutty wife, drunk for horse cock... forevermore..."
+    },
+	{
+      "id": 703,
+	  "sub_id": 0,
+	  "type": "BADEND:MESSAGE",
+	  "text": "Maya has been liquefied, molested by countless desires... forevermore..."
+    },
+	{
+      "id": 704,
+	  "sub_id": 0,
+	  "type": "BADEND:MESSAGE",
+	  "text": "Maya and Nene submitted to the strong male... forevermore..."
+    },
+	{
+      "id": 705,
+	  "sub_id": 0,
+	  "type": "BADEND:MESSAGE",
+	  "text": "Maya became a kobold Queen, nurturing more subjects daily... forevermore..."
+    },
+	{
+      "id": 706,
+	  "sub_id": 0,
+	  "type": "BADEND:MESSAGE",
+	  "text": "Maya has been reduced to being just climax ejection... forevermore..."
+    },
+	{
+      "id": 707,
+	  "sub_id": 0,
+	  "type": "BADEND:MESSAGE",
+	  "text": "Maya became a happy mother that is addicted to birthing... forevermore..."
+    },
+	{
+      "id": 708,
+	  "sub_id": 0,
+	  "type": "BADEND:MESSAGE",
+	  "text": "Maya transformed into a furry servant, loving her adored master... forevermore..."
+    },
+	{
+      "id": 800,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "DPad-Up"
+    },
+	{
+      "id": 801,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "DPad-Left"
+    },
+	{
+      "id": 802,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "DPad-Down"
+    },
+	{
+      "id": 803,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "DPad-Right"
+    },
+	{
+      "id": 804,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "LeftStick-Up"
+    },
+	{
+      "id": 805,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "LeftStick-Left"
+    },
+	{
+      "id": 806,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "LeftStick-Down"
+    },
+	{
+      "id": 807,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "LeftStick-Right"
+    },
+	{
+      "id": 808,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "RightStick-Up"
+    },
+	{
+      "id": 809,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "RightStick-Left"
+    },
+	{
+      "id": 810,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "RightStick-Down"
+    },
+	{
+      "id": 811,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "RightStick-Right"
+    },
+	{
+      "id": 812,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "Square"
+    },
+	{
+      "id": 813,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "X"
+    },
+	{
+      "id": 814,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "Circle"
+    },
+	{
+      "id": 815,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "Triangle"
+    },
+	{
+      "id": 816,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "L1"
+    },
+	{
+      "id": 817,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "R1"
+    },
+	{
+      "id": 818,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "L2"
+    },
+	{
+      "id": 819,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "R2"
+    },
+	{
+      "id": 820,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "Share"
+    },
+	{
+      "id": 821,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "Options"
+    },
+	{
+      "id": 822,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "L3"
+    },
+	{
+      "id": 823,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "R3"
+    },
+	{
+      "id": 824,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "Touchpad"
+    },
+	{
+      "id": 825,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "A"
+    },
+	{
+      "id": 826,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "B"
+    },
+	{
+      "id": 827,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "Y"
+    },
+	{
+      "id": 828,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "LeftBumper"
+    },
+	{
+      "id": 829,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "RightBumper"
+    },
+	{
+      "id": 830,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "LeftTrigger"
+    },
+	{
+      "id": 831,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "RightTrigger"
+    },
+	{
+      "id": 832,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "Back"
+    },
+	{
+      "id": 833,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "Start"
+    },
+	{
+      "id": 834,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "LeftStickButton"
+    },
+	{
+      "id": 835,
+	  "sub_id": 0,
+	  "type": "GAMEPAD:BUTTON_NAME",
+	  "text": "RightStickButton"
+    },
+	{
+      "id": 900,
+	  "sub_id": 0,
+	  "type": "STAGE:THEME",
+	  "text": "Beach"
+    },
+	{
+      "id": 901,
+	  "sub_id": 0,
+	  "type": "STAGE:THEME",
+	  "text": "Forest"
+    },
+	{
+      "id": 902,
+	  "sub_id": 0,
+	  "type": "STAGE:THEME",
+	  "text": "Hill"
+    },
+	{
+      "id": 903,
+	  "sub_id": 0,
+	  "type": "STAGE:THEME",
+	  "text": "City"
+    },
+	{
+      "id": 904,
+	  "sub_id": 0,
+	  "type": "STAGE:THEME",
+	  "text": "Cave"
+    },
+	{
+      "id": 905,
+	  "sub_id": 0,
+	  "type": "STAGE:THEME",
+	  "text": "Swamp"
+    },
+	{
+      "id": 906,
+	  "sub_id": 0,
+	  "type": "STAGE:THEME",
+	  "text": "Castle"
+    },
+	{
+      "id": 907,
+	  "sub_id": 0,
+	  "type": "STAGE:THEME",
+	  "text": "High-Tech"
     },
 	{
       "id": 950,
@@ -617,7 +1463,7 @@
       "id": 951,
 	  "sub_id": 0,
 	  "type": "STAGE:NAME",
-	  "text": "Ruined Castle"
+	  "text": "Gloomy Castle"
     },
 	{
       "id": 952,
@@ -665,13 +1511,13 @@
       "id": 959,
 	  "sub_id": 0,
 	  "type": "STAGE:NAME",
-	  "text": "Abandoned Gate"
+	  "text": "Back Gate"
     },
 	{
       "id": 960,
 	  "sub_id": 0,
 	  "type": "STAGE:NAME",
-	  "text": "Lower Tamaresh"
+	  "text": "Lower City"
     },
 	{
       "id": 961,
@@ -716,22 +1562,502 @@
 	  "text": "Gardens of Mausolea"
     },
 	{
+      "id": 968,
+	  "sub_id": 0,
+	  "type": "STAGE:NAME",
+	  "text": "The Colosseum"
+    },
+	{
+      "id": 969,
+	  "sub_id": 0,
+	  "type": "STAGE:NAME",
+	  "text": "Hallways of Insanity"
+    },
+	{
+      "id": 970,
+	  "sub_id": 0,
+	  "type": "STAGE:NAME",
+	  "text": "Royal Chamber"
+    },
+	{
+      "id": 971,
+	  "sub_id": 0,
+	  "type": "STAGE:NAME",
+	  "text": "Ruined Dungeon"
+    },
+	{
+      "id": 972,
+	  "sub_id": 0,
+	  "type": "STAGE:NAME",
+	  "text": "Gateway to Perdition"
+    },
+	{
+      "id": 973,
+	  "sub_id": 0,
+	  "type": "STAGE:NAME",
+	  "text": "Deity Machine"
+    },
+	{
+      "id": 974,
+	  "sub_id": 0,
+	  "type": "STAGE:NAME",
+	  "text": "Quantum Equalizer"
+    },
+	{
+      "id": 975,
+	  "sub_id": 0,
+	  "type": "STAGE:NAME",
+	  "text": "Corrupted Matrix"
+    },
+	{
+      "id": 976,
+	  "sub_id": 0,
+	  "type": "STAGE:NAME",
+	  "text": "The Gallery"
+    },
+	{
+      "id": 977,
+	  "sub_id": 0,
+	  "type": "STAGE:NAME",
+	  "text": "Temple of the Rain"
+    },
+	{
       "id": 1000,
 	  "sub_id": 0,
 	  "type": "AGE:DISCLAIMER",
-	  "text": "This game is intended for mature audiences only. You're not allowed to play this game if you're not a legal adult in your country. \r\n\r\nThis game contains explicit erotic depictions of a variety of fetishes. Player discretion is advised. \r\n\r\nThis game is entirelly a work of fiction and an artistic expression for entertainment purposes only."
+	  "text": "This game is intended for mature audiences only. You are not allowed to play this game if you are not a legal adult in your country. \r\n\r\nThis game contains erotic art and depictions of a variety of sexual encounters, therefore player discretion is advised. \r\n\r\nThis game is entirely a work of fiction and has no basis in reality."
     },
 	{
       "id": 1001,
 	  "sub_id": 0,
 	  "type": "AGE:DISCLAIMER",
-	  "text": "You can press any key to confirm that you acknowledge and abide by those rules..."
+	  "text": "Press any key to proceed and confirm that you acknowledge and abide by those rules..."
     },
 	{
       "id": 1002,
 	  "sub_id": 0,
 	  "type": "ALPHA:DISCLAIMER",
-	  "text": "This is an early alpha version of the action platformer game called Mystic Knight Maya. \r\n\r\nThe gameplay is under active development and therefore some elements are missing, incomplete, or not properly balanced yet. The game's assets such as graphics, user interface, music and sound effects may not be final and therefore are subject to change. \r\n\r\nThank you and please have a good time with the game! \r\n\r\nPress any key to continue..."
+	  "text": "This is an early alpha version of Mystic Knight Maya and this game is currently under active development. \r\n\r\nBe aware that gameplay elements may not yet be properly balanced at this phase, and other features are in an unfinished state or not yet implemented. \r\n\r\nPress any key to continue and enjoy the game!"
+    },
+	{
+      "id": 1003,
+	  "sub_id": 0,
+	  "type": "UI:DRESS_LAYER_STATS",
+	  "text": "100% Attack<@:LINE_BREAK>100% Defense<@:LINE_BREAK>100% Move Speed<@:LINE_BREAK>25% Essence Yield"
+    },
+	{
+      "id": 1004,
+	  "sub_id": 0,
+	  "type": "UI:DRESS_LAYER_STATS",
+	  "text": "90% Attack<@:LINE_BREAK>75% Defense<@:LINE_BREAK>105% Move Speed<@:LINE_BREAK>50% Essence Yield"
+    },
+	{
+      "id": 1005,
+	  "sub_id": 0,
+	  "type": "UI:DRESS_LAYER_STATS",
+	  "text": "80% Attack<@:LINE_BREAK>50% Defense<@:LINE_BREAK>110% Move Speed<@:LINE_BREAK>100% Essence Yield"
+    },
+	{
+      "id": 1006,
+	  "sub_id": 0,
+	  "type": "UI:OVERRIDEFETISH",
+	  "text": "Press <@:KEY_INTERACT> to override the fetish configuration for the selected animation:"
+    },
+	{
+      "id": 9900,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Lazy Starfish"
+    },
+	{
+      "id": 9901,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Naughty Coral"
+    },
+	{
+      "id": 9902,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Water Jelly"
+    },
+	{
+      "id": 9903,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Blonde Kitsune"
+    },
+	{
+      "id": 9904,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Burly Sailor"
+    },
+	{
+      "id": 9905,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Isobora"
+    },
+	{
+      "id": 9906,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Blaze Plant"
+    },
+	{
+      "id": 9907,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Flower Blossom"
+    },
+	{
+      "id": 9908,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Bunette"
+    },
+	{
+      "id": 9909,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Kaly"
+    },
+	{
+      "id": 9910,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Dragonfly"
+    },
+	{
+      "id": 9911,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Fae Spirit"
+    },
+	{
+      "id": 9912,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Salamandra"
+    },
+	{
+      "id": 9913,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Beelina"
+    },
+	{
+      "id": 9914,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Highland Centauress"
+    },
+	{
+      "id": 9915,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Lizaro"
+    },
+	{
+      "id": 9916,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Doggo Boy"
+    },
+	{
+      "id": 9917,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Vivian"
+    },
+	{
+      "id": 9918,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Arakna"
+    },
+	{
+      "id": 9919,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Jeeves"
+    },
+	{
+      "id": 9920,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Manequinn"
+    },
+	{
+      "id": 9921,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Happy Pudding"
+    },
+	{
+      "id": 9922,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Latex Maiden"
+    },
+	{
+      "id": 9923,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Obscure Pain Thing"
+    },
+	{
+      "id": 9924,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "The Brute"
+    },
+	{
+      "id": 9925,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Phantom Domina"
+    },
+	{
+      "id": 9926,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Koboling"
+    },
+	{
+      "id": 9927,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Living Shard"
+    },
+	{
+      "id": 9928,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Dwarf Girl"
+    },
+	{
+      "id": 9929,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Mush-Mina"
+    },
+	{
+      "id": 9930,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Nugua"
+    },
+	{
+      "id": 9931,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Batty Sega"
+    },
+	{
+      "id": 9932,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Lingua Wyvern"
+    },
+	{
+      "id": 9933,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Earthworm Jack"
+    },
+	{
+      "id": 9934,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Swamp Fairy"
+    },
+	{
+      "id": 9935,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Ancient Donna"
+    },
+	{
+      "id": 9936,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Ghoul Tree"
+    },
+	{
+      "id": 9937,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Mothrina"
+    },
+	{
+      "id": 9938,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Swamp Golem"
+    },
+	{
+      "id": 9939,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Giant Botfly"
+    },
+	{
+      "id": 9940,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Drone Tester"
+    },
+	{
+      "id": 9941,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Dark Damsel"
+    },
+	{
+      "id": 9942,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Sinccubus"
+    },
+	{
+      "id": 9943,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "The Rejected"
+    },
+	{
+      "id": 9944,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Corrupt Beast"
+    },
+	{
+      "id": 9945,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Meat Blossom"
+    },
+	{
+      "id": 9946,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Medusa"
+    },
+	{
+      "id": 9947,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Fairy of Sorrow"
+    },
+	{
+      "id": 9948,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Slimy Lass"
+    },
+	{
+      "id": 9949,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Cat Girl"
+    },
+	{
+      "id": 9950,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Goblin"
+    },
+	{
+      "id": 9951,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Goblina"
+    },
+	{
+      "id": 9952,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Geckewt"
+    },
+	{
+      "id": 9953,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Sewer Vermin"
+    },
+	{
+      "id": 9954,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Hill Troll"
+    },
+	{
+      "id": 9955,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Tentapod"
+    },
+	{
+      "id": 9956,
+	  "sub_id": 0,
+	  "type": "ENEMY:NAME",
+	  "text": "Vagrant Monk"
+    },
+	{
+      "id": 9980,
+	  "sub_id": 0,
+	  "type": "BOSS:STATUE_NAME",
+	  "text": "Young Mother"
+    },
+	{
+      "id": 9981,
+	  "sub_id": 0,
+	  "type": "BOSS:STATUE_NAME",
+	  "text": "Captain Dick Rogers"
+    },
+	{
+      "id": 9982,
+	  "sub_id": 0,
+	  "type": "BOSS:STATUE_NAME",
+	  "text": "Nina Touro"
+    },
+	{
+      "id": 9983,
+	  "sub_id": 0,
+	  "type": "BOSS:STATUE_NAME",
+	  "text": "General Claudius"
+    },
+	{
+      "id": 9984,
+	  "sub_id": 0,
+	  "type": "BOSS:STATUE_NAME",
+	  "text": "Tauros"
+    },
+	{
+      "id": 9985,
+	  "sub_id": 0,
+	  "type": "BOSS:STATUE_NAME",
+	  "text": "Sophia Ashreal"
+    },
+	{
+      "id": 9986,
+	  "sub_id": 0,
+	  "type": "BOSS:STATUE_NAME",
+	  "text": "Clematis"
+    },
+	{
+      "id": 9987,
+	  "sub_id": 0,
+	  "type": "BOSS:STATUE_NAME",
+	  "text": "Hunter of Tyrants"
+    },
+	{
+      "id": 9988,
+	  "sub_id": 0,
+	  "type": "BOSS:STATUE_NAME",
+	  "text": "Mausolea"
     },
 	{
       "id": 10001,
@@ -742,20 +2068,50 @@
 	{
       "id": 10002,
 	  "sub_id": 0,
-	  "type": "BOSS:NAME",
+	  "type": "BOSS:BATTLE_NAME",
 	  "text": "Forgotten Mariner"
     },
 	{
       "id": 10003,
 	  "sub_id": 0,
-	  "type": "BOSS:NAME",
+	  "type": "BOSS:BATTLE_NAME",
 	  "text": "Gatekeeper Nina"
     },
 	{
       "id": 10004,
 	  "sub_id": 0,
-	  "type": "BOSS:NAME",
-	  "text": "The Bewitched Monarch"
+	  "type": "BOSS:BATTLE_NAME",
+	  "text": "Bewitched Commander"
+    },
+	{
+      "id": 10005,
+	  "sub_id": 0,
+	  "type": "BOSS:BATTLE_NAME",
+	  "text": "The Champion"
+    },
+	{
+      "id": 10006,
+	  "sub_id": 0,
+	  "type": "BOSS:BATTLE_NAME",
+	  "text": "Princess Sophia"
+    },
+	{
+      "id": 10007,
+	  "sub_id": 0,
+	  "type": "BOSS:BATTLE_NAME",
+	  "text": "Clematis the Arrogant Witch"
+    },
+	{
+      "id": 10008,
+	  "sub_id": 0,
+	  "type": "BOSS:BATTLE_NAME",
+	  "text": "Hunter of Tyrants"
+    },
+	{
+      "id": 10009,
+	  "sub_id": 0,
+	  "type": "BOSS:BATTLE_NAME",
+	  "text": "Mausolea the Amalgamation"
     }
   ]
 }

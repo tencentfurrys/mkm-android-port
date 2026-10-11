@@ -63,3 +63,35 @@ Fix:
 - `GameCore.WEBGL_FeedLocalVariablesToString`: null-guards on all 7 slots.
 Note: feed call passes Haruna asset into the Nene slot (pre-existing mapping
 quirk) - Nene NPC shows Haruna lines until a Nene TextAsset is wired.
+(Fixed in P1e below.)
+
+## P1d - Complete language TextAssets (fixes the "kicked out at loading screen" crash)
+Symptom: splash plays, 3 key presses, loading screen (`imgLoading`) shows, then
+the app is killed during `LoadSceneAsync("MainMenu")`.
+
+Root cause: the ripped `Assets/TextAsset/*.json` are TRIMMED copies of the game's
+WebGL-embedded JSONs. `Assets/TextAsset/UserInterface.json` only carried 123 of
+the 348 UI ids (it stops at id 99, jumps to 950+). On Android all JSON reads go
+through the embedded TextAssets (P1), so `GetTranslatedStringUI(136)`
+(`menuInGame.btnTextContinue`) hits a missing entry:
+`listOfUserInterfaceTranslation.Find(...)` returns null -> `.text` NRE ->
+unhandled exception in `MenuBehaviour.InitialSetup`/`ApplyLanguageOfMenu` ->
+IL2CPP aborts the process mid-scene-load. (On PC this never happens: the build
+reads the full files from StreamingAssets.)
+ItemList (18 of 99 items), Dialogue_Various (12 of 143 ids) and
+Dialogue_BoardSign (30 of 57) were trimmed the same way.
+Fix: all `Assets/TextAsset/*.json` now hold the complete
+`Assets/StreamingAssets/Languages/ENG/` versions (Farina was already done in
+P1c). Counts now: UI 348, Items 99, Various 143, Board 57.
+
+## P1e - Nene dialogue wired + Find() crash hardening
+- `SplashScreen.jsonFileDialogueNene` added (+ `Assets/TextAsset/Dialogue_Nene.json`
+  and its import guid) and wired in `_InitialScreen.unity`; the feed call now
+  passes the Nene asset into the Nene slot instead of Haruna's (old quirk).
+- `GameCore.GetTranslatedStringUI/ITEM`, `ParseDialogueLineTags`, `LoadUIFile`,
+  `LoadItemDatabaseFile`, `LoadIntroStoryFile`, `LoadGameConfiguration`
+  (`File.Exists` guard) and `LoadYourAsyncScene` (new `MKM_IsSceneInBuild`
+  build-settings check, name- or path-matching) are now null-safe.
+- All 43 `list.Find(...).member` sites across GameCore/Controller_Player/
+  MenuBehaviour/SplashScreen/MayaVoiceGroups use `?.member` so a missing entry
+  degrades to an empty string instead of killing the app.

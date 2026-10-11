@@ -32,6 +32,8 @@ public class SplashScreen : MonoBehaviour
 
 	public TextAsset jsonFileDialogueBoard;
 
+	public TextAsset jsonFileDialogueNene;
+
 	public TextAsset jsonFileDialogueHaruna;
 
 	public TextAsset jsonFileDialogueFarina;
@@ -80,7 +82,9 @@ public class SplashScreen : MonoBehaviour
 		GC.LoadGameConfiguration();
 		if (GC.GameBuildCurrent == GameCore.GameBuildType.WebGL || GC.GameBuildCurrent == GameCore.GameBuildType.Mac || Application.platform == RuntimePlatform.Android)
 		{
-			GC.WEBGL_FeedLocalVariablesToString(jsonFileUI, jsonFileItemList, jsonFileIntroStory, jsonFileDialogueBoard, jsonFileDialogueHaruna, jsonFileDialogueVarious, jsonFileDialogueFarina);
+			// Nene slot MUST get the Nene TextAsset (P1e). Before P1e the splash passed the
+			// Haruna asset into the Nene slot, so the Nene NPC spoke Haruna's lines.
+			GC.WEBGL_FeedLocalVariablesToString(jsonFileUI, jsonFileItemList, jsonFileIntroStory, jsonFileDialogueBoard, jsonFileDialogueNene, jsonFileDialogueVarious, jsonFileDialogueFarina);
 		}
 		GC.GetRootLanguageList();
 		GC.ConcatenateSelectedLanguageFolderPath();
@@ -191,15 +195,15 @@ public class SplashScreen : MonoBehaviour
 	{
 		if ((bool)txtMainWarnings)
 		{
-			txtMainWarnings.text = GC.clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 1000).text;
+			txtMainWarnings.text = GC.clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 1000)?.text;
 		}
 		if ((bool)txtPushAnyKey)
 		{
-			txtPushAnyKey.text = GC.clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 1001).text;
+			txtPushAnyKey.text = GC.clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 1001)?.text;
 		}
 		if ((bool)txtAlphaDisclaimer)
 		{
-			txtAlphaDisclaimer.text = GC.clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 1002).text;
+			txtAlphaDisclaimer.text = GC.clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 1002)?.text;
 		}
 	}
 

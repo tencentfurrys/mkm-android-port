@@ -4140,6 +4140,7 @@ MonoBehaviour:
   jsonFileItemList: {fileID: 4900000, guid: 17fea4a20a300b34d862aae49757c963, type: 3}
   jsonFileIntroStory: {fileID: 4900000, guid: 2eb67ad29aa95534dad1f6b72ccb0ad6, type: 3}
   jsonFileDialogueBoard: {fileID: 4900000, guid: 0238add69e542754cae387daa81bbf7b, type: 3}
+  jsonFileDialogueNene: {fileID: 4900000, guid: e87d57eda0d74c4d8bd22d14075deb28, type: 3}
   jsonFileDialogueHaruna: {fileID: 4900000, guid: 435854617b565324f91ceb55b4fbe521, type: 3}
   jsonFileDialogueFarina: {fileID: 4900000, guid: e50fc3b6c5004d748ae2a4595a02611b, type: 3}
   jsonFileDialogueVarious: {fileID: 4900000, guid: 5820ac01b2996954e8068f3ee06fc65b, type: 3}

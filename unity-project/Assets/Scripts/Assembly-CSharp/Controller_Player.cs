@@ -5111,7 +5111,7 @@ public class Controller_Player : MonoBehaviour
 		case GameCore.CollectibleType.SpiritUpgrade:
 			if (GC.AddThisPowerUp(classItem.currentItemType))
 			{
-				string description = GC.clsItemDatabase.listOfItemDatabase.Find((ItemInfo x) => x.id == classItem.itemID).description;
+				string description = GC.clsItemDatabase.listOfItemDatabase.Find((ItemInfo x) => x.id == classItem.itemID)?.description;
 				flag = true;
 				GC.PlaySFX(GameCore.SFXBasic1.PowerupCollected, 0, checkForDuplicity: true, Vector2.zero, 0f, 0f);
 				GC.DisplaySystemMessageUI(123456, 0, 0f, description);
@@ -5140,7 +5140,7 @@ public class Controller_Player : MonoBehaviour
 			break;
 		case GameCore.CollectibleType.KeyItem:
 		{
-			string customString = GC.clsItemDatabase.listOfItemDatabase.Find((ItemInfo x) => x.id == classItem.itemID).name;
+			string customString = GC.clsItemDatabase.listOfItemDatabase.Find((ItemInfo x) => x.id == classItem.itemID)?.name;
 			flag = true;
 			GC.DisplaySystemMessageUI(100, 0, 4f, customString);
 			GC.StartWaitingThenDoSomethingGeneric(GameCore.WaitGenerics.UniqueItemFanfare, 3f);
@@ -6371,7 +6371,7 @@ public class Controller_Player : MonoBehaviour
 			}
 			if (GC.ExistsEffectOnPlayer(GameCore.TempPlayerEffect.Charmed))
 			{
-				charmedDuration = GC.playerEffectList.Find((BuffEffect x) => x.effect == GameCore.TempPlayerEffect.Charmed).maxTimer;
+				charmedDuration = GC.playerEffectList.Find((BuffEffect x) => x.effect == GameCore.TempPlayerEffect.Charmed)?.maxTimer ?? 5f;
 			}
 			else
 			{
@@ -7530,7 +7530,7 @@ public class Controller_Player : MonoBehaviour
 		{
 			if (GC.AddThisPowerUp((GameCore.CollectibleType)array[i]))
 			{
-				text = GC.clsItemDatabase.listOfItemDatabase.Find((ItemInfo x) => x.id == arrayDBid[i]).description;
+				text = GC.clsItemDatabase.listOfItemDatabase.Find((ItemInfo x) => x.id == arrayDBid[i])?.description;
 				GC.DisplaySystemMessageUI(123456, 0, 0f, text);
 				GC.AddItemToPlayerInventory(arrayDBid[i], GC.strCurrentActiveSceneName, itemPosition);
 			}

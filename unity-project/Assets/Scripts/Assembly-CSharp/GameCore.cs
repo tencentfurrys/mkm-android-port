@@ -4292,6 +4292,12 @@ public class GameCore : MonoBehaviour
 
 	public IEnumerator LoadYourAsyncScene(string strnextScene, bool lockPlayerInput, bool persistPlayerGameSessionValues = false)
 	{
+		if (!MKM_IsSceneInBuild(strnextScene))
+		{
+			Debug.LogError("GC_Error[LoadYourAsyncScene]: scene [" + strnextScene + "] is not in the build settings! Aborting load.");
+			_isSceneTransitioning = false;
+			yield break;
+		}
 		_isSceneTransitioning = true;
 		_isPersistGameSessionValues = persistPlayerGameSessionValues;
 		_isForbidAllPlayerInput = lockPlayerInput;
@@ -4301,6 +4307,29 @@ public class GameCore : MonoBehaviour
 		{
 			yield return null;
 		}
+	}
+
+	// The game addresses scenes by bare name ("MainMenu"); Unity's build settings store
+	// full paths ("Assets/Scenes/MainMenu.unity"), so match on the file name too.
+	private bool MKM_IsSceneInBuild(string sceneName)
+	{
+		if (string.IsNullOrEmpty(sceneName))
+		{
+			return false;
+		}
+		for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
+		{
+			string path = SceneUtility.GetScenePathByBuildIndex(i);
+			if (string.IsNullOrEmpty(path))
+			{
+				continue;
+			}
+			if (path == sceneName || System.IO.Path.GetFileNameWithoutExtension(path) == sceneName)
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 
 	private bool CheckIfSceneToLoadIsValid(string sceneName)
@@ -4517,7 +4546,7 @@ public class GameCore : MonoBehaviour
 		string result = "title.null";
 		if (dialogueList != null && dialogueList.listOfDialogue.Exists((DialogueLine x) => x.id == idDiag))
 		{
-			result = dialogueList.listOfDialogue.Find((DialogueLine x) => x.id == idDiag).miscText;
+			result = dialogueList.listOfDialogue.Find((DialogueLine x) => x.id == idDiag)?.miscText;
 		}
 		return result;
 	}
@@ -4944,6 +4973,10 @@ public class GameCore : MonoBehaviour
 
 	public string ParseDialogueLineTags(string lineRaw)
 	{
+		if (string.IsNullOrEmpty(lineRaw))
+		{
+			return "";
+		}
 		string text = "";
 		if (lineRaw.Contains("<"))
 		{
@@ -5164,7 +5197,7 @@ public class GameCore : MonoBehaviour
 	public void DisplayTutorialMessage(bool setActive, int idLine)
 	{
 		string text = "tutorial.placeholder";
-		text = JsonUtility.FromJson<DialogueList>(LoadJSONDialogueFile(NPCType.OBJ_Tutorial)).listOfDialogue.Find((DialogueLine x) => x.id == idLine).speakerDialogue;
+		text = JsonUtility.FromJson<DialogueList>(LoadJSONDialogueFile(NPCType.OBJ_Tutorial)).listOfDialogue.Find((DialogueLine x) => x.id == idLine)?.speakerDialogue;
 		text = ParseDialogueLineTags(text);
 		if (CheckRefCoreUI())
 		{
@@ -5390,7 +5423,7 @@ public class GameCore : MonoBehaviour
 
 	public void LoadGameConfiguration()
 	{
-		if (DataDirectoryCheck() && coreConfigData != null)
+		if (DataDirectoryCheck() && coreConfigData != null && File.Exists(Path.Combine(MKMSaveDir(), "MKM_configfile.json")))
 		{
 			string strText = File.ReadAllText(Path.Combine(MKMSaveDir(), "MKM_configfile.json"));
 			strText = BasicXorEncryptorDecryptor(strText);
@@ -6391,8 +6424,15 @@ public class GameCore : MonoBehaviour
 	{
 		if (WEBGL_CheckIfIsWebBuild())
 		{
+			// Android/WebGL: embedded TextAsset feed. An empty/failed parse would null
+			// clsTranslationUI and NRE every Find(...).text in the menu - guard it.
 			clsTranslationUI = JsonUtility.FromJson<ListOfTranslationUI>(_jsonUI);
-			return true;
+			if (clsTranslationUI != null && clsTranslationUI.listOfUserInterfaceTranslation.Count > 0)
+			{
+				return true;
+			}
+			Debug.LogError("GC_Error[LoadUIFile]: embedded UI TextAsset is empty or failed to parse!");
+			return false;
 		}
 		string path = Path.Combine(_strCurrentLanguageFolderPath, "UserInterface.json");
 		clsTranslationUI = JsonUtility.FromJson<ListOfTranslationUI>(File.ReadAllText(path));
@@ -6407,7 +6447,12 @@ public class GameCore : MonoBehaviour
 	{
 		if (WEBGL_CheckIfIsWebBuild())
 		{
-			return JsonUtility.FromJson<IntroStoryList>(_jsonIntro);
+			IntroStoryList story = JsonUtility.FromJson<IntroStoryList>(_jsonIntro);
+			if (story == null || story.listOfIntroStory.Count == 0)
+			{
+				Debug.LogError("GC_Error[LoadIntroStoryFile]: embedded IntroStory TextAsset is empty or failed to parse!");
+			}
+			return story;
 		}
 		return JsonUtility.FromJson<IntroStoryList>(File.ReadAllText(Path.Combine(_strCurrentLanguageFolderPath, "IntroStory.json")));
 	}
@@ -7715,7 +7760,7 @@ public class GameCore : MonoBehaviour
 
 	public string GetItemNameFromList(int itemID)
 	{
-		return coreGameData.listOfItemInventory.Find((ItemInfo x) => x.id == itemID).name;
+		return coreGameData.listOfItemInventory.Find((ItemInfo x) => x.id == itemID)?.name;
 	}
 
 	private bool IsThereFlagActiveForThisUniqueItem(int itemID, string itemName)
@@ -7748,6 +7793,10 @@ public class GameCore : MonoBehaviour
 		if (WEBGL_CheckIfIsWebBuild())
 		{
 			clsItemDatabase = JsonUtility.FromJson<ListOfItemDatabase>(_jsonItemList);
+			if (clsItemDatabase == null || clsItemDatabase.listOfItemDatabase.Count == 0)
+			{
+				Debug.LogError("GC_Error[LoadItemDatabaseFile]: embedded ItemList TextAsset is empty or failed to parse!");
+			}
 			return;
 		}
 		string path = Path.Combine(_strCurrentLanguageFolderPath, "ItemList.json");
@@ -9403,7 +9452,7 @@ public class GameCore : MonoBehaviour
 	{
 		if (clsTranslationUI.listOfUserInterfaceTranslation.Count > 0)
 		{
-			string text = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == idBossNameInFile).text;
+			string text = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == idBossNameInFile)?.text;
 			if (CheckRefCoreUI() && text != "")
 			{
 				coreUI.UIMisc.BossName.text = text;
@@ -10184,12 +10233,12 @@ public class GameCore : MonoBehaviour
 
 	public string GetTranslatedStringUI(int sentID)
 	{
-		return ParseDialogueLineTags(clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == sentID).text);
+		return ParseDialogueLineTags(clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == sentID)?.text);
 	}
 
 	public string GetTranslatedStringITEM(int sentID)
 	{
-		return clsItemDatabase.listOfItemDatabase.Find((ItemInfo item) => item.id == sentID).name;
+		return clsItemDatabase.listOfItemDatabase.Find((ItemInfo item) => item.id == sentID)?.name;
 	}
 
 	public string getTranslatedStringChessPiece(SavePieceType thisPiece)
@@ -10244,88 +10293,88 @@ public class GameCore : MonoBehaviour
 		switch (strParseThisSceneName)
 		{
 		case "Stage2-Beach":
-			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 950).text;
+			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 950)?.text;
 			break;
 		case "Stage0-Dungeon":
-			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 951).text;
+			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 951)?.text;
 			break;
 		case "Stage0-UpperFloors":
-			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 969).text;
+			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 969)?.text;
 			break;
 		case "Stage0-BossChamber":
-			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 970).text;
+			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 970)?.text;
 			break;
 		case "Stage0-xActualDungeon":
-			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 971).text;
+			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 971)?.text;
 			break;
 		case "Stage1-Forest":
-			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 952).text;
+			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 952)?.text;
 			break;
 		case "Stage1-Forest-part2":
-			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 953).text;
+			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 953)?.text;
 			break;
 		case "Stage1-Forest-Boss":
-			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 954).text;
+			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 954)?.text;
 			break;
 		case "Stage2-Beach-Part2":
-			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 955).text;
+			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 955)?.text;
 			break;
 		case "Stage2-Beach-PartBoss":
-			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 956).text;
+			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 956)?.text;
 			break;
 		case "Stage3-Valley":
-			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 957).text;
+			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 957)?.text;
 			break;
 		case "Stage3-Valley-part2":
-			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 958).text;
+			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 958)?.text;
 			break;
 		case "Stage3-Valley-partBoss":
-			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 959).text;
+			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 959)?.text;
 			break;
 		case "Stage4-City":
-			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 960).text;
+			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 960)?.text;
 			break;
 		case "Stage4-City-part2":
-			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 961).text;
+			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 961)?.text;
 			break;
 		case "Stage4-City-part3Boss":
-			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 968).text;
+			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 968)?.text;
 			break;
 		case "Stage5-Cave1":
-			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 962).text;
+			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 962)?.text;
 			break;
 		case "Stage5-Cave2":
-			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 963).text;
+			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 963)?.text;
 			break;
 		case "Stage5-Cave3":
-			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 964).text;
+			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 964)?.text;
 			break;
 		case "Stage5-Cave4BW":
-			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 965).text;
+			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 965)?.text;
 			break;
 		case "Stage5-Cave5BossWitch":
-			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 972).text;
+			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 972)?.text;
 			break;
 		case "Stage6-1-Swamp":
-			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 966).text;
+			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 966)?.text;
 			break;
 		case "Stage6-2-Gardens":
-			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 967).text;
+			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 967)?.text;
 			break;
 		case "Stage6-3-SwampBoss":
-			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 977).text;
+			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 977)?.text;
 			break;
 		case "Stage7-HighTech_A":
-			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 973).text;
+			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 973)?.text;
 			break;
 		case "Stage7-HighTech_B_Boss":
-			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 974).text;
+			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 974)?.text;
 			break;
 		case "Stage7-HighTech_C":
-			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 975).text;
+			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 975)?.text;
 			break;
 		case "AnimGallery":
-			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 976).text;
+			result = clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 976)?.text;
 			break;
 		}
 		return result;

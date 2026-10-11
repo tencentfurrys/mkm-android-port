@@ -8,6 +8,6 @@ public class MayaVoiceGroups : ScriptableObject
 
 	public AudioClip[] GetVoiceArrayOfGroupType(GameCore.MARange thisGroup)
 	{
-		return listOfMayaVoiceGroups.Find((PresetMayaVoiceGroups x) => x.groupType == thisGroup).voices;
+		return listOfMayaVoiceGroups.Find((PresetMayaVoiceGroups x) => x.groupType == thisGroup)?.voices;
 	}
 }

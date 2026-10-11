@@ -1242,7 +1242,7 @@ public class MenuBehaviour : MonoBehaviour
 				menuSaveLoad.arraySaveSlots[i].imgSavePoint.color = Color.white;
 				continue;
 			}
-			menuSaveLoad.arraySaveSlots[i].txtStageName.text = "-" + GC.clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 43).text + "-";
+			menuSaveLoad.arraySaveSlots[i].txtStageName.text = "-" + GC.clsTranslationUI.listOfUserInterfaceTranslation.Find((LineOfTranslationUI item) => item.id == 43)?.text + "-";
 			menuSaveLoad.arraySaveSlots[i].txtDateTime.text = "";
 			menuSaveLoad.arraySaveSlots[i].imgSavePoint.sprite = null;
 			menuSaveLoad.arraySaveSlots[i].imgSavePoint.color = color;
