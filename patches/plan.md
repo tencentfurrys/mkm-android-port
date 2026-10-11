@@ -48,3 +48,18 @@ Fallback: USB/BT gamepad already works via `UnifiedInputHandlerGamepadDirectiona
 IL2CPP + ARMv7|ARM64 FAT APK, minSdk 19 (J3 = API 28 OK), targetSdk 28,
 GLES3 only, stripping Disabled, landscape.
 First build: P0+P1 only (boots to menu, touch comes next).
+
+## P1c - Splash text fix (boot NRE from null Farina ref)
+Ripped `_InitialScreen.unity` had `jsonFileDialogueFarina: {fileID: 0}` (no
+Farina TextAsset was ripped). `WEBGL_FeedLocalVariablesToString` threw NRE on
+`jsonDiagFarina.text`, aborting `InitialScreenSetup()` before
+`LoadUIFile()`/`ApplyLanguageOfWarnings()` - splash kept default key texts
+(`game_start:splash_screen`, `press_any_key`, `alpha_disclaimer_here`).
+Fix:
+- `Assets/TextAsset/Dialogue_Farina.json` (+ `.meta`) copied from
+  `Assets/StreamingAssets/Languages/ENG/`; scene ref wired (use the guid Unity
+  assigns on import, not a hand-made one - else `Fatal Error! guid is
+  uninitialized` at build).
+- `GameCore.WEBGL_FeedLocalVariablesToString`: null-guards on all 7 slots.
+Note: feed call passes Haruna asset into the Nene slot (pre-existing mapping
+quirk) - Nene NPC shows Haruna lines until a Nene TextAsset is wired.

@@ -10479,13 +10479,13 @@ public class GameCore : MonoBehaviour
 
 	public void WEBGL_FeedLocalVariablesToString(TextAsset jsonUI, TextAsset jsonItemLIst, TextAsset jsonIntroStory, TextAsset jsonDBoard, TextAsset jsonDNene, TextAsset jsonDVarious, TextAsset jsonDiagFarina)
 	{
-		_jsonUI = jsonUI.text;
-		_jsonItemList = jsonItemLIst.text;
-		_jsonIntro = jsonIntroStory.text;
-		_jsonD_Board = jsonDBoard.text;
-		_jsonD_Nene = jsonDNene.text;
-		_jsonD_Farina = jsonDiagFarina.text;
-		_jsonD_Various = jsonDVarious.text;
+		_jsonUI = (jsonUI != null) ? jsonUI.text : "";
+		_jsonItemList = (jsonItemLIst != null) ? jsonItemLIst.text : "";
+		_jsonIntro = (jsonIntroStory != null) ? jsonIntroStory.text : "";
+		_jsonD_Board = (jsonDBoard != null) ? jsonDBoard.text : "";
+		_jsonD_Nene = (jsonDNene != null) ? jsonDNene.text : "";
+		_jsonD_Farina = (jsonDiagFarina != null) ? jsonDiagFarina.text : "";
+		_jsonD_Various = (jsonDVarious != null) ? jsonDVarious.text : "";
 	}
 
 	private bool WEBGL_CheckIfIsWebBuild()
