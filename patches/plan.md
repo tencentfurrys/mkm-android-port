@@ -84,6 +84,39 @@ Fix: all `Assets/TextAsset/*.json` now hold the complete
 `Assets/StreamingAssets/Languages/ENG/` versions (Farina was already done in
 P1c). Counts now: UI 348, Items 99, Various 143, Board 57.
 
+## P1f - Diagnostic logger (MKMDiag, temporary)
+`Assets/Scripts/Assembly-CSharp/MKMDiag.cs`: `RuntimeInitializeOnLoadMethod`
+(BeforeSceneLoad) logger, DontDestroyOnLoad. Records device info, scene
+transitions, every Unity error/exception and explicit step markers to
+`persistentDataPath/MKMDiag.log` plus an on-screen overlay (current step +
+last error). All I/O try/catch-guarded; no gameplay behavior changed.
+Step markers cover: Splash Start/Setup/feed/LoadUIFile, async scene load,
+Menu Start/Setup per-call, AudioSystem clip resolution, TeleportScreenLogic
+and ItemScrollManager entry. Remove for final release builds.
+
+## P1g - OOM fix: lazy-load all audio (fixes LMK kill during MainMenu load)
+Symptom: A16 (3.4GB RAM) died inside `LoadSceneAsync("MainMenu")` with no
+managed exception - diag log healthy up to `calling LoadSceneAsync`, then
+silence. Root cause: all 850 AudioClips were `DecompressOnLoad` +
+`preloadAudioData`, and all are referenced by the shared `AudioClipsList`
+ScriptableObject that MainMenu loads - ~94MB Vorbis expanded to ~1GB PCM
+in one spike, LMK killed the app.
+Fix: all 850 `Assets/AudioClip/*.meta` set to `loadType:
+CompressedInMemory (1)`, `preloadAudioData: 0`, `loadInBackground: 1`.
+Clips stay compressed and decode only when actually played (menu footprint
+now title music + UI sounds only).
+
+## P2a - IntroStory touch advance + wide-screen UI fit
+- `IntroStory.Update` was keyboard-only (ConfirmUI/Return/Space) and the
+  Next/Skip prompts are labels, not buttons - touch players stuck on page 1.
+  Any tap/click now advances; two-finger tap (or right-click) skips;
+  hints read Tap / 2-Finger Tap on Android.
+- Ripped canvases are 1920x1080 Match-Width: on wider phones (2340x1080)
+  everything scaled ~22% and top/bottom UI cropped off-screen.
+  `Assets/Scripts/Assembly-CSharp/MKMCanvasFit.cs` runtime hook forces
+  Expand mode on every ScaleWithScreenSize scaler at each scene load -
+  full design space visible on any aspect, no scene-file edits.
+
 ## P1e - Nene dialogue wired + Find() crash hardening
 - `SplashScreen.jsonFileDialogueNene` added (+ `Assets/TextAsset/Dialogue_Nene.json`
   and its import guid) and wired in `_InitialScreen.unity`; the feed call now

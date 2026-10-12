@@ -35,7 +35,14 @@ Private reverse-engineering backup + build tree for porting the Windows demo
   `LoadUIFile`/`LoadItemDatabaseFile`/`LoadIntroStoryFile`/`LoadGameConfiguration`
   and a build-settings check in `LoadYourAsyncScene` — a missing entry now
   degrades to empty text instead of crashing the app.
-- **P2 (TODO)** touch controls injected at `GameCore.UnifiedInputHandler`.
+- **P1f** diagnostic build: `MKMDiag` logger (boot steps, device info, all
+  errors) to `MKMDiag.log` + on-screen overlay. Temporary, remove for release.
+- **P1g** loading-screen OOM fix: all 850 AudioClips changed from
+  DecompressOnLoad+preload to CompressedInMemory, preload off, background load.
+- **P2a** IntroStory touch advance (tap = next, two-finger tap = skip) and
+  `MKMCanvasFit` Expand-mode hook so UI isn't cropped on wide screens.
+- **P2 (TODO)** in-game touch controls (joystick + buttons) injected at
+  `GameCore.UnifiedInputHandler`.
 
 ## Toolchain (all installed on the build machine, D: drive)
 
