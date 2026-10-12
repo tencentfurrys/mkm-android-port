@@ -23,6 +23,8 @@ public class MKM_TouchUI : MonoBehaviour
 
 		private int activePointer = -10;
 
+		public int ActivePointer => activePointer;
+
 		public void OnPointerDown(PointerEventData e)
 		{
 			if (activePointer == -10)
@@ -49,7 +51,7 @@ public class MKM_TouchUI : MonoBehaviour
 			}
 		}
 
-		private void OnDisable()
+		public void ForceRelease()
 		{
 			if (activePointer != -10)
 			{
@@ -61,11 +63,18 @@ public class MKM_TouchUI : MonoBehaviour
 				}
 			}
 		}
+
+		private void OnDisable()
+		{
+			ForceRelease();
+		}
 	}
 
 	private static MKM_TouchUI _inst;
 
 	private GameObject _root;
+
+	private System.Collections.Generic.List<Btn> _btns = new System.Collections.Generic.List<Btn>();
 
 	private static Sprite _circle;
 
@@ -94,6 +103,7 @@ public class MKM_TouchUI : MonoBehaviour
 				if (_inst != null)
 				{
 					_inst.Refresh();
+					_inst.ResetButtons();
 				}
 				MKM_Touch.ResetAll();
 			};
@@ -110,10 +120,104 @@ public class MKM_TouchUI : MonoBehaviour
 		MKM_Touch.ClearFrame();
 	}
 
+	private void OnApplicationFocus(bool focus)
+	{
+		if (!focus)
+		{
+			ResetButtons();
+			MKM_Touch.ResetAll();
+		}
+	}
+
+	private void OnApplicationPause(bool paused)
+	{
+		if (paused)
+		{
+			ResetButtons();
+			MKM_Touch.ResetAll();
+		}
+	}
+
+	private void ResetButtons()
+	{
+		try
+		{
+			if (_btns != null)
+			{
+				for (int i = 0; i < _btns.Count; i++)
+				{
+					if (_btns[i] != null)
+					{
+						_btns[i].ForceRelease();
+					}
+				}
+			}
+		}
+		catch
+		{
+		}
+	}
+
+	// A pointer stolen by another control (or a canvas hidden mid-press) never
+	// fires OnPointerUp, latching held[Right]=true forever -> Maya auto-runs.
+	// Each frame, verify every claimed pointer is still an active touch.
+	private void ReapStalePointers()
+	{
+		try
+		{
+			if (_btns == null || _btns.Count == 0)
+			{
+				return;
+			}
+			bool hasTouches = Input.touchCount > 0;
+			for (int i = 0; i < _btns.Count; i++)
+			{
+				Btn b = _btns[i];
+				if (b == null || b.ActivePointer == -10)
+				{
+					continue;
+				}
+				int pid = b.ActivePointer;
+				if (pid >= 0)
+				{
+					bool alive = false;
+					if (hasTouches)
+					{
+						for (int t = 0; t < Input.touches.Length; t++)
+						{
+							Touch th = Input.touches[t];
+							if (th.fingerId == pid && (th.phase == TouchPhase.Began || th.phase == TouchPhase.Moved || th.phase == TouchPhase.Stationary))
+							{
+								alive = true;
+								break;
+							}
+						}
+					}
+					if (!alive)
+					{
+						b.ForceRelease();
+					}
+				}
+				else
+				{
+					// Mouse / pen pointer (editor testing): release when button is up.
+					if (!Input.GetMouseButton(0))
+					{
+						b.ForceRelease();
+					}
+				}
+			}
+		}
+		catch
+		{
+		}
+	}
+
 	private float _nextVisCheck;
 
 	private void Update()
 	{
+		ReapStalePointers();
 		if (Time.time >= _nextVisCheck)
 		{
 			_nextVisCheck = Time.time + 0.25f;
@@ -189,6 +293,8 @@ public class MKM_TouchUI : MonoBehaviour
 			_font = Resources.GetBuiltinResource<Font>("Arial.ttf");
 			float s = Mathf.Min((float)Screen.width / 1920f, (float)Screen.height / 1080f);
 			s = Mathf.Clamp(s, 0.6f, 1.6f);
+			float w = Screen.width;
+			float h = Screen.height;
 			float R = 92f * s;
 			float cx = 250f * s;
 			float cy = 250f * s;
@@ -196,18 +302,29 @@ public class MKM_TouchUI : MonoBehaviour
 			Add(GameCore.InputLib.Down, "▼", cx, cy - R * 1.15f, R);
 			Add(GameCore.InputLib.Left, "◀", cx - R * 1.15f, cy, R);
 			Add(GameCore.InputLib.Right, "▶", cx + R * 1.15f, cy, R);
-			float ax = (float)Screen.width - 250f * s;
-			float ay = 250f * s;
-			float r2 = 78f * s;
-			Add(GameCore.InputLib.BasicAttack, "ATK", ax, ay + r2 * 0.1f, r2 * 1.15f);
-			Add(GameCore.InputLib.Jump, "JMP", ax - r2 * 2.3f, ay - r2 * 0.4f, r2);
-			Add(GameCore.InputLib.Interact, "INT", ax + r2 * 0.1f - r2 * 2.3f, ay + r2 * 1.9f, r2 * 0.9f);
-			Add(GameCore.InputLib.AttackSkills, "SKL", ax + r2 * 2.1f, ay + r2 * 1.5f, r2 * 0.9f);
-			Add(GameCore.InputLib.DefenseSkills, "DEF", ax + r2 * 2.1f, ay - r2 * 1.2f, r2 * 0.9f);
-			Add(GameCore.InputLib.UseItemActive, "USE", ax - r2 * 2.3f, ay + r2 * 1.9f, r2 * 0.8f);
-			GameObject pause = Add(GameCore.InputLib.Pause, "II", (float)Screen.width - 90f * s, (float)Screen.height - 90f * s, 62f * s);
+			// Right cluster: 2 cols x 3 rows grid anchored bottom-right.
+			// Old packing put INT and USE on near-identical centers and pushed
+			// SKL off the right edge at 2340x1080. Grid spacing (180h x 170v)
+			// exceeds max diameter sum (~160) so neighbours can't overlap,
+			// and every center is clamped inside the screen.
+			float col1 = w - 330f * s;
+			float col2 = w - 150f * s;
+			float row1 = 190f * s;
+			float row2 = 360f * s;
+			float row3 = 530f * s;
+			float rBig = 88f * s;
+			float rMed = 76f * s;
+			float rSml = 68f * s;
+			Add(GameCore.InputLib.Jump, "JMP", col1, row1, rMed);
+			Add(GameCore.InputLib.BasicAttack, "ATK", col2, row1, rBig);
+			Add(GameCore.InputLib.UseItemActive, "USE", col1, row2, rSml);
+			Add(GameCore.InputLib.DefenseSkills, "DEF", col2, row2, rSml);
+			Add(GameCore.InputLib.Interact, "INT", col1, row3, rSml);
+			Add(GameCore.InputLib.AttackSkills, "SKL", col2, row3, rSml);
+			// Pause was top-right under a game icon; move to top-left.
+			GameObject pause = Add(GameCore.InputLib.Pause, "II", 90f * s, h - 90f * s, 62f * s);
 			pause.name = "TouchPause";
-			MKMDiag.Step("TOUCHUI built, scale=" + s);
+			MKMDiag.Step("TOUCHUI built, scale=" + s + " w=" + w + " h=" + h);
 		}
 		catch
 		{
@@ -216,6 +333,10 @@ public class MKM_TouchUI : MonoBehaviour
 
 	private GameObject Add(GameCore.InputLib lib, string label, float x, float y, float rad)
 	{
+		// Clamp every center inside the screen so no button can end up half
+		// off-screen on wide/tall aspects (SKL was cut off at 2340x1080).
+		float cx = Mathf.Clamp(x, rad, Mathf.Max(rad, (float)Screen.width - rad));
+		float cy = Mathf.Clamp(y, rad, Mathf.Max(rad, (float)Screen.height - rad));
 		GameObject go = new GameObject("Touch_" + lib);
 		go.transform.SetParent(_root.transform, worldPositionStays: false);
 		RectTransform rt = go.AddComponent<RectTransform>();
@@ -223,7 +344,7 @@ public class MKM_TouchUI : MonoBehaviour
 		rt.anchorMax = Vector2.zero;
 		rt.pivot = new Vector2(0.5f, 0.5f);
 		rt.sizeDelta = new Vector2(rad * 2f, rad * 2f);
-		rt.anchoredPosition = new Vector2(x, y);
+		rt.anchoredPosition = new Vector2(cx, cy);
 		Image img = go.AddComponent<Image>();
 		img.sprite = _circle;
 		img.type = Image.Type.Simple;
@@ -232,6 +353,11 @@ public class MKM_TouchUI : MonoBehaviour
 		b.img = img;
 		b.normal = _circle;
 		b.pressed = _circleHot;
+		if (_btns == null)
+		{
+			_btns = new System.Collections.Generic.List<Btn>();
+		}
+		_btns.Add(b);
 		GameObject tx = new GameObject("Label");
 		tx.transform.SetParent(go.transform, worldPositionStays: false);
 		RectTransform rtt = tx.AddComponent<RectTransform>();

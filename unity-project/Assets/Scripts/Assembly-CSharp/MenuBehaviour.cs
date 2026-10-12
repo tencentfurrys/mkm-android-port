@@ -1306,6 +1306,7 @@ public class MenuBehaviour : MonoBehaviour
 
 	private void TryToSaveTheGame(int slotID)
 	{
+		try { MKMDiag.Step("MENU save tap slot=" + slotID); } catch { }
 		if (GC.SaveGameData(slotID))
 		{
 			PopulateSaveFileSlotArrayAndApplyToUI();
@@ -1315,6 +1316,7 @@ public class MenuBehaviour : MonoBehaviour
 
 	private void TryToLoadTheGame(int slotID, bool isRetry = false)
 	{
+		try { MKMDiag.Step("MENU load tap slot=" + slotID); } catch { }
 		if (!GC.isSceneTransitioning && GC.TrySetupGameLoad(getLatestSave: false, slotID, currentMenuSceneType, isRetry))
 		{
 			SpecialCloseAllWindows();

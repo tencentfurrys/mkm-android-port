@@ -3756,7 +3756,39 @@ public class GameCore : MonoBehaviour
 	private void Update()
 	{
 		UpdateGamepadDirectionalStateControl();
-		UPDT_UINavigation();
+		try
+		{
+			UPDT_UINavigation();
+		}
+		catch (System.Exception ex)
+		{
+			try { MKMDiag.Step("UINav guarded: " + ex.GetType().Name + " " + ex.Message); } catch { }
+		}
+		// Safety net for the touch latch: OnGUI is event-driven, so a missed
+		// OnPointerUp could leave movHack set. Per-frame, touch state is
+		// authoritative unless a physical key/pad holds that direction.
+		try
+		{
+			if (MKM_Touch.Held(InputLib.Right))
+			{
+				_movHackRight = true;
+			}
+			else if (!IsPhysHold(InputLib.Right))
+			{
+				_movHackRight = false;
+			}
+			if (MKM_Touch.Held(InputLib.Left))
+			{
+				_movHackLeft = true;
+			}
+			else if (!IsPhysHold(InputLib.Left))
+			{
+				_movHackLeft = false;
+			}
+		}
+		catch
+		{
+		}
 		_currentFullScrnState = Screen.fullScreen;
 		if (_currentFullScrnState != _storedFullScrnState)
 		{
@@ -3771,52 +3803,92 @@ public class GameCore : MonoBehaviour
 	private void UPDT_UINavigation()
 	{
 		EventSystem current = EventSystem.current;
-		if ((object)current == null || current.currentSelectedGameObject?.activeInHierarchy != true || _isListeningGeneralKB || crtUINavigationMicroDelay != null || delayAfterkeyBound)
+		// Use Unity null check (not (object) cast) so a destroyed EventSystem
+		// during scene loads safely skips instead of throwing every frame.
+		if (current == null || current.currentSelectedGameObject?.activeInHierarchy != true || _isListeningGeneralKB || crtUINavigationMicroDelay != null || delayAfterkeyBound)
 		{
 			return;
 		}
-		Selectable selectable = EventSystem.current?.currentSelectedGameObject?.GetComponent<Selectable>();
+		Selectable selectable = null;
+		try
+		{
+			selectable = current.currentSelectedGameObject?.GetComponent<Selectable>();
+		}
+		catch
+		{
+			return;
+		}
 		if (!(selectable == null))
 		{
 			Selectable selectable2 = null;
 			float wait = 0.125f;
 			float wait2 = 0.125f;
-			if (UPDT_UIMove(InputLib.Up, InputPressType.KeyHolding, KeyCode.UpArrow))
+			try
 			{
-				selectable2 = selectable.FindSelectableOnUp();
-				OnGUICheckScrollBars(selectable, directionUp: true);
-				crtUINavigationMicroDelay = StartCoroutine(waitUINavigationMicroDelay(wait2));
+				if (UPDT_UIMove(InputLib.Up, InputPressType.KeyHolding, KeyCode.UpArrow))
+				{
+					selectable2 = selectable.FindSelectableOnUp();
+					OnGUICheckScrollBars(selectable, directionUp: true);
+					crtUINavigationMicroDelay = StartCoroutine(waitUINavigationMicroDelay(wait2));
+				}
+				else if (UPDT_UIMove(InputLib.Left, InputPressType.KeyHolding, KeyCode.LeftArrow))
+				{
+					selectable2 = selectable.FindSelectableOnLeft();
+					OnGUICheckSliders(selectable, directionRight: false);
+					crtUINavigationMicroDelay = StartCoroutine(waitUINavigationMicroDelay(wait));
+				}
+				else if (UPDT_UIMove(InputLib.Down, InputPressType.KeyHolding, KeyCode.DownArrow))
+				{
+					selectable2 = selectable.FindSelectableOnDown();
+					OnGUICheckScrollBars(selectable, directionUp: false);
+					crtUINavigationMicroDelay = StartCoroutine(waitUINavigationMicroDelay(wait2));
+				}
+				else if (UPDT_UIMove(InputLib.Right, InputPressType.KeyHolding, KeyCode.RightArrow))
+				{
+					selectable2 = selectable.FindSelectableOnRight();
+					OnGUICheckSliders(selectable, directionRight: true);
+					crtUINavigationMicroDelay = StartCoroutine(waitUINavigationMicroDelay(wait));
+				}
 			}
-			else if (UPDT_UIMove(InputLib.Left, InputPressType.KeyHolding, KeyCode.LeftArrow))
+			catch (System.Exception ex)
 			{
-				selectable2 = selectable.FindSelectableOnLeft();
-				OnGUICheckSliders(selectable, directionRight: false);
-				crtUINavigationMicroDelay = StartCoroutine(waitUINavigationMicroDelay(wait));
+				try { MKMDiag.Step("UINav inner guarded: " + ex.GetType().Name + " " + ex.Message); } catch { }
+				return;
 			}
-			else if (UPDT_UIMove(InputLib.Down, InputPressType.KeyHolding, KeyCode.DownArrow))
+			try
 			{
-				selectable2 = selectable.FindSelectableOnDown();
-				OnGUICheckScrollBars(selectable, directionUp: false);
-				crtUINavigationMicroDelay = StartCoroutine(waitUINavigationMicroDelay(wait2));
+				if ((bool)selectable2)
+				{
+					selectable2.Select();
+				}
 			}
-			else if (UPDT_UIMove(InputLib.Right, InputPressType.KeyHolding, KeyCode.RightArrow))
+			catch
 			{
-				selectable2 = selectable.FindSelectableOnRight();
-				OnGUICheckSliders(selectable, directionRight: true);
-				crtUINavigationMicroDelay = StartCoroutine(waitUINavigationMicroDelay(wait));
-			}
-			if ((bool)selectable2)
-			{
-				selectable2.Select();
 			}
 		}
 	}
 
 	private bool UPDT_UIMove(InputLib dir, InputPressType type, KeyCode arrowUniversal)
 	{
-		if (MKM_Touch.Query(dir, type) || UnifiedInputHandlerGamepadDirectional(dir, type) || UnifiedInputHandlerTypeOfPress(dir, type) || Input.GetKeyDown(arrowUniversal))
+		try
 		{
-			return true;
+			if (MKM_Touch.Query(dir, type) || UnifiedInputHandlerGamepadDirectional(dir, type) || UnifiedInputHandlerTypeOfPress(dir, type))
+			{
+				return true;
+			}
+		}
+		catch
+		{
+		}
+		try
+		{
+			if (Input.GetKeyDown(arrowUniversal))
+			{
+				return true;
+			}
+		}
+		catch
+		{
 		}
 		return false;
 	}
@@ -3835,9 +3907,10 @@ public class GameCore : MonoBehaviour
 	private void OnGUI()
 	{
 		Event current = Event.current;
-		if (isKeyboardCfgInput && current.isKey)
+		if (isKeyboardCfgInput && current != null && current.isKey)
 		{
-			if (current.keyCode == IKey(InputLib.Right))
+			KeyCode kr = IKeySafe(InputLib.Right);
+			if (kr != KeyCode.None && current.keyCode == kr)
 			{
 				if (current.type == EventType.KeyDown)
 				{
@@ -3848,7 +3921,8 @@ public class GameCore : MonoBehaviour
 					_movHackRight = false;
 				}
 			}
-			if (current.keyCode == IKey(InputLib.Left))
+			KeyCode kl = IKeySafe(InputLib.Left);
+			if (kl != KeyCode.None && current.keyCode == kl)
 			{
 				if (current.type == EventType.KeyDown)
 				{
@@ -3880,15 +3954,54 @@ public class GameCore : MonoBehaviour
 			}
 		}
 		// Android touch controls (P2): d-pad holds drive horizontal movement
-		// regardless of keyboard/gamepad config mode.
-		if (MKM_Touch.Held(InputLib.Right))
+		// regardless of keyboard/gamepad config mode. Must clear on release
+		// too — the old code only ever set true, so one tap latched
+		// _movHackRight forever (Maya auto-ran into the pillar). Only keep
+		// the flag when a physical keyboard/gamepad still holds that side.
+		bool touchR = MKM_Touch.Held(InputLib.Right);
+		bool touchL = MKM_Touch.Held(InputLib.Left);
+		if (touchR)
 		{
 			_movHackRight = true;
 		}
-		if (MKM_Touch.Held(InputLib.Left))
+		else if (!IsPhysHold(InputLib.Right))
+		{
+			_movHackRight = false;
+		}
+		if (touchL)
 		{
 			_movHackLeft = true;
 		}
+		else if (!IsPhysHold(InputLib.Left))
+		{
+			_movHackLeft = false;
+		}
+	}
+
+	private bool IsPhysHold(InputLib lib)
+	{
+		try
+		{
+			KeyCode k = IKeySafe(lib);
+			if (k != KeyCode.None && Input.GetKey(k))
+			{
+				return true;
+			}
+		}
+		catch
+		{
+		}
+		try
+		{
+			if (UnifiedInputHandlerGamepadDirectional(lib, InputPressType.KeyHolding))
+			{
+				return true;
+			}
+		}
+		catch
+		{
+		}
+		return false;
 	}
 
 	public KeyCode TranslateGamepadInput()
@@ -4177,22 +4290,76 @@ public class GameCore : MonoBehaviour
 
 	public bool GetSubmitButtonUniversalPress(bool isHold = false)
 	{
-		if (!isHold && Input.GetKeyDown(IKey(InputLib.ConfirmUI)))
+		// Touch twin: pause-menu Save/Continue rows are tapped directly, but
+		// MenuBehaviour also polls this for ConfirmUI — feed the USE/Confirm
+		// virtual button so touch taps raise the same press.
+		try
 		{
-			return true;
+			if (!isHold && (MKM_Touch.Down(InputLib.ConfirmUI) || MKM_Touch.Down(InputLib.UseItemActive) || MKM_Touch.Down(InputLib.Interact)))
+			{
+				return true;
+			}
+			if (isHold && (MKM_Touch.Held(InputLib.ConfirmUI) || MKM_Touch.Held(InputLib.UseItemActive) || MKM_Touch.Held(InputLib.Interact)))
+			{
+				return true;
+			}
 		}
-		if (isHold && Input.GetKey(IKey(InputLib.ConfirmUI)))
+		catch
 		{
-			return true;
+		}
+		try
+		{
+			KeyCode k = IKeySafe(InputLib.ConfirmUI);
+			if (k != KeyCode.None)
+			{
+				if (!isHold && Input.GetKeyDown(k))
+				{
+					return true;
+				}
+				if (isHold && Input.GetKey(k))
+				{
+					return true;
+				}
+			}
+		}
+		catch
+		{
 		}
 		return false;
 	}
 
 	public bool GetCancelButtonUniversalPress()
 	{
-		if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(IKey(InputLib.CancelUI)) || Input.GetMouseButtonDown(1))
+		try
 		{
-			return true;
+			if (MKM_Touch.Down(InputLib.CancelUI) || MKM_Touch.Down(InputLib.Pause))
+			{
+				return true;
+			}
+		}
+		catch
+		{
+		}
+		try
+		{
+			KeyCode k = IKeySafe(InputLib.CancelUI);
+			if ((k != KeyCode.None && Input.GetKeyDown(k)) || Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(1))
+			{
+				return true;
+			}
+		}
+		catch
+		{
+			try
+			{
+				if (Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(1))
+				{
+					return true;
+				}
+			}
+			catch
+			{
+			}
 		}
 		return false;
 	}
@@ -4347,9 +4514,29 @@ public class GameCore : MonoBehaviour
 
 	private bool CheckIfSceneToLoadIsValid(string sceneName)
 	{
-		if (SceneUtility.GetBuildIndexByScenePath(sceneName) >= 0)
+		// Saves store bare names ("Stage2-Beach") but GetBuildIndexByScenePath
+		// needs full paths ("Assets/Scenes/Stage2-Beach.unity"), so it always
+		// returned -1 and rejected valid saves on device. Reuse the
+		// name-or-path matcher used by LoadYourAsyncScene.
+		try
 		{
-			return true;
+			if (MKM_IsSceneInBuild(sceneName))
+			{
+				return true;
+			}
+		}
+		catch
+		{
+		}
+		try
+		{
+			if (SceneUtility.GetBuildIndexByScenePath(sceneName) >= 0)
+			{
+				return true;
+			}
+		}
+		catch
+		{
 		}
 		return false;
 	}
@@ -5261,6 +5448,7 @@ public class GameCore : MonoBehaviour
 	{
 		try
 		{
+			try { MKMDiag.Step("SAVE begin slot=" + slotID + " scene=" + strCurrentActiveSceneName); } catch { }
 			_savingPlayerData = true;
 			canPlayerCanUpdateGlobalVariables = false;
 			coreGameData.strPlayerSaveScene = strCurrentActiveSceneName;
@@ -5276,19 +5464,23 @@ public class GameCore : MonoBehaviour
 				string strText = JsonUtility.ToJson(coreGameData);
 				strText = BasicXorEncryptorDecryptor(strText);
 				File.WriteAllText(Path.Combine(MKMSaveDir(), text), strText);
+				try { MKMDiag.Step("SAVE wrote " + text + " bytes=" + strText.Length); } catch { }
 				ValidateSaveFilesIntoSlots();
 				StoreRetryGameCore(_playerCurrentWorldXPosition, _playerCurrentWorldYPosition, "GameCore-SaveGameData");
 				_offsetCameraAfterTP = Vector2.zero;
 				canPlayerCanUpdateGlobalVariables = true;
+				try { MKMDiag.Step("SAVE ok slot=" + slotID); } catch { }
 				return true;
 			}
 			Debug.Log("GC_Error[SaveGameData]: Returned FALSE on the main IF statement!");
+			try { MKMDiag.Step("SAVE rejected slot=" + slotID); } catch { }
 			canPlayerCanUpdateGlobalVariables = true;
 			return false;
 		}
 		catch (Exception ex)
 		{
 			Debug.Log("GC_Error[SaveGameData]: " + ex.Message);
+			try { MKMDiag.Step("SAVE fail: " + ex.GetType().Name + " " + ex.Message); } catch { }
 			_savingPlayerData = false;
 			canPlayerCanUpdateGlobalVariables = true;
 			return false;
@@ -5299,6 +5491,7 @@ public class GameCore : MonoBehaviour
 	{
 		try
 		{
+			try { MKMDiag.Step("LOAD begin slot=" + slotID); } catch { }
 			GamePlayerData loadedFile = new GamePlayerData();
 			if (DataDirectoryCheck() && coreGameData != null && slotID >= 0 && slotID <= 9 && !isRetry)
 			{
@@ -5309,6 +5502,11 @@ public class GameCore : MonoBehaviour
 					string strText = File.ReadAllText(Path.Combine(MKMSaveDir(), text));
 					strText = BasicXorEncryptorDecryptor(strText);
 					loadedFile = JsonUtility.FromJson<GamePlayerData>(strText);
+					try { MKMDiag.Step("LOAD read " + text + " scene=" + loadedFile.strPlayerSaveScene); } catch { }
+				}
+				else
+				{
+					try { MKMDiag.Step("LOAD missing " + text); } catch { }
 				}
 			}
 			if (isRetry && retryCoreGameData != null)
@@ -5322,6 +5520,7 @@ public class GameCore : MonoBehaviour
 				if (!CheckIfSceneToLoadIsValid(loadedFile.strPlayerSaveScene))
 				{
 					Debug.Log("GC_Error[LoadGameData]: Tried to load scene [" + loadedFile.strPlayerSaveScene + "], but it is not valid or was not found in the list!");
+					try { MKMDiag.Step("LOAD bad scene: " + loadedFile.strPlayerSaveScene); } catch { }
 					return false;
 				}
 			}
@@ -5330,11 +5529,13 @@ public class GameCore : MonoBehaviour
 			{
 				return false;
 			}
+			try { MKMDiag.Step("LOAD ok slot=" + slotID); } catch { }
 			return true;
 		}
 		catch (Exception ex)
 		{
 			Debug.Log("GC_Error[LoadGameData]: " + ex.Message);
+			try { MKMDiag.Step("LOAD fail: " + ex.GetType().Name + " " + ex.Message); } catch { }
 			return false;
 		}
 	}
@@ -7321,42 +7522,94 @@ public class GameCore : MonoBehaviour
 
 	private bool UnifiedInputHandlerGamepadDirectional(InputLib sentInput, InputPressType sentType)
 	{
-		if (_listGPInputState != null && _listGPInputState.Count > 0 && _listGPInputState.Exists((GamepadDirectionalStateControl x) => x.reservedKey == IKey(sentInput) && x.state == sentType))
+		try
 		{
-			return true;
+			KeyCode want = IKeySafe(sentInput);
+			if (want == KeyCode.None)
+			{
+				return false;
+			}
+			if (_listGPInputState != null && _listGPInputState.Count > 0 && _listGPInputState.Exists((GamepadDirectionalStateControl x) => x != null && x.reservedKey == want && x.state == sentType))
+			{
+				return true;
+			}
+		}
+		catch
+		{
 		}
 		return false;
 	}
 
 	private bool UnifiedInputHandlerTypeOfPress(InputLib sentInput, InputPressType sentPress)
 	{
-		switch (sentPress)
+		try
 		{
-		case InputPressType.KeyPressedOnce:
-			if (Input.GetKeyDown(IKey(sentInput)))
+			KeyCode k = IKeySafe(sentInput);
+			if (k == KeyCode.None)
 			{
-				return true;
+				return false;
 			}
-			break;
-		case InputPressType.KeyHolding:
-			if (Input.GetKey(IKey(sentInput)))
+			switch (sentPress)
 			{
-				return true;
+			case InputPressType.KeyPressedOnce:
+				if (Input.GetKeyDown(k))
+				{
+					return true;
+				}
+				break;
+			case InputPressType.KeyHolding:
+				if (Input.GetKey(k))
+				{
+					return true;
+				}
+				break;
+			case InputPressType.KeyReleased:
+				if (Input.GetKeyUp(k))
+				{
+					return true;
+				}
+				break;
 			}
-			break;
-		case InputPressType.KeyReleased:
-			if (Input.GetKeyUp(IKey(sentInput)))
-			{
-				return true;
-			}
-			break;
+		}
+		catch
+		{
 		}
 		return false;
 	}
 
 	public KeyCode IKey(InputLib type)
 	{
-		return (KeyCode)inputList.Find((KeyBindingItem x) => x.type == (int)type).key;
+		KeyCode k = IKeySafe(type);
+		if (k == KeyCode.None)
+		{
+			// Preserve old throw-site behaviour for PC callers that expect a
+			// valid binding, but UPDT paths now use IKeySafe via IsPhysHold /
+			// guarded UnifiedInputHandlerTypeOfPress. Only throw if truly
+			// missing so the NRE line in the overlay becomes a named error.
+			throw new System.NullReferenceException("MKM IKey missing binding for " + type);
+		}
+		return k;
+	}
+
+	public KeyCode IKeySafe(InputLib type)
+	{
+		try
+		{
+			if (inputList == null)
+			{
+				return KeyCode.None;
+			}
+			KeyBindingItem it = inputList.Find((KeyBindingItem x) => x.type == (int)type);
+			if (it == null)
+			{
+				return KeyCode.None;
+			}
+			return (KeyCode)it.key;
+		}
+		catch
+		{
+			return KeyCode.None;
+		}
 	}
 
 	public void InsertNewInputKeyCode(InputLib newType, KeyCode newKeyCode)
@@ -9807,6 +10060,12 @@ public class GameCore : MonoBehaviour
 	{
 		try
 		{
+			// On Android/GLES3 the capture path stalls or throws on some GPUs;
+			// JSON save is authoritative — skip the PNG, keep the slot working.
+			if (isCapture && Application.platform == RuntimePlatform.Android)
+			{
+				return;
+			}
 			string text = Path.Combine(MKMSaveDir(), "MKMSVP" + strCustom + ".png");
 			if (isCapture)
 			{
