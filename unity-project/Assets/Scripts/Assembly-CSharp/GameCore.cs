@@ -3814,7 +3814,7 @@ public class GameCore : MonoBehaviour
 
 	private bool UPDT_UIMove(InputLib dir, InputPressType type, KeyCode arrowUniversal)
 	{
-		if (UnifiedInputHandlerGamepadDirectional(dir, type) || UnifiedInputHandlerTypeOfPress(dir, type) || Input.GetKeyDown(arrowUniversal))
+		if (MKM_Touch.Query(dir, type) || UnifiedInputHandlerGamepadDirectional(dir, type) || UnifiedInputHandlerTypeOfPress(dir, type) || Input.GetKeyDown(arrowUniversal))
 		{
 			return true;
 		}
@@ -3878,6 +3878,16 @@ public class GameCore : MonoBehaviour
 			{
 				_movHackLeft = false;
 			}
+		}
+		// Android touch controls (P2): d-pad holds drive horizontal movement
+		// regardless of keyboard/gamepad config mode.
+		if (MKM_Touch.Held(InputLib.Right))
+		{
+			_movHackRight = true;
+		}
+		if (MKM_Touch.Held(InputLib.Left))
+		{
+			_movHackLeft = true;
 		}
 	}
 
@@ -7285,6 +7295,11 @@ public class GameCore : MonoBehaviour
 
 	public bool UnifiedInputHandler(InputLib requestedInput, InputPressType typeOfPress)
 	{
+		// Android touch controls (P2): virtual buttons feed the same libs.
+		if (MKM_Touch.Query(requestedInput, typeOfPress))
+		{
+			return true;
+		}
 		switch (configInputType)
 		{
 		case InputType.Keyboard:

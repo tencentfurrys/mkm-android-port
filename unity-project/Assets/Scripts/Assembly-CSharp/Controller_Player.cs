@@ -1760,7 +1760,7 @@ public class Controller_Player : MonoBehaviour
 
 	private bool UPD_EXCEPTIONS_SPECIAL_SKILL_CANCELS()
 	{
-		if (Input.GetKeyDown(GC.IKey(GameCore.InputLib.AttackSkills)) || Input.GetKeyDown(GC.IKey(GameCore.InputLib.DefenseSkills)))
+		if (Input.GetKeyDown(GC.IKey(GameCore.InputLib.AttackSkills)) || Input.GetKeyDown(GC.IKey(GameCore.InputLib.DefenseSkills)) || MKM_Touch.Down(GameCore.InputLib.AttackSkills) || MKM_Touch.Down(GameCore.InputLib.DefenseSkills))
 		{
 			return true;
 		}

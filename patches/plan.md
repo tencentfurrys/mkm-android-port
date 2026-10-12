@@ -30,7 +30,7 @@ private bool WEBGL_CheckIfIsWebBuild()
 Requires the ripped scenes to keep the TextAsset refs on the bootstrap object
 that calls `WEBGL_FeedLocalVariablesToString` — verify post-rip.
 
-## P2 — Touch input (REQUIRED for playability, do after first bootable APK)
+## P2 - Touch input (REQUIRED for playability, do after first bootable APK)
 All gameplay input funnels through `GameCore.UnifiedInputHandler(InputLib, InputPressType)`
 (plus ~34 direct `Input.GetKey/GetButton` call sites, mostly UI/cancel keys).
 Plan:
@@ -43,6 +43,23 @@ Plan:
    (`#if UNITY_ANDROID` / platform check).
 5. `Screen.sleepTimeout = SleepTimeout.NeverSleep` while playing.
 Fallback: USB/BT gamepad already works via `UnifiedInputHandlerGamepadDirectional`.
+
+## P2b - Touch gamepad implemented (MKM_Touch + MKM_TouchUI)
+- `MKM_Touch.cs`: static per-lib held/down/up state. down/up latched exactly
+  one frame (cleared in LateUpdate, after all Updates) so polling order never
+  matters. `Query(lib, press)` maps the three press types.
+- `MKM_TouchUI.cs`: runtime-built overlay (no scene edits), Android-only,
+  parchment-and-bronze circular buttons generated in code. Left diamond d-pad
+  (Up/Down/Left/Right), right cluster ATK(BasicAttack)/JMP(Jump)/INT(Interact)/
+  SKL(AttackSkills)/DEF(DefenseSkills)/USE(UseItemActive), Pause top-right.
+  Multi-touch safe (per-button pointerId). Shown in gameplay scenes only;
+  hidden in _InitialScreen/MainMenu/Intro-Story and while paused (those are
+  tapped directly). Creates an EventSystem only if the scene has none.
+- Injections: `UnifiedInputHandler` ORs touch first (covers all gameplay +
+  menu nav + teleport + gallery); `UPDT_UIMove` ORs touch; `OnGUI` movHack
+  Left/Right OR touch holds (movement is event-driven, no keyboard fallback);
+  skill-cancel exception path ORs touch downs. CancelUI LCtrl twins already
+  route via `UnifiedInputHandler`, no edit needed. USB/BT gamepad unaffected.
 
 ## Build config (see build/BuildAndroid.cs)
 IL2CPP + ARMv7|ARM64 FAT APK, minSdk 19 (J3 = API 28 OK), targetSdk 28,
