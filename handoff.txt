@@ -1,0 +1,44 @@
+MKM ANDROID PORT - HANDOFF (2026-10-12)
+Repo: https://github.com/tencentfurrys/mkm-android-port (branch: main)
+Game: Mystic Knight Maya 0.7.5 demo, Unity 2019.2.6f1 (fe82a0e88406), IL2CPP FAT (arm64+armeabi-v7a), minSdk 19 / targetSdk 28, GLES3, landscape.
+Latest release: v0.7.5-android-p2b (playable: boots, menu, intro, beach gameplay, touch gamepad v1).
+
+STATE OF PLAY
+- Game runs on Galaxy A16. Fixed so far: P0 save path, P1 JSON-via-TextAssets, P1c splash text, P1d full language JSON, P1e NRE hardening, P1f MKMDiag logger+overlay, P1g audio OOM fix, P2a tap-story + UI Expand fit, P2b touch gamepad.
+- Full history in patches/plan.md (P0..P2b) and README.md. Build with MKMBuild.BuildAndroid (unity-project/Assets/Editor/MKMBuild.cs).
+- THIS MACHINE paths (D: build box): editor D:\Unity\Hub\Editor\2019.2.6f1, SDK/NDK r16b/OpenJDK under its PlaybackEngines/AndroidPlayer, workspace copy D:\mkm\mkm-android-port (warm Library - rebuilds ~20 min), license C:\ProgramData\Unity\Unity_lic.ulf. Repo checkout C:\Users\RDP\Documents\Default Project\mkm-android-port. NOTE: a PAT token was pasted in chat history - REVOKE it (github.com/settings/tokens).
+- Package-ID trap: our APKs are com.MegaBlueBall.MysticKnightMaya (ripper default; build driver's SetApplicationIdentifier doesn't apply on 2019.2). A DIFFERENT old app com.megablueball.mkm exists on the test phone - same icon. Always verify which app is under test (adb shell pm list packages | grep -i megablue).
+
+3 OPEN ISSUES (all seen live on A16, Stage2-Beach, P2b build)
+
+[1] GAMEPAD BUTTONS OVERLAP (screenshot confirmed)
+Right cluster overlaps: USE button drawn on top of INT; SKL half off right screen edge. Cause: MKM_TouchUI.cs Build() right-cluster coordinates pack 6 buttons into too small an area at this aspect (1920x1080 design scaled s=1.0 on 2340x1080). INT and USE get near-identical centers; SKL x exceeds screen width.
+Fix: re-space the cluster in MKM_TouchUI.cs Build() - 2 columns x 3 rows grid anchored bottom-right with margins verified against Screen.width, e.g. col centers at (w - 150*s, w - 320*s), row centers at (180*s, 350*s, 520*s); assign ATK/JMP/INT/SKL/DEF/USE to grid cells; clamp every center to [rad, w-rad]x[rad, h-rad]. Tune with one screenshot round-trip.
+Also: pause button (top-right) overlapped a red game icon - move to top-LEFT or below the item HUD.
+
+[2] SAVE SYSTEM - VERIFY / FIX
+Unverified end-to-end on device. Save path (P0, MKMSaveDir()=persistentDataPath/UserData) writes config fine (MKM_configfile.json seen on device). What to test: pause menu Save on beach -> exit -> Continue/Load restores beach position. Suspects if broken: (a) save menu (MenuBehaviour save/load screen) may need ConfirmUI key events that touch-tap doesn't raise as KeyPressedOnce - tap only sends UI Submit; check MenuBehaviour.TryToSaveTheGame path and GetSubmitButtonUniversalPress (GameCore 4168) vs touch; (b) screenshot capture on save (GameCore ~9743 MKMSVP png) may fail on GLES3/mobile - guard with try/catch + skip screenshot on Android, keep JSON save; (c) LoadGameData scene validation uses CheckIfSceneToLoadIsValid which compares full build paths vs bare names - saves store bare scene names, could reject valid saves (MKM_IsSceneInBuild already handles this for async loads; apply same name-or-path match there).
+Fix recipe: instrument MenuBehaviour save/load + GameCore.SaveGameData/LoadGameData with MKMDiag.Step markers, reproduce on device, read MKMDiag.log, fix what the log names.
+
+[3] CHARACTER STUCK RUNNING FORWARD + top-left NRE (screenshot confirmed)
+Two possibly-linked symptoms: (a) Maya runs right on her own; (b) diag overlay shows repeating NullReferenceException in UPDT_UINavigation.
+Evidence: NRE text "UPDT_UINavigation () (at <000...>" repeats every frame even in gameplay with no menu open. Stuck-run means movHackRight or held-Right latched true.
+Suspects, in order:
+  (i) Touch state stuck: Btn.OnPointerUp missed (finger released over another UI element / canvas hidden mid-press / scene changed mid-press) leaving MKM_Touch held[Right]=true forever. OnDisable releases only its own button - a pointer stolen by a different control never fires OnPointerUp. Harden: in MKM_TouchUI.Update, each frame verify each pressed button's pointerId is still in Input.touches; if its touch ended/canceled with no OnPointerUp, force Release. Also clear all on Application focus loss (OnApplicationFocus(false) -> ResetAll) and on canvas hide (already ResetAll - confirm it runs).
+  (ii) UPDT_UINavigation NRE itself: GameCore ~3771-3812 - EventSystem.current?.currentSelectedGameObject chain or selectable.FindSelectableOn* on a destroyed/ripped object; runs every frame in stages (guard `currentSelectedGameObject?.activeInHierarchy != true` should skip... unless EventSystem.current is null in a way that still enters). Get the FULL stack trace first (see below) - the truncated overlay hides the throwing line.
+  (iii) If stuck-run persists with touch UI hidden: check _movHackRight writers (GameCore OnGUI 3835-3882) - keyboard-event branch only runs when isKeyboardCfgInput; a stuck KeyDown without KeyUp (lost focus) latches it. Same focus-loss reset covers it.
+How to nail it: pull the FULL MKMDiag.log from the device (persistentDataPath/MKMDiag.log, same folder the earlier logs.zip came from) - it captures every LOG-Exception with stack trace. The throwing line + the last TOUCH markers before the runaway identify it exactly. Do NOT guess further without that file.
+
+NEXT STEPS IN ORDER
+1. Push this file (done) - everything committed, tree clean.
+2. Get full MKMDiag.log + a fresh screenshot after 30s of the stuck-run.
+3. Fix [3] with the log (touch-lifecycle hardening first), then [1] layout, then [2] save test.
+4. Rebuild (warm Library, batchmode MKMBuild.BuildAndroid), release, playtest.
+5. Remaining roadmap: remove MKMDiag overlay for final build, fix package id via PlayerSettings.SetApplicationIdentifier(BuildTargetGroup.Android,...), P2 tuning round.
+
+BUILD (headless, needs env):
+set ANDROID_HOME=D:\Unity\Hub\Editor\2019.2.6f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK (same for ANDROID_SDK_ROOT)
+set ANDROID_NDK_ROOT=...\NDK (same for ANDROID_NDK_HOME)
+set JAVA_HOME=...\Tools\OpenJDK\Windows
+Unity.exe -batchmode -quit -projectPath <repo>\unity-project -executeMethod MKMBuild.BuildAndroid -logFile build.log
+APK -> unity-project/MKM-0.7.5-android.apk (gitignored; ship via GitHub Releases).
