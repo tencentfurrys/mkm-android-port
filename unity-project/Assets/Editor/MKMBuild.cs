@@ -16,6 +16,10 @@ public static class MKMBuild
         PlayerSettings.companyName = "Mega Blue Ball";
         PlayerSettings.productName = "Mystic Knight Maya";
         PlayerSettings.applicationIdentifier = "com.megablueball.mkm";
+        // 2019.2: the plain setter follows the selected build target, so set
+        // the Android identifier explicitly (a batch session defaulting to
+        // Standalone silently shipped the ripper default package id once).
+        PlayerSettings.SetApplicationIdentifier(BuildTargetGroup.Android, "com.megablueball.mkm");
         PlayerSettings.bundleVersion = "0.7.5";
         PlayerSettings.Android.bundleVersionCode = 1;
         PlayerSettings.Android.minSdkVersion = AndroidSdkVersions.AndroidApiLevel19;
