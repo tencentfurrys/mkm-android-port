@@ -84,6 +84,18 @@ Fix: all `Assets/TextAsset/*.json` now hold the complete
 `Assets/StreamingAssets/Languages/ENG/` versions (Farina was already done in
 P1c). Counts now: UI 348, Items 99, Various 143, Board 57.
 
+## P1e - Nene dialogue wired + Find() crash hardening
+- `SplashScreen.jsonFileDialogueNene` added (+ `Assets/TextAsset/Dialogue_Nene.json`
+  and its import guid) and wired in `_InitialScreen.unity`; the feed call now
+  passes the Nene asset into the Nene slot instead of Haruna's (old quirk).
+- `GameCore.GetTranslatedStringUI/ITEM`, `ParseDialogueLineTags`, `LoadUIFile`,
+  `LoadItemDatabaseFile`, `LoadIntroStoryFile`, `LoadGameConfiguration`
+  (`File.Exists` guard) and `LoadYourAsyncScene` (new `MKM_IsSceneInBuild`
+  build-settings check, name- or path-matching) are now null-safe.
+- All 43 `list.Find(...).member` sites across GameCore/Controller_Player/
+  MenuBehaviour/SplashScreen/MayaVoiceGroups use `?.member` so a missing entry
+  degrades to an empty string instead of killing the app.
+
 ## P1f - Diagnostic logger (MKMDiag, temporary)
 `Assets/Scripts/Assembly-CSharp/MKMDiag.cs`: `RuntimeInitializeOnLoadMethod`
 (BeforeSceneLoad) logger, DontDestroyOnLoad. Records device info, scene
@@ -116,15 +128,3 @@ now title music + UI sounds only).
   `Assets/Scripts/Assembly-CSharp/MKMCanvasFit.cs` runtime hook forces
   Expand mode on every ScaleWithScreenSize scaler at each scene load -
   full design space visible on any aspect, no scene-file edits.
-
-## P1e - Nene dialogue wired + Find() crash hardening
-- `SplashScreen.jsonFileDialogueNene` added (+ `Assets/TextAsset/Dialogue_Nene.json`
-  and its import guid) and wired in `_InitialScreen.unity`; the feed call now
-  passes the Nene asset into the Nene slot instead of Haruna's (old quirk).
-- `GameCore.GetTranslatedStringUI/ITEM`, `ParseDialogueLineTags`, `LoadUIFile`,
-  `LoadItemDatabaseFile`, `LoadIntroStoryFile`, `LoadGameConfiguration`
-  (`File.Exists` guard) and `LoadYourAsyncScene` (new `MKM_IsSceneInBuild`
-  build-settings check, name- or path-matching) are now null-safe.
-- All 43 `list.Find(...).member` sites across GameCore/Controller_Player/
-  MenuBehaviour/SplashScreen/MayaVoiceGroups use `?.member` so a missing entry
-  degrades to an empty string instead of killing the app.
