@@ -83,6 +83,7 @@ public class TeleportScreenLogic : MonoBehaviour
 
 	private void Start()
 	{
+		MKMDiag.Step("TELEPORT.Start");
 		GC = GameCore.Instance;
 		currentTransition = LocalScroll.Null;
 		colorOriginalButton = btnCenterMain.image.color;

@@ -4292,6 +4292,7 @@ public class GameCore : MonoBehaviour
 
 	public IEnumerator LoadYourAsyncScene(string strnextScene, bool lockPlayerInput, bool persistPlayerGameSessionValues = false)
 	{
+		MKMDiag.Step("GC.LoadScene: " + strnextScene);
 		if (!MKM_IsSceneInBuild(strnextScene))
 		{
 			Debug.LogError("GC_Error[LoadYourAsyncScene]: scene [" + strnextScene + "] is not in the build settings! Aborting load.");
@@ -4302,11 +4303,13 @@ public class GameCore : MonoBehaviour
 		_isPersistGameSessionValues = persistPlayerGameSessionValues;
 		_isForbidAllPlayerInput = lockPlayerInput;
 		_strPreviousSceneName = strCurrentActiveSceneName;
+		MKMDiag.Step("GC.LoadScene: calling LoadSceneAsync");
 		AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(strnextScene);
 		while (!asyncLoad.isDone)
 		{
 			yield return null;
 		}
+		MKMDiag.Step("GC.LoadScene: async done, progress=" + asyncLoad.progress);
 	}
 
 	// The game addresses scenes by bare name ("MainMenu"); Unity's build settings store

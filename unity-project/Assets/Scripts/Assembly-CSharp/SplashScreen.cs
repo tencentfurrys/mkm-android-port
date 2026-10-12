@@ -60,9 +60,11 @@ public class SplashScreen : MonoBehaviour
 
 	private void Start()
 	{
+		MKMDiag.Step("SPLASH.Start");
 		InitializeVariables();
 		RunKeyPressDelay(timeDelayKeyPress);
 		InitialScreenSetup();
+		MKMDiag.Step("SPLASH.Start done");
 	}
 
 	private void InitializeVariables()
@@ -78,20 +80,28 @@ public class SplashScreen : MonoBehaviour
 
 	private void InitialScreenSetup()
 	{
+		MKMDiag.Step("SPLASH.Setup: MainGameDataInitialize");
 		GC.MainGameDataInitialize(RenewAll: true);
+		MKMDiag.Step("SPLASH.Setup: LoadGameConfiguration");
 		GC.LoadGameConfiguration();
 		if (GC.GameBuildCurrent == GameCore.GameBuildType.WebGL || GC.GameBuildCurrent == GameCore.GameBuildType.Mac || Application.platform == RuntimePlatform.Android)
 		{
 			// Nene slot MUST get the Nene TextAsset (P1e). Before P1e the splash passed the
 			// Haruna asset into the Nene slot, so the Nene NPC spoke Haruna's lines.
+			MKMDiag.Step("SPLASH.Setup: feed UI=" + (jsonFileUI != null) + " items=" + (jsonFileItemList != null) + " intro=" + (jsonFileIntroStory != null) + " board=" + (jsonFileDialogueBoard != null) + " nene=" + (jsonFileDialogueNene != null) + " haruna=" + (jsonFileDialogueHaruna != null) + " various=" + (jsonFileDialogueVarious != null) + " farina=" + (jsonFileDialogueFarina != null));
 			GC.WEBGL_FeedLocalVariablesToString(jsonFileUI, jsonFileItemList, jsonFileIntroStory, jsonFileDialogueBoard, jsonFileDialogueNene, jsonFileDialogueVarious, jsonFileDialogueFarina);
 		}
+		MKMDiag.Step("SPLASH.Setup: GetRootLanguageList");
 		GC.GetRootLanguageList();
 		GC.ConcatenateSelectedLanguageFolderPath();
-		if (GC.LoadUIFile())
+		MKMDiag.Step("SPLASH.Setup: LoadUIFile");
+		bool okUI = GC.LoadUIFile();
+		MKMDiag.Step("SPLASH.Setup: LoadUIFile=" + okUI + " uiCount=" + ((GC.clsTranslationUI != null && GC.clsTranslationUI.listOfUserInterfaceTranslation != null) ? GC.clsTranslationUI.listOfUserInterfaceTranslation.Count : -1));
+		if (okUI)
 		{
 			ApplyLanguageOfWarnings();
 		}
+		MKMDiag.Step("SPLASH.Setup done");
 	}
 
 	private void Update()
@@ -209,6 +219,7 @@ public class SplashScreen : MonoBehaviour
 
 	private void LoadMainMenuScene()
 	{
+		MKMDiag.Step("SPLASH: loading MainMenu...");
 		StartCoroutine(GC.LoadYourAsyncScene("MainMenu", lockPlayerInput: true));
 	}
 

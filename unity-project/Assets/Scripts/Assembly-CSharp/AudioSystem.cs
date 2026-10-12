@@ -46,7 +46,9 @@ public class AudioSystem : MonoBehaviour
 
 	public void PlayMusicTheme(GameCore.MusicTheme thisMusic, bool doFadeIn, float fadeTime, bool doLoop)
 	{
+		MKMDiag.Step("AUDIO.PlayMusic: " + thisMusic + " listNull=" + (listOfAudio == null) + " srcNull=" + (sourceMusicPlayer == null));
 		sourceMusicPlayer.clip = listOfAudio.ReturnMusicAudioClipByType(thisMusic);
+		MKMDiag.Step("AUDIO.PlayMusic: clip null=" + (sourceMusicPlayer.clip == null));
 		sourceMusicPlayer.loop = doLoop;
 		if (sourceMusicPlayer.clip != null)
 		{

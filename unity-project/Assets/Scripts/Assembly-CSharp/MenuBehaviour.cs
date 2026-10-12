@@ -151,10 +151,13 @@ public class MenuBehaviour : MonoBehaviour
 
 	private void Start()
 	{
+		MKMDiag.Step("MENU.Start type=" + currentMenuSceneType);
 		GC = GameCore.Instance;
+		MKMDiag.Step("MENU.Start: GC null=" + (GC == null));
 		InitializeVariables();
 		InitialSetup();
 		InvokeRepeating("Invoked_SpecialBehaviorsUpdated", 0f, freqInvokeMainBehaviorUpdate);
+		MKMDiag.Step("MENU.Start done");
 	}
 
 	private void InitializeVariables()
@@ -194,13 +197,21 @@ public class MenuBehaviour : MonoBehaviour
 			return;
 		}
 		GC.PlayMusicTheme(GameCore.MusicTheme.TitleScreen, doFadeIn: true, 1f, doLoop: true);
+		MKMDiag.Step("MENU.Setup: PlayMusicTheme done");
 		GC.ResetGameCoreGlobals();
+		MKMDiag.Step("MENU.Setup: ResetGameCoreGlobals done");
 		GC.MainGameDataInitialize(RenewAll: true);
+		MKMDiag.Step("MENU.Setup: MainGameDataInitialize done");
 		RetrieveBaseLists();
+		MKMDiag.Step("MENU.Setup: RetrieveBaseLists done");
 		LoadLanguageOfMenu();
+		MKMDiag.Step("MENU.Setup: LoadLanguageOfMenu done");
 		GC.LoadItemDatabaseFile();
+		MKMDiag.Step("MENU.Setup: LoadItemDatabaseFile done, items=" + ((GC.clsItemDatabase != null && GC.clsItemDatabase.listOfItemDatabase != null) ? GC.clsItemDatabase.listOfItemDatabase.Count : -1));
 		ApplyInitialValuesToSelections();
+		MKMDiag.Step("MENU.Setup: ApplyInitialValues done");
 		CheckFirstButtonToSelect();
+		MKMDiag.Step("MENU.Setup done");
 		if (GC.isSceneTransitioning)
 		{
 			GC.isSceneTransitioning = false;

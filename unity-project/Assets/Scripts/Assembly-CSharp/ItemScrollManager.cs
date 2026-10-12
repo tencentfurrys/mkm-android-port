@@ -40,6 +40,7 @@ public class ItemScrollManager : MonoBehaviour
 
 	private void OnEnable()
 	{
+		MKMDiag.Step("ITEMSCROLL.OnEnable logic=" + selfInventoryLogic);
 		timeDelayAfterListLoad = 0.1f;
 		crtDelayAfterListLoad = null;
 		isFirstLoad = true;
