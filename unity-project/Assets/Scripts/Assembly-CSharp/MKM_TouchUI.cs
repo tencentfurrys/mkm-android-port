@@ -251,7 +251,7 @@ public class MKM_TouchUI : MonoBehaviour
 	private static Sprite Circle(Color fill, Color rim)
 	{
 		int S = 128;
-		Texture2D tex = new Texture2D(S, S, TextureFormat.ARGB32, mipmap: false);
+		Texture2D tex = new Texture2D(S, S, TextureFormat.ARGB32, false);
 		tex.filterMode = FilterMode.Bilinear;
 		Color clear = new Color(0f, 0f, 0f, 0f);
 		for (int py = 0; py < S; py++)
