@@ -10860,6 +10860,38 @@ public class GameCore : MonoBehaviour
 		}
 	}
 
+	// Pause-open save diagnostic (P2e): reports the save gate + nearest
+	// SavePoint trigger distance so the log shows whether the player is
+	// really inside a save zone or the trigger never fired on device.
+	private void MKM_LogPauseSaveState()
+	{
+		try
+		{
+			float nearest = -1f;
+			int count = 0;
+			try
+			{
+				GameObject[] pts = GameObject.FindGameObjectsWithTag("SavePoint");
+				if (pts != null)
+				{
+					count = pts.Length;
+					Vector2 pp = new Vector2(_playerCurrentWorldXPosition, _playerCurrentWorldYPosition);
+					for (int i = 0; i < pts.Length; i++)
+					{
+						if (pts[i] == null) continue;
+						float d = Vector2.Distance(pp, (Vector2)pts[i].transform.position);
+						if (nearest < 0f || d < nearest) nearest = d;
+					}
+				}
+			}
+			catch { }
+			MKMDiag.Step("PAUSE saveGate=" + _canPlayerSaveGame + " updGlobals=" + canPlayerCanUpdateGlobalVariables + " scene=" + strCurrentActiveSceneName + " pos=" + _playerCurrentWorldXPosition.ToString("F1") + "," + _playerCurrentWorldYPosition.ToString("F1") + " savePts=" + count + " nearest=" + nearest.ToString("F1"));
+		}
+		catch
+		{
+		}
+	}
+
 	public void TogglePauseForGameMenu()
 	{
 		if (isListeningForGeneralKeyBindings)
@@ -10876,6 +10908,7 @@ public class GameCore : MonoBehaviour
 					refAudioSystem.SetMusicVolumeManually(configMusicVolume * 0.4f);
 				}
 				_isGamePaused = true;
+				try { MKM_LogPauseSaveState(); } catch { }
 				if (CheckRefCoreUI())
 				{
 					coreUI.ToggleMainMenu(state: true);
