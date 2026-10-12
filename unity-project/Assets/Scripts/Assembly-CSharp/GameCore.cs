@@ -3762,7 +3762,7 @@ public class GameCore : MonoBehaviour
 		}
 		catch (System.Exception ex)
 		{
-			try { MKMDiag.Step("UINav guarded: " + ex.GetType().Name + " " + ex.Message); } catch { }
+			MKM_LogGuarded("UINav outer", ex);
 		}
 		// Safety net for the touch latch: OnGUI is event-driven, so a missed
 		// OnPointerUp could leave movHack set. Per-frame, touch state is
@@ -3800,10 +3800,32 @@ public class GameCore : MonoBehaviour
 		}
 	}
 
+	private static int _mkmGuardLogCount;
+
+	// The guards below fire every frame while the fault persists, so log the
+	// FULL trace (message + stack) for the first few hits into MKMDiag.log,
+	// then stay silent. Without the stack the overlay line can't name the fix.
+	private static void MKM_LogGuarded(string site, System.Exception ex)
+	{
+		try
+		{
+			if (_mkmGuardLogCount < 4)
+			{
+				_mkmGuardLogCount++;
+				string trace = "";
+				try { trace = ex.ToString(); } catch { trace = ex.GetType().Name + " " + ex.Message; }
+				MKMDiag.Step(site + " guarded #" + _mkmGuardLogCount + ": " + trace);
+			}
+		}
+		catch
+		{
+		}
+	}
+
 	private void UPDT_UINavigation()
 	{
 		EventSystem current = EventSystem.current;
-		// Use Unity null check (not (object) cast) so a destroyed EventSystem
+		// Unity null check (not (object) cast) so a destroyed EventSystem
 		// during scene loads safely skips instead of throwing every frame.
 		if (current == null || current.currentSelectedGameObject?.activeInHierarchy != true || _isListeningGeneralKB || crtUINavigationMicroDelay != null || delayAfterkeyBound)
 		{
@@ -3852,7 +3874,7 @@ public class GameCore : MonoBehaviour
 			}
 			catch (System.Exception ex)
 			{
-				try { MKMDiag.Step("UINav inner guarded: " + ex.GetType().Name + " " + ex.Message); } catch { }
+				MKM_LogGuarded("UINav inner", ex);
 				return;
 			}
 			try
