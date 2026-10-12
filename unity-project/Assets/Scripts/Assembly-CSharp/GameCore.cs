@@ -10569,11 +10569,29 @@ public class GameCore : MonoBehaviour
 
 	public bool IsButtonAlreadySelected(Button thisBTN)
 	{
-		if (EventSystem.current?.currentSelectedGameObject?.name == thisBTN.name)
+		// Touch players never have a selected object and ripped scenes can
+		// leave button refs unwired - either null here used to NRE every
+		// pause/menu open (GameUI.ToggleMainMenu, MenuBehaviour setup paths).
+		try
 		{
-			EventSystem.current.SetSelectedGameObject(null);
-			thisBTN.Select();
-			return true;
+			if (thisBTN == null)
+			{
+				return false;
+			}
+			EventSystem es = EventSystem.current;
+			if (es == null || es.currentSelectedGameObject == null)
+			{
+				return false;
+			}
+			if (es.currentSelectedGameObject.name == thisBTN.name)
+			{
+				es.SetSelectedGameObject(null);
+				thisBTN.Select();
+				return true;
+			}
+		}
+		catch
+		{
 		}
 		return false;
 	}

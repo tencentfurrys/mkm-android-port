@@ -2305,6 +2305,7 @@ public class Controller_Player : MonoBehaviour
 		}
 		case "SavePoint":
 			canSaveGame = true;
+			try { MKMDiag.Step("SAVEZONE enter " + ((other != null && other.gameObject != null) ? other.gameObject.name : "?")); } catch { }
 			if (!isLoadDelay && GC.playerCurrentHealth < (float)GC.playerMaxHealth && !GC.isPlayerFainted && !GC.playerIsBeingGrabed)
 			{
 				GC.HealThePlayer(100f);
@@ -2436,6 +2437,7 @@ public class Controller_Player : MonoBehaviour
 			break;
 		case "SavePoint":
 			canSaveGame = false;
+			try { MKMDiag.Step("SAVEZONE exit " + ((other != null && other.gameObject != null) ? other.gameObject.name : "?")); } catch { }
 			break;
 		case "Mech-Lever":
 			canInteractWithLever = false;
