@@ -106,17 +106,55 @@ public class IntroStory : MonoBehaviour
 		{
 			return;
 		}
-		if (GC.UnifiedInputHandler(GameCore.InputLib.ConfirmUI, GameCore.InputPressType.KeyPressedOnce) || Input.GetKeyDown(GC.IKey(GameCore.InputLib.Interact)) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
+		if (GC.UnifiedInputHandler(GameCore.InputLib.ConfirmUI, GameCore.InputPressType.KeyPressedOnce) || Input.GetKeyDown(GC.IKey(GameCore.InputLib.Interact)) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space) || MKM_Tap())
 		{
 			if (txtStoryLineDisplay.color.a >= 1f)
 			{
 				DisplayNextSentence(isFirstLine: false);
 			}
 		}
-		else if (GC.UnifiedInputHandler(GameCore.InputLib.CancelUI, GameCore.InputPressType.KeyPressedOnce) || Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.LeftControl))
+		else if (GC.UnifiedInputHandler(GameCore.InputLib.CancelUI, GameCore.InputPressType.KeyPressedOnce) || Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.LeftControl) || MKM_TwoFingerTap())
 		{
 			FinishIntro();
 		}
+	}
+
+	// Android (P2a): no keyboard, so any tap/click advances the story and a
+	// two-finger tap (or right-click) skips it. Touch counts as mouse input,
+	// but check real touches too in case mouse simulation is ever disabled.
+	private bool MKM_Tap()
+	{
+		if (Input.GetMouseButtonDown(0))
+		{
+			return true;
+		}
+		for (int i = 0; i < Input.touchCount; i++)
+		{
+			if (Input.GetTouch(i).phase == TouchPhase.Began)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
+	private bool MKM_TwoFingerTap()
+	{
+		if (Input.GetMouseButtonDown(1))
+		{
+			return true;
+		}
+		if (Input.touchCount >= 2)
+		{
+			for (int i = 0; i < Input.touchCount; i++)
+			{
+				if (Input.GetTouch(i).phase == TouchPhase.Began)
+				{
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 
 	private void DisplayNextSentence(bool isFirstLine)
@@ -355,6 +393,11 @@ public class IntroStory : MonoBehaviour
 		txtLabelSkip.text = GC.GetTranslatedStringUI(147) + ":";
 		txtInputNext.text = GC.IKey(GameCore.InputLib.ConfirmUI).ToString();
 		txtInputSkip.text = GC.IKey(GameCore.InputLib.CancelUI).ToString();
+		if (Application.platform == RuntimePlatform.Android)
+		{
+			txtInputNext.text = "Tap";
+			txtInputSkip.text = "2-Finger Tap";
+		}
 	}
 
 	private IEnumerator waitForInputLockDelay(float wait)
