@@ -1,44 +1,49 @@
-MKM ANDROID PORT - HANDOFF (2026-10-12)
+MKM ANDROID PORT - HANDOFF (2026-10-13, session 2: P2c/P2d/P2e built + released)
 Repo: https://github.com/tencentfurrys/mkm-android-port (branch: main)
 Game: Mystic Knight Maya 0.7.5 demo, Unity 2019.2.6f1 (fe82a0e88406), IL2CPP FAT (arm64+armeabi-v7a), minSdk 19 / targetSdk 28, GLES3, landscape.
-Latest release: v0.7.5-android-p2b (playable: boots, menu, intro, beach gameplay, touch gamepad v1).
+Latest release: v0.7.5-android-p2e (P2c fixes + P2d/P2e diagnostics). Previous: v0.7.5-android-p2c (same fixes, ripper package id).
+
+COMMITS SINCE LAST HANDOFF (all on main, pushed)
+- 1ddd55da P2c: gamepad right cluster -> 2-col x 3-row grid + on-screen clamp (INT/USE overlap proven: 7.8px apart, needed 132px), pause button top-LEFT; stuck-run latch fixed (touch release clears _movHack unless physical key/pad holds + per-frame Update safety net + stale-pointer reaping + focus/pause/scene reset); UPDT_UINavigation hardened (Unity null check, IKeySafe, inner/outer try-catch); CheckIfSceneToLoadIsValid uses name-or-path match; touch wired into GetSubmit/CancelButtonUniversalPress; save screenshot skipped on Android; SAVE/LOAD/MENU diag markers.
+- 70ecce3d P2d: UINav guards log FULL ex.ToString() throttled to first 4 hits (guards previously swallowed the stack).
+- 39cc5160 P2e: pause-open Step "PAUSE saveGate/updGlobals/scene/pos/savePts/nearest" (settles save-at-crystal reports).
+- f69d59ac Build: MKMBuild sets Android applicationIdentifier explicitly (see PACKAGE-ID note).
 
 STATE OF PLAY
-- Game runs on Galaxy A16. Fixed so far: P0 save path, P1 JSON-via-TextAssets, P1c splash text, P1d full language JSON, P1e NRE hardening, P1f MKMDiag logger+overlay, P1g audio OOM fix, P2a tap-story + UI Expand fit, P2b touch gamepad.
-- Full history in patches/plan.md (P0..P2b) and README.md. Build with MKMBuild.BuildAndroid (unity-project/Assets/Editor/MKMBuild.cs).
-- THIS MACHINE paths (D: build box): editor D:\Unity\Hub\Editor\2019.2.6f1, SDK/NDK r16b/OpenJDK under its PlaybackEngines/AndroidPlayer, workspace copy D:\mkm\mkm-android-port (warm Library - rebuilds ~20 min), license C:\ProgramData\Unity\Unity_lic.ulf. Repo checkout C:\Users\RDP\Documents\Default Project\mkm-android-port. NOTE: a PAT token was pasted in chat history - REVOKE it (github.com/settings/tokens).
-- Package-ID trap: our APKs are com.MegaBlueBall.MysticKnightMaya (ripper default; build driver's SetApplicationIdentifier doesn't apply on 2019.2). A DIFFERENT old app com.megablueball.mkm exists on the test phone - same icon. Always verify which app is under test (adb shell pm list packages | grep -i megablue).
+- P2c verified live on A16 by screenshots: new grid clean, pause top-left, NRE caught by guard (no spam), stuck-run fix in test.
+- Save design (code-read, NOT a bug): Save Game enables ONLY inside SavePoint crystal triggers (Controller_Player 2306-7 sets canSaveGame, 2438 clears; MenuBehaviour 355 gates on GC.canPlayerSaveGame). INT at crystal = quicksave slot 0 (Controller_Player 1605-8 -> PlayerQuickSaveGameData -> SaveGameData(0) + msg 60). Gray Save mid-dungeon is correct PC behavior. Save e2e on device still unverified.
+- Device: Galaxy A16 SM-S166V, Android 16 API-36, 3.4GB RAM, usable 2240x1080. UserData on device had only MKM_configfile.json (config path P0 works; no savefile ever written).
+- MKMDiag.log only keeps current boot (wiped at BOOT) and holds ~60 recent lines: MUST pull before restarting the game. Last received log covered boot->MainMenu only, zero errors - useless for gameplay issues.
+- FMOD "subsounds" red error seen on device: audio-only, non-fatal, parked.
 
-3 OPEN ISSUES (all seen live on A16, Stage2-Beach, P2b build)
+OPEN ISSUES (need gameplay-session MKMDiag.log, pulled WITHOUT relaunch)
+[A] INVISIBLE ENEMIES / WEIRD TEXTURES (forest + dungeon screenshots, P2c). Prime suspect: custom 2DShaderCollection_* failing on GLES3 (shader errors auto-log). Need: scene name + which enemy + log.
+[B] UPDT_UINavigation NRE root cause. Guard holds it; P2d full-trace lines will name the throwing line. Need: P2e log.
+[C] SAVE e2e. Need: stand at crystal, press INT (expect msg 60), pause (expect PAUSE line, saveGate=1, nearest~0), save, exit, Continue. If saveGate=0 with nearest~0 -> trigger broken, fix from log.
 
-[1] GAMEPAD BUTTONS OVERLAP (screenshot confirmed)
-Right cluster overlaps: USE button drawn on top of INT; SKL half off right screen edge. Cause: MKM_TouchUI.cs Build() right-cluster coordinates pack 6 buttons into too small an area at this aspect (1920x1080 design scaled s=1.0 on 2340x1080). INT and USE get near-identical centers; SKL x exceeds screen width.
-Fix: re-space the cluster in MKM_TouchUI.cs Build() - 2 columns x 3 rows grid anchored bottom-right with margins verified against Screen.width, e.g. col centers at (w - 150*s, w - 320*s), row centers at (180*s, 350*s, 520*s); assign ATK/JMP/INT/SKL/DEF/USE to grid cells; clamp every center to [rad, w-rad]x[rad, h-rad]. Tune with one screenshot round-trip.
-Also: pause button (top-right) overlapped a red game icon - move to top-LEFT or below the item HUD.
+PACKAGE-ID NOTE (resolved, watch for recurrence)
+- v0.7.5-android-p2c shipped com.MegaBlueBall.MysticKnightMaya; v0.7.5-android-p2e ships com.megablueball.mkm. Cause: PlayerSettings.applicationIdentifier follows the selected build target in 2019.2 batchmode; a session defaulting to Standalone set the Windows id and left Android on ripper default. Fixed via explicit SetApplicationIdentifier(BuildTargetGroup.Android,...). Different ids = separate apps + separate data dirs (saves don't transfer). A DIFFERENT old app com.megablueball.mkm exists on the test phone (same icon) - uninstall before installing P2e or install fails on signature. Verify under test with: adb shell pm list packages | grep -i megablue.
 
-[2] SAVE SYSTEM - VERIFY / FIX
-Unverified end-to-end on device. Save path (P0, MKMSaveDir()=persistentDataPath/UserData) writes config fine (MKM_configfile.json seen on device). What to test: pause menu Save on beach -> exit -> Continue/Load restores beach position. Suspects if broken: (a) save menu (MenuBehaviour save/load screen) may need ConfirmUI key events that touch-tap doesn't raise as KeyPressedOnce - tap only sends UI Submit; check MenuBehaviour.TryToSaveTheGame path and GetSubmitButtonUniversalPress (GameCore 4168) vs touch; (b) screenshot capture on save (GameCore ~9743 MKMSVP png) may fail on GLES3/mobile - guard with try/catch + skip screenshot on Android, keep JSON save; (c) LoadGameData scene validation uses CheckIfSceneToLoadIsValid which compares full build paths vs bare names - saves store bare scene names, could reject valid saves (MKM_IsSceneInBuild already handles this for async loads; apply same name-or-path match there).
-Fix recipe: instrument MenuBehaviour save/load + GameCore.SaveGameData/LoadGameData with MKMDiag.Step markers, reproduce on device, read MKMDiag.log, fix what the log names.
+THIS MACHINE paths (RDP box, tenant of this session)
+- Editor: D:\Unity\2019.2.6f1 (standalone NSIS install, NOT Hub-managed; Hub present but has no editors). Installers kept: D:\TempUnity\UnitySetup64-2019.2.6f1.exe, D:\TempUnity\UnitySetup-Android-2019.2.6f1.exe.
+- SDK: D:\Unity\android-sdk-2019 (platform-tools, android-28, build-tools 28.0.3, legacy tools/ r26.1.1 from sdk-tools-windows-4333796.zip) junctioned at .../AndroidPlayer/SDK.
+- NDK r16b: D:\Unity\android-ndk-r16b junctioned at .../AndroidPlayer/NDK. Zip: D:\TempUnity\android-ndk-r16b.zip.
+- JDK: bundled OpenJDK 8 at .../AndroidPlayer/Tools/OpenJDK/Windows.
+- Unity 2019.2 batchmode IGNORES env vars: SDK/NDK/JDK must be in EditorPrefs (HKCU..\Unity Editor 5.x AndroidSdkRoot/AndroidNdkRoot/JdkPath) - set once via temp Assets/Editor/MKMSdkSetup.cs (deleted after use; Editor-only, never ships).
+- SDK detection ALSO requires legacy tools/ r26.1.1, else "Android SDK not found".
+- Workspace: D:\TempUnity\mkm-android-port (warm Library - rebuilds ~20 min; first import ~40 min). License C:\ProgramData\Unity\Unity_lic.ulf (Personal, valid).
+- DIRTY TREE WARNING: ~40 asset files under unity-project/Assets show as modified from editor reimports (AnimatorControllers, mixers, sprites). Left UNCOMMITTED deliberately - do not commit without review.
+- Logs: D:\TempUnity\build*.log, sdksetup.log. User device logs: D:\TempUnity\devlogs (Alarms.zip arrived misnamed as Alarms.zip.png - rename to .zip).
 
-[3] CHARACTER STUCK RUNNING FORWARD + top-left NRE (screenshot confirmed)
-Two possibly-linked symptoms: (a) Maya runs right on her own; (b) diag overlay shows repeating NullReferenceException in UPDT_UINavigation.
-Evidence: NRE text "UPDT_UINavigation () (at <000...>" repeats every frame even in gameplay with no menu open. Stuck-run means movHackRight or held-Right latched true.
-Suspects, in order:
-  (i) Touch state stuck: Btn.OnPointerUp missed (finger released over another UI element / canvas hidden mid-press / scene changed mid-press) leaving MKM_Touch held[Right]=true forever. OnDisable releases only its own button - a pointer stolen by a different control never fires OnPointerUp. Harden: in MKM_TouchUI.Update, each frame verify each pressed button's pointerId is still in Input.touches; if its touch ended/canceled with no OnPointerUp, force Release. Also clear all on Application focus loss (OnApplicationFocus(false) -> ResetAll) and on canvas hide (already ResetAll - confirm it runs).
-  (ii) UPDT_UINavigation NRE itself: GameCore ~3771-3812 - EventSystem.current?.currentSelectedGameObject chain or selectable.FindSelectableOn* on a destroyed/ripped object; runs every frame in stages (guard `currentSelectedGameObject?.activeInHierarchy != true` should skip... unless EventSystem.current is null in a way that still enters). Get the FULL stack trace first (see below) - the truncated overlay hides the throwing line.
-  (iii) If stuck-run persists with touch UI hidden: check _movHackRight writers (GameCore OnGUI 3835-3882) - keyboard-event branch only runs when isKeyboardCfgInput; a stuck KeyDown without KeyUp (lost focus) latches it. Same focus-loss reset covers it.
-How to nail it: pull the FULL MKMDiag.log from the device (persistentDataPath/MKMDiag.log, same folder the earlier logs.zip came from) - it captures every LOG-Exception with stack trace. The throwing line + the last TOUCH markers before the runaway identify it exactly. Do NOT guess further without that file.
+BUILD (headless, PowerShell; Unity.exe is GUI so Start-Process -Wait, plain invoke returns instantly):
+  $p = Start-Process -FilePath "D:\Unity\2019.2.6f1\Editor\Unity.exe" -ArgumentList "-batchmode","-quit","-projectPath","D:\TempUnity\mkm-android-port\unity-project","-executeMethod","MKMBuild.BuildAndroid","-logFile","D:\TempUnity\buildN.log" -Wait -PassThru
+APK -> unity-project/MKM-0.7.5-android.apk (gitignored; ship via GitHub Releases, e.g. gh release create vX --notes ... <apk>).
+Verify: build-tools\28.0.3\aapt.exe dump badging <apk>  (check package id + ABIs arm64-v8a/armeabi-v7a + sdkVersion/targetSdkVersion).
 
 NEXT STEPS IN ORDER
-1. Push this file (done) - everything committed, tree clean.
-2. Get full MKMDiag.log + a fresh screenshot after 30s of the stuck-run.
-3. Fix [3] with the log (touch-lifecycle hardening first), then [1] layout, then [2] save test.
-4. Rebuild (warm Library, batchmode MKMBuild.BuildAndroid), release, playtest.
-5. Remaining roadmap: remove MKMDiag overlay for final build, fix package id via PlayerSettings.SetApplicationIdentifier(BuildTargetGroup.Android,...), P2 tuning round.
+1. Get P2e gameplay log (no relaunch before pull) + scene/enemy names for [A].
+2. Fix [B] from full trace, [A] from shader errors, confirm [C] e2e.
+3. Rebuild, release, playtest.
+4. Remaining roadmap: remove MKMDiag overlay for final, P2 tuning round.
 
-BUILD (headless, needs env):
-set ANDROID_HOME=D:\Unity\Hub\Editor\2019.2.6f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK (same for ANDROID_SDK_ROOT)
-set ANDROID_NDK_ROOT=...\NDK (same for ANDROID_NDK_HOME)
-set JAVA_HOME=...\Tools\OpenJDK\Windows
-Unity.exe -batchmode -quit -projectPath <repo>\unity-project -executeMethod MKMBuild.BuildAndroid -logFile build.log
-APK -> unity-project/MKM-0.7.5-android.apk (gitignored; ship via GitHub Releases).
+SECURITY: TWO classic PATs were pasted in chat history during this session and used for push/release via GH_TOKEN env. REVOKED? ___ (revoke at github.com/settings/tokens, issue fine-grained contents:write token next time).
