@@ -37,7 +37,7 @@ Shader "Custom/SpriteWhiteFlash" {
 				v2f OUT;
 				OUT.vertex = UnityObjectToClipPos(IN.vertex);
 				OUT.texcoord = IN.texcoord;
-				OUT.color = IN.color * _Color;
+				OUT.color = IN.color;
 				#ifdef PIXELSNAP_ON
 				OUT.vertex = UnityPixelSnap(OUT.vertex);
 				#endif
@@ -45,6 +45,7 @@ Shader "Custom/SpriteWhiteFlash" {
 			}
 			fixed4 frag(v2f IN) : SV_Target {
 				fixed4 c = SampleSpriteTexture(IN.texcoord) * IN.color;
+				c.rgb *= _Color.rgb;
 				c.rgb = lerp(c.rgb, fixed3(1,1,1), saturate(_FlashAmount));
 				c.a *= _SpriteFade * Pixel_Fade;
 				return c;
