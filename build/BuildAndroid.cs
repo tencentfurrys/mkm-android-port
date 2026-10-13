@@ -15,7 +15,7 @@ public static class MKMBuild
         PlayerSettings.productName = "Mystic Knight Maya";
         PlayerSettings.applicationIdentifier = "com.megablueball.mkm";
         PlayerSettings.bundleVersion = "0.7.5";
-        PlayerSettings.Android.bundleVersionCode = 1;
+        PlayerSettings.Android.bundleVersionCode = 2;
         PlayerSettings.Android.minSdkVersion = AndroidSdkVersions.AndroidApiLevel19;
         PlayerSettings.Android.targetSdkVersion = AndroidSdkVersions.AndroidApiLevel28;
         PlayerSettings.Android.preferredInstallLocation = AndroidPreferredInstallLocation.Auto;
