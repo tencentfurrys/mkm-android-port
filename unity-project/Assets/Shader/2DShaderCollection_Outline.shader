@@ -18,10 +18,19 @@ Shader "2DShaderCollection/Outline" {
 			#pragma vertex vert
 			#pragma fragment frag
 			#pragma multi_compile _ PIXELSNAP_ON
+			#pragma multi_compile _ ETC1_EXTERNAL_ALPHA
 			#include "UnityCG.cginc"
 			struct appdata_t { float4 vertex : POSITION; float2 texcoord : TEXCOORD0; float4 color : COLOR; };
 			struct v2f { float4 vertex : SV_POSITION; float2 texcoord : TEXCOORD0; float4 color : COLOR; };
 			sampler2D _MainTex;
+			sampler2D _AlphaTex;
+			fixed4 SampleSpriteTexture(float2 uv) {
+				fixed4 c = tex2D(_MainTex, uv);
+#if ETC1_EXTERNAL_ALPHA
+				c.a = tex2D(_AlphaTex, uv).r;
+#endif
+				return c;
+			}
 			float4 _MainTex_TexelSize;
 			fixed4 _Color;
 			float _Outline_Size_1;
@@ -41,18 +50,18 @@ Shader "2DShaderCollection/Outline" {
 				return OUT;
 			}
 			fixed4 frag(v2f IN) : SV_Target {
-				fixed4 c = tex2D(_MainTex, IN.texcoord) * IN.color;
+				fixed4 c = SampleSpriteTexture(IN.texcoord) * IN.color;
 				float2 px = _MainTex_TexelSize.xy * _Outline_Size_1;
 				float a = c.a;
 				float outlineA = 0;
-				outlineA += tex2D(_MainTex, IN.texcoord + float2(px.x, 0)).a;
-				outlineA += tex2D(_MainTex, IN.texcoord - float2(px.x, 0)).a;
-				outlineA += tex2D(_MainTex, IN.texcoord + float2(0, px.y)).a;
-				outlineA += tex2D(_MainTex, IN.texcoord - float2(0, px.y)).a;
-				outlineA += tex2D(_MainTex, IN.texcoord + px).a;
-				outlineA += tex2D(_MainTex, IN.texcoord - px).a;
-				outlineA += tex2D(_MainTex, IN.texcoord + float2(px.x, -px.y)).a;
-				outlineA += tex2D(_MainTex, IN.texcoord - float2(px.x, -px.y)).a;
+				outlineA += SampleSpriteTexture(IN.texcoord + float2(px.x, 0)).a;
+				outlineA += SampleSpriteTexture(IN.texcoord - float2(px.x, 0)).a;
+				outlineA += SampleSpriteTexture(IN.texcoord + float2(0, px.y)).a;
+				outlineA += SampleSpriteTexture(IN.texcoord - float2(0, px.y)).a;
+				outlineA += SampleSpriteTexture(IN.texcoord + px).a;
+				outlineA += SampleSpriteTexture(IN.texcoord - px).a;
+				outlineA += SampleSpriteTexture(IN.texcoord + float2(px.x, -px.y)).a;
+				outlineA += SampleSpriteTexture(IN.texcoord - float2(px.x, -px.y)).a;
 				outlineA = saturate(outlineA);
 				fixed3 oc = _Outline_Color_1.rgb * _Outline_HDR_1;
 				c.rgb = lerp(oc, c.rgb, a);
