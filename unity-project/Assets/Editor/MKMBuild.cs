@@ -21,7 +21,7 @@ public static class MKMBuild
         // Standalone silently shipped the ripper default package id once).
         PlayerSettings.SetApplicationIdentifier(BuildTargetGroup.Android, "com.megablueball.mkm");
         PlayerSettings.bundleVersion = "0.7.5";
-        PlayerSettings.Android.bundleVersionCode = 2;
+        PlayerSettings.Android.bundleVersionCode = 3;
         PlayerSettings.Android.minSdkVersion = AndroidSdkVersions.AndroidApiLevel19;
         PlayerSettings.Android.targetSdkVersion = AndroidSdkVersions.AndroidApiLevel28;
         PlayerSettings.Android.preferredInstallLocation = AndroidPreferredInstallLocation.Auto;
