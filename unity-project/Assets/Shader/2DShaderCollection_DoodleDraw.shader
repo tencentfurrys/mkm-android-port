@@ -11,56 +11,59 @@ Shader "2DShaderCollection/DoodleDraw" {
 		[HideInInspector] _StencilWriteMask ("Stencil Write Mask", Float) = 255
 		[HideInInspector] _StencilReadMask ("Stencil Read Mask", Float) = 255
 		[HideInInspector] _ColorMask ("Color Mask", Float) = 15
-	}
-	//DummyShaderTextExporter
-	SubShader{
-		Tags { "RenderType"="Opaque" }
-		LOD 200
+	
+		Pixel_Fade ("Pixel_Fade", Range(0, 1)) = 1
+		_FlashAmount ("_FlashAmount", Range(0, 1)) = 0
+		_Brightness_Fade_1 ("_Brightness_Fade_1", Range(0, 1)) = 0.5
+		Disolve_Value ("Disolve_Value", Range(0, 1)) = 0
+		_Fire_Displacement_Value ("_Fire_Displacement_Value", Float) = 0
+		_TurnMetal_Speed_1 ("_TurnMetal_Speed_1", Float) = 0
+		_Emboss_Intensity_1 ("_Emboss_Intensity_1", Float) = 0
 
-		Pass
-		{
-			HLSLPROGRAM
+	}
+
+	SubShader {
+		Tags { "Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent" "PreviewType"="Plane" "CanUseSpriteAtlas"="True" }
+		Cull Off Lighting Off ZWrite Off
+		Blend SrcAlpha OneMinusSrcAlpha
+		Pass {
+			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
-
-			float4x4 unity_ObjectToWorld;
-			float4x4 unity_MatrixVP;
-			float4 _MainTex_ST;
-
-			struct Vertex_Stage_Input
-			{
-				float4 pos : POSITION;
-				float2 uv : TEXCOORD0;
-			};
-
-			struct Vertex_Stage_Output
-			{
-				float2 uv : TEXCOORD0;
-				float4 pos : SV_POSITION;
-			};
-
-			Vertex_Stage_Output vert(Vertex_Stage_Input input)
-			{
-				Vertex_Stage_Output output;
-				output.uv = (input.uv.xy * _MainTex_ST.xy) + _MainTex_ST.zw;
-				output.pos = mul(unity_MatrixVP, mul(unity_ObjectToWorld, input.pos));
-				return output;
+			#pragma multi_compile _ PIXELSNAP_ON
+			#include "UnityCG.cginc"
+			struct appdata_t { float4 vertex : POSITION; float2 texcoord : TEXCOORD0; float4 color : COLOR; };
+			struct v2f { float4 vertex : SV_POSITION; float2 texcoord : TEXCOORD0; float4 color : COLOR; };
+			sampler2D _MainTex;
+			fixed4 _Color;
+			float _SpriteFade;
+			float Pixel_Fade;
+			float _FlashAmount;
+			float _Brightness_Fade_1;
+			float Disolve_Value;
+			float _Fire_Displacement_Value;
+			float _TurnMetal_Speed_1;
+			float _Emboss_Intensity_1;
+			v2f vert(appdata_t IN) {
+				v2f OUT;
+				OUT.vertex = UnityObjectToClipPos(IN.vertex);
+				OUT.texcoord = IN.texcoord;
+				#ifdef PIXELSNAP_ON
+				OUT.vertex = UnityPixelSnap(OUT.vertex);
+				#endif
+				OUT.color = IN.color;
+				return OUT;
 			}
-
-			Texture2D<float4> _MainTex;
-			SamplerState sampler_MainTex;
-
-			struct Fragment_Stage_Input
-			{
-				float2 uv : TEXCOORD0;
-			};
-
-			float4 frag(Fragment_Stage_Input input) : SV_TARGET
-			{
-				return _MainTex.Sample(sampler_MainTex, input.uv.xy);
+			fixed4 frag(v2f IN) : SV_Target {
+				fixed4 c = tex2D(_MainTex, IN.texcoord) * IN.color;
+				c.rgb *= (0.5 + _Brightness_Fade_1);
+				c.rgb = lerp(c.rgb, fixed3(1,1,1), saturate(_FlashAmount));
+				float fade = _SpriteFade * Pixel_Fade;
+				fade *= saturate(1.0 - Disolve_Value);
+				c.a *= saturate(fade);
+				return c;
 			}
-
-			ENDHLSL
+			ENDCG
 		}
 	}
 	Fallback "Sprites/Default"

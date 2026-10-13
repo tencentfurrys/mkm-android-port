@@ -1,59 +1,47 @@
 Shader "Custom/SpriteWhiteFlash" {
 	Properties {
 		[PerRendererData] _MainTex ("Sprite Texture", 2D) = "white" {}
-		_Color ("Color", Vector) = (1,1,1,0)
+		_Color ("Tint", Color) = (1,1,1,1)
+		_FlashAmount ("_FlashAmount", Range(0, 1)) = 0
+		_SpriteFade ("SpriteFade", Range(0, 1)) = 1
+		Pixel_Fade ("Pixel_Fade", Range(0, 1)) = 1
 		[MaterialToggle] PixelSnap ("Pixel snap", Float) = 0
 	}
-	//DummyShaderTextExporter
-	SubShader{
-		Tags { "RenderType"="Opaque" }
-		LOD 200
-
-		Pass
-		{
-			HLSLPROGRAM
+	SubShader {
+		Tags { "Queue"="Transparent" "IgnoreProjector"="True" "RenderType"="Transparent" "PreviewType"="Plane" "CanUseSpriteAtlas"="True" }
+		Cull Off Lighting Off ZWrite Off
+		Blend SrcAlpha OneMinusSrcAlpha
+		Pass {
+			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
-
-			float4x4 unity_ObjectToWorld;
-			float4x4 unity_MatrixVP;
-			float4 _MainTex_ST;
-
-			struct Vertex_Stage_Input
-			{
-				float4 pos : POSITION;
-				float2 uv : TEXCOORD0;
-			};
-
-			struct Vertex_Stage_Output
-			{
-				float2 uv : TEXCOORD0;
-				float4 pos : SV_POSITION;
-			};
-
-			Vertex_Stage_Output vert(Vertex_Stage_Input input)
-			{
-				Vertex_Stage_Output output;
-				output.uv = (input.uv.xy * _MainTex_ST.xy) + _MainTex_ST.zw;
-				output.pos = mul(unity_MatrixVP, mul(unity_ObjectToWorld, input.pos));
-				return output;
+			#pragma multi_compile _ PIXELSNAP_ON
+			#include "UnityCG.cginc"
+			struct appdata_t { float4 vertex : POSITION; float2 texcoord : TEXCOORD0; float4 color : COLOR; };
+			struct v2f { float4 vertex : SV_POSITION; float2 texcoord : TEXCOORD0; float4 color : COLOR; };
+			sampler2D _MainTex;
+			fixed4 _Color;
+			float _FlashAmount;
+			float _SpriteFade;
+			float Pixel_Fade;
+			v2f vert(appdata_t IN) {
+				v2f OUT;
+				OUT.vertex = UnityObjectToClipPos(IN.vertex);
+				OUT.texcoord = IN.texcoord;
+				OUT.color = IN.color * _Color;
+				#ifdef PIXELSNAP_ON
+				OUT.vertex = UnityPixelSnap(OUT.vertex);
+				#endif
+				return OUT;
 			}
-
-			Texture2D<float4> _MainTex;
-			SamplerState sampler_MainTex;
-			float4 _Color;
-
-			struct Fragment_Stage_Input
-			{
-				float2 uv : TEXCOORD0;
-			};
-
-			float4 frag(Fragment_Stage_Input input) : SV_TARGET
-			{
-				return _MainTex.Sample(sampler_MainTex, input.uv.xy) * _Color;
+			fixed4 frag(v2f IN) : SV_Target {
+				fixed4 c = tex2D(_MainTex, IN.texcoord) * IN.color;
+				c.rgb = lerp(c.rgb, fixed3(1,1,1), saturate(_FlashAmount));
+				c.a *= _SpriteFade * Pixel_Fade;
+				return c;
 			}
-
-			ENDHLSL
+			ENDCG
 		}
 	}
+	Fallback "Sprites/Default"
 }
