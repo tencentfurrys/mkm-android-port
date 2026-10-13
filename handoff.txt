@@ -60,3 +60,15 @@ SESSION 3 (2026-10-13, RDP box, tenant session): video analysis + toolchain inst
 - P2j prep (16b37419): bundleVersionCode 1->2 (build/BuildAndroid.cs:19 + Assets/Editor/MKMBuild.cs) because every release shipped versionCode 1; removed MKMDumpSprites diag script. NOTE: opening scenes in editor re-adds ETC1_EXTERNAL_ALPHA to SpriteWhiteFlash.mat (reverted, do not commit mats without review).
 - PENDING: user clean-UNINSTALL + fresh install P2i, screenshot same beach spot + Maya at rest. If ghosts persist -> instrument runtime renderer color/material on device. Gray box in shots = MKMDiag overlay panel (expected); red text = known FMOD subsounds issue (parked).
 - SECURITY: a THIRD classic PAT pasted in chat and used via GH_TOKEN for push/release. REVOKED? ___ .
+
+---
+SESSION 4 TODO (2026-10-13): ghost sprites persist - what to do next
+STATUS: P2j (versionCode 2) clean-installed by user. NO CHANGE: enemies ghostly, Maya washed during heal. Stale-install/shader-cache theory DEAD.
+VERIFIED SOLID (so the bug is NOT here): APK textures have clean binary alpha (UnityPy check: Forest-Blaze/Isobora/WaterJelly 0-or-255, zero mid values); editor dump shows all enemies on SpriteWhiteFlash with vertex color white and _SpriteFade=Pixel_Fade=1; shader math is tex*white*fades. Gray potion box on beach = MKMDiag overlay panel (expected debug UI), red text = known FMOD subsounds issue (audio only, parked).
+TODO IN ORDER:
+1. Runtime sprite probe build (P2k-diag): extend MKMDump-style read into MKMDiag.cs - every few seconds log nearest Enemy-Basic renderer: obj name, material, shader, objRE.color, GetFloat(_SpriteFade/Pixel_Fade/_FlashAmount), GetColor(_Color). User plays beach/forest 30s, pulls MKMDiag.log via appdata zip (log survives, only ~60 recent lines kept - pull WITHOUT relaunch). This distinguishes runtime-driven alpha (spawn fade stuck a la PaintingEvil pattern EnemyGeneralLogic.cs:641, stuck hit-flash InvokeRepeating, dash 0.4f) from GPU-variant miscompile.
+2. If runtime values read 1.0/white but screen still ghosts -> GPU compiles a different variant: simplify WhiteFlash (inline sampling, drop multi_compile ETC1 + _AlphaTex fn, hardcode alpha=1 test pass outputting solid red). If red box appears solid -> re-add features one by one.
+3. Control experiment: set ONE enemy type (e.g. BlazePlant) SpriteRenderers to Sprites/Default in Stage1-Forest only. If it goes solid while others ghost -> 100% custom-shader path, compare compiled variants.
+4. Separate issue: beach potion panel gray box (dungeon panel fine) - check Stage2-Beach potion UI Image sprites/materials.
+5. Keep bundleVersionCode incrementing every release (now 2) so updates always apply; keep stripping OFF until shaders proven; MKMDiag overlay still ships (remove for final).
+- SECURITY: now THREE classic PATs pasted in chat, all used via GH_TOKEN. REVOKED? ___ .
