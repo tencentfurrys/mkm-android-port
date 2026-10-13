@@ -47,3 +47,16 @@ NEXT STEPS IN ORDER
 4. Remaining roadmap: remove MKMDiag overlay for final, P2 tuning round.
 
 SECURITY: TWO classic PATs were pasted in chat history during this session and used for push/release via GH_TOKEN env. REVOKED? ___ (revoke at github.com/settings/tokens, issue fine-grained contents:write token next time).
+
+---
+SESSION 3 (2026-10-13, RDP box, tenant session): video analysis + toolchain install + shader saga P2g/P2h/P2i + ghost hunt
+- Video C:\Users\RDP\Downloads\2026_10_12_17_29_04.mp4 (8:31, 720p): red Rook = SavePoint (heal 100% + INT quicksave slot 0, Controller_Player.cs:2306/1605), blue-potion drink heals SP with starburst ~07:47, blue-stripe texture glitch at castle door ~04:38, invisible-enemy hits (-1/-2, no sprite) in forest. Frames kept at C:\Users\RDP\AppData\Local\Temp\1\video_detail\.
+- Save correction: NOT crystal-only. SavePieceType = Pawn/Rook/Knight/Bishop/Queen/Crystal (GameCore.cs:1391); red Rook runs Save-IdleRook (SavePointLogic.cs:72).
+- Toolchain installed on D: (temp storage, 219GB free): Unity 2019.2.6f1 + Android module (D:\Unity\2019.2.6f1), SDK D:\Unity\android-sdk-2019 (tools r26.1.1 + platform-tools/android-28/28.0.3 via Corretto8 sdkmanager), NDK r16b, bundled OpenJDK. Junctions AndroidPlayer/SDK+NDK, EditorPrefs SDK/NDK/JDK set. Installers in D:\TempUnity.
+- P2g (5ae82006): all 10 2DShaderCollection/Custom shaders were AssetRipper HLSL stubs (Opaque, raw sample) -> rewrote CG Transparent Sprite shaders. Result: char bleed fixed, ALL enemies invisible.
+- P2h (e3b0130b): added _AlphaTex/ETC1 branch. Result: still invisible + char transparent (baked ETC1 keyword forced split branch on non-split ETC2 textures).
+- P2i (1c54f5ab): root-caused via EnemyGeneralLogic.cs:414 (flash color alpha 0, hit 0.5) + WhiteFlash doing IN.color*_Color -> alpha 0 at rest. Now tint uses _Color.rgb only; stripped baked ETC1 keyword from 10 mats (engine variant kept). Result: enemies visible but GHOSTLY, char washed during heal.
+- Ghost evidence (all verified, all read 1.0/solid): APK textures extracted via UnityPy have clean binary alpha (Forest-Blaze/Isobora/WaterJelly 0-or-255); editor dump of Beach/Dungeon/Forest shows every enemy on SpriteWhiteFlash, vertex color white, _SpriteFade=Pixel_Fade=1; shader math is tex*white*fades. Cannot produce ghosts -> suspect stale same-versionCode update or runtime-driven color.
+- P2j prep (16b37419): bundleVersionCode 1->2 (build/BuildAndroid.cs:19 + Assets/Editor/MKMBuild.cs) because every release shipped versionCode 1; removed MKMDumpSprites diag script. NOTE: opening scenes in editor re-adds ETC1_EXTERNAL_ALPHA to SpriteWhiteFlash.mat (reverted, do not commit mats without review).
+- PENDING: user clean-UNINSTALL + fresh install P2i, screenshot same beach spot + Maya at rest. If ghosts persist -> instrument runtime renderer color/material on device. Gray box in shots = MKMDiag overlay panel (expected); red text = known FMOD subsounds issue (parked).
+- SECURITY: a THIRD classic PAT pasted in chat and used via GH_TOKEN for push/release. REVOKED? ___ .
